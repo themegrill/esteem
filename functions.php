@@ -252,4 +252,16 @@ function esteem_theme_options() {
       esc_url('http://themegrill.com/contact/')
    );
 }
+
+/**
+ * Assign the Spacious version to a variable.
+ */
+$theme            = wp_get_theme( 'esteem' );
+$esteem_version = $theme['Version'];
+
+/* Calling in the admin area for the Welcome Page */
+if ( is_admin() ) {
+	require get_template_directory() . '/inc/admin/class-esteem-admin.php';
+}
+
 ?>
