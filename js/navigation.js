@@ -35,4 +35,12 @@
 			container.className = container.className.replace( 'main-navigation', 'main-small-navigation' );
 		}
 	};
+
+	    jQuery('#site-navigation .menu-item-has-children').append('<span class="sub-toggle"> <i class="icon-caret-down"></i> </span>');
+    jQuery('#site-navigation .sub-toggle').click(function() {
+        jQuery(this).parent('.menu-item-has-children').children('ul.sub-menu').first().slideToggle('1000');
+        jQuery(this).children('.icon-caret-right').first().toggleClass('icon-caret-down');
+        jQuery(this).toggleClass('active');
+    });
 } )();
+

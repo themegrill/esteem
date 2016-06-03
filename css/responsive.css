@@ -15,6 +15,24 @@
 	}
 }
 @media screen and (max-width: 768px) {
+	    #site-navigation ul li .sub-menu {
+        display: none;
+    }
+    .main-small-navigation li {
+        position: relative;
+    }
+    .sub-toggle {
+        background-color: #ED564B;
+        cursor: pointer;
+        display: block;
+        padding: 3px 10px;
+        position: absolute;
+        right: 11px;
+        top: 6px;
+    }
+    .sub-toggle .icon-caret-down {
+        color: #fff;
+    }
 	.hgroup-wrap {
 		padding-top: 0;
 		padding-bottom: 10px;
