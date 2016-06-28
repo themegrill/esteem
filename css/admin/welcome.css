@@ -17,23 +17,23 @@ pre.changelog {
  pre.changelog span {
      font-weight: 700;
  }
- .return-to-dashboard.spacious {
+ .return-to-dashboard.esteem {
     clear: both;
 }
 
-p.spacious-actions a.skip {
+p.esteem-actions a.skip {
     opacity: .5;
 }
 
-p.spacious-actions a.docs:focus,
-p.spacious-actions a.docs:hover,
-p.spacious-actions a.skip:focus,
-p.spacious-actions a.skip:hover {
+p.esteem-actions a.docs:focus,
+p.esteem-actions a.docs:hover,
+p.esteem-actions a.skip:focus,
+p.esteem-actions a.skip:hover {
     opacity: 1;
 }
 
-p.spacious-actions a.button-primary,
-p.spacious-actions a.button-secondary {
+p.esteem-actions a.button-primary,
+p.esteem-actions a.button-secondary {
     text-decoration: none!important;
 }
 
@@ -65,7 +65,7 @@ td {
 }
 
 .about-wrap .about-text,
-.spacious-screenshot {
+.esteem-screenshot {
     margin: 20px 10px;
     width: 47%;
     float: left;
@@ -173,7 +173,7 @@ table tr .btn-wrapper .button:hover {
         font-size: 25px;
     }
     .about-wrap .about-text,
-    .spacious-screenshot {
+    .esteem-screenshot {
         float: none;
         width: 100%;
     }

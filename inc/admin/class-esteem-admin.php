@@ -1,22 +1,22 @@
 <?php
 /**
- * Esteem Admin Class.
+ * Spacious Admin Class.
  *
  * @author  ThemeGrill
  * @package esteem
- * @since   1.3.1
+ * @since   1.3.2
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-if ( ! class_exists( 'Esteem_Admin' ) ) :
+if ( ! class_exists( 'Spacious_Admin' ) ) :
 
 /**
- * Esteem_Admin Class.
+ * Spacious_Admin Class.
  */
-class Esteem_Admin {
+class Spacious_Admin {
 
 	/**
 	 * Constructor.
@@ -57,10 +57,10 @@ class Esteem_Admin {
 		// Let's bail on theme activation.
 		if ( 'themes.php' == $pagenow && isset( $_GET['activated'] ) ) {
 			add_action( 'admin_notices', array( $this, 'welcome_notice' ) );
-			update_option( 'esteem_admin_notice_welcome', 1 );
+			update_option( 'spacious_admin_notice_welcome', 1 );
 
 		// No option? Let run the notice wizard again..
-		} elseif( ! get_option( 'esteem_admin_notice_welcome' ) ) {
+		} elseif( ! get_option( 'spacious_admin_notice_welcome' ) ) {
 			add_action( 'admin_notices', array( $this, 'welcome_notice' ) );
 		}
 	}
@@ -69,8 +69,8 @@ class Esteem_Admin {
 	 * Hide a notice if the GET variable is set.
 	 */
 	public static function hide_notices() {
-		if ( isset( $_GET['esteem-hide-notice'] ) && isset( $_GET['_esteem_notice_nonce'] ) ) {
-			if ( ! wp_verify_nonce( $_GET['_esteem_notice_nonce'], 'esteem_hide_notices_nonce' ) ) {
+		if ( isset( $_GET['esteem-hide-notice'] ) && isset( $_GET['_spacious_notice_nonce'] ) ) {
+			if ( ! wp_verify_nonce( $_GET['_spacious_notice_nonce'], 'spacious_hide_notices_nonce' ) ) {
 				wp_die( __( 'Action failed. Please refresh the page and retry.', 'esteem' ) );
 			}
 
@@ -79,7 +79,7 @@ class Esteem_Admin {
 			}
 
 			$hide_notice = sanitize_text_field( $_GET['esteem-hide-notice'] );
-			update_option( 'esteem_admin_notice_' . $hide_notice, 1 );
+			update_option( 'spacious_admin_notice_' . $hide_notice, 1 );
 		}
 	}
 
@@ -89,10 +89,10 @@ class Esteem_Admin {
 	public function welcome_notice() {
 		?>
 		<div id="message" class="updated esteem-message">
-			<a class="esteem-message-close notice-dismiss" href="<?php echo esc_url( wp_nonce_url( remove_query_arg( array( 'activated' ), add_query_arg( 'esteem-hide-notice', 'welcome' ) ), 'esteem_hide_notices_nonce', '_esteem_notice_nonce' ) ); ?>"><?php _e( 'Dismiss', 'esteem' ); ?></a>
-			<p><?php printf( esc_html__( 'Welcome! Thank you for choosing Esteem! To fully take advantage of the best our theme can offer please make sure you visit our %swelcome page%s.', 'esteem' ), '<a href="' . esc_url( admin_url( 'themes.php?page=esteem-welcome' ) ) . '">', '</a>' ); ?></p>
+			<a class="esteem-message-close notice-dismiss" href="<?php echo esc_url( wp_nonce_url( remove_query_arg( array( 'activated' ), add_query_arg( 'esteem-hide-notice', 'welcome' ) ), 'spacious_hide_notices_nonce', '_spacious_notice_nonce' ) ); ?>"><?php _e( 'Dismiss', 'esteem' ); ?></a>
+			<p><?php printf( esc_html__( 'Welcome! Thank you for choosing Spacious! To fully take advantage of the best our theme can offer please make sure you visit our %swelcome page%s.', 'esteem' ), '<a href="' . esc_url( admin_url( 'themes.php?page=esteem-welcome' ) ) . '">', '</a>' ); ?></p>
 			<p class="submit">
-				<a class="button-secondary" href="<?php echo esc_url( admin_url( 'themes.php?page=esteem-welcome' ) ); ?>"><?php esc_html_e( 'Get started with Esteem', 'esteem' ); ?></a>
+				<a class="button-secondary" href="<?php echo esc_url( admin_url( 'themes.php?page=esteem-welcome' ) ); ?>"><?php esc_html_e( 'Get started with Spacious', 'esteem' ); ?></a>
 			</p>
 		</div>
 		<?php
@@ -111,7 +111,7 @@ class Esteem_Admin {
 		// Drop minor version if 0
 		$major_version = substr( $esteem_version, 0, 3 );
 		?>
-		<div class="spacious-theme-info">
+		<div class="esteem-theme-info">
 			<h1>
 				<?php esc_html_e('About', 'esteem'); ?>
 				<?php echo $theme->display( 'Name' ); ?>
@@ -121,13 +121,13 @@ class Esteem_Admin {
 			<div class="welcome-description-wrap">
 				<div class="about-text"><?php echo $theme->display( 'Description' ); ?></div>
 
-				<div class="spacious-screenshot">
+				<div class="esteem-screenshot">
 					<img src="<?php echo esc_url( get_template_directory_uri() ) . '/screenshot.png'; ?>" />
 				</div>
 			</div>
 		</div>
 
-		<p class="spacious-actions">
+		<p class="esteem-actions">
 			<a href="<?php echo esc_url( 'http://themegrill.com/themes/esteem/' ); ?>" class="button button-secondary" target="_blank"><?php esc_html_e( 'Theme Info', 'esteem' ); ?></a>
 
 			<a href="<?php echo esc_url( 'http://demo.themegrill.com/esteem/' ); ?>" class="button button-secondary docs" target="_blank"><?php esc_html_e( 'View Demo', 'esteem' ); ?></a>
@@ -182,31 +182,31 @@ class Esteem_Admin {
 			<div class="changelog point-releases">
 				<div class="under-the-hood two-col">
 					<div class="col">
-						<h3><?php echo esc_html_e( 'Theme Customizer', 'esteem' ); ?></h3>
+						<h3><?php esc_html_e( 'Theme Customizer', 'esteem' ); ?></h3>
 						<p><?php esc_html_e( 'All Theme Options are available via Customize screen.', 'esteem' ) ?></p>
 						<p><a href="<?php echo admin_url( 'customize.php' ); ?>" class="button button-secondary"><?php esc_html_e( 'Customize', 'esteem' ); ?></a></p>
 					</div>
 
 					<div class="col">
-						<h3><?php echo esc_html_e( 'Documentation', 'esteem' ); ?></h3>
+						<h3><?php esc_html_e( 'Documentation', 'esteem' ); ?></h3>
 						<p><?php esc_html_e( 'Please view our documentation page to setup the theme.', 'esteem' ) ?></p>
 						<p><a href="<?php echo esc_url( 'http://themegrill.com/theme-instruction/esteem/' ); ?>" class="button button-secondary"><?php esc_html_e( 'Documentation', 'esteem' ); ?></a></p>
 					</div>
 
 					<div class="col">
-						<h3><?php echo esc_html_e( 'Got theme support question?', 'esteem' ); ?></h3>
+						<h3><?php esc_html_e( 'Got theme support question?', 'esteem' ); ?></h3>
 						<p><?php esc_html_e( 'Please put it in our dedicated support forum.', 'esteem' ) ?></p>
 						<p><a href="<?php echo esc_url( 'http://themegrill.com/support-forum/' ); ?>" class="button button-secondary"><?php esc_html_e( 'Support Forum', 'esteem' ); ?></a></p>
 					</div>
 
 					<div class="col">
-						<h3><?php echo esc_html_e( 'Need more features?', 'esteem' ); ?></h3>
+						<h3><?php esc_html_e( 'Need more features?', 'esteem' ); ?></h3>
 						<p><?php esc_html_e( 'Upgrade to PRO version for more exciting features.', 'esteem' ) ?></p>
 						<p><a href="<?php echo esc_url( 'http://themegrill.com/themes/esteem-pro/' ); ?>" class="button button-secondary"><?php esc_html_e( 'View Pro', 'esteem' ); ?></a></p>
 					</div>
 
 					<div class="col">
-						<h3><?php echo esc_html_e( 'Got sales related question?', 'esteem' ); ?></h3>
+						<h3><?php esc_html_e( 'Got sales related question?', 'esteem' ); ?></h3>
 						<p><?php esc_html_e( 'Please send it via our sales contact page.', 'esteem' ) ?></p>
 						<p><a href="<?php echo esc_url( 'http://themegrill.com/contact/' ); ?>" class="button button-secondary"><?php esc_html_e( 'Contact Page', 'esteem' ); ?></a></p>
 					</div>
@@ -214,7 +214,7 @@ class Esteem_Admin {
 					<div class="col">
 						<h3>
 							<?php
-							echo esc_html_e( 'Translate', 'esteem' );
+							esc_html_e( 'Translate', 'esteem' );
 							echo ' ' . $theme->display( 'Name' );
 							?>
 						</h3>
@@ -257,7 +257,7 @@ class Esteem_Admin {
 			<p class="about-description"><?php esc_html_e( 'View changelog below:', 'esteem' ); ?></p>
 
 			<?php
-				$changelog_file = apply_filters( 'esteem_changelog_file', get_template_directory() . '/readme.txt' );
+				$changelog_file = apply_filters( 'spacious_changelog_file', get_template_directory() . '/readme.txt' );
 
 				// Check if the changelog file exists and is readable.
 				if ( $changelog_file && is_readable( $changelog_file ) ) {
@@ -308,25 +308,22 @@ class Esteem_Admin {
 
 			<p class="about-description"><?php esc_html_e( 'This theme recommends following plugins:', 'esteem' ); ?></p>
 			<ol>
-				<li><?php printf(__('<a href="%s" target="_blank">Social Icons</a>', 'esteem'), esc_url('https://wordpress.org/plugins/social-icons/')); ?>
+				<li><a href="<?php echo esc_url( 'https://wordpress.org/plugins/social-icons/' ); ?>" target="_blank"><?php esc_html_e( 'Social Icons', 'esteem' ); ?></a>
 					<?php esc_html_e(' by ThemeGrill', 'esteem'); ?>
 				</li>
-				<li><?php printf(__('<a href="%s" target="_blank">Easy Social Sharing</a>', 'esteem'), esc_url('https://wordpress.org/plugins/easy-social-sharing/')); ?>
+				<li><a href="<?php echo esc_url( 'https://wordpress.org/plugins/easy-social-sharing/' ); ?>" target="_blank"><?php esc_html_e( 'Easy Social Sharing', 'esteem' ); ?></a>
 					<?php esc_html_e(' by ThemeGrill', 'esteem'); ?>
 				</li>
-				<li><?php printf(__('<a href="%s" target="_blank">Contact Form 7</a>', 'esteem'), esc_url('https://wordpress.org/plugins/contact-form-7/')); ?></li>
-                <li><?php printf(__('<a href="%s" target="_blank">WP-PageNavi</a>', 'esteem'), esc_url('https://wordpress.org/plugins/wp-pagenavi/')); ?></li>
-                <li><?php printf(__('<a href="%s" target="_blank">Breadcrumb NavXT</a>', 'esteem'), esc_url('https://wordpress.org/plugins/breadcrumb-navxt/')); ?></li>
-                <li><?php printf(__('<a href="%s" target="_blank">Recent Posts Widget Extended</a>', 'esteem'), esc_url('https://wordpress.org/plugins/recent-posts-widget-extended/')); ?></li>
-                <li><?php printf(__('<a href="%s" target="_blank">JetPack by WordPress.com</a>', 'esteem'), esc_url('https://wordpress.org/plugins/jetpack/')); ?></li>
-                <li>
-                    <?php printf(__('<a href="%s" target="_blank">Polylang</a>', 'esteem'), esc_url('https://wordpress.org/plugins/polylang/')); ?>
-                    <?php esc_html_e('Fully Compatible in Pro Version', 'esteem'); ?>
-                </li>
-                <li>
-                    <?php printf(__('<a href="%s" target="_blank">WMPL</a>', 'esteem'), esc_url('https://wpml.org/')); ?>
-                    <?php esc_html_e('Fully Compatible in Pro Version', 'esteem'); ?>
-                </li>
+				<li><a href="<?php echo esc_url( 'https://wordpress.org/plugins/contact-form-7/' ); ?>" target="_blank"><?php esc_html_e( 'Contact Form 7', 'esteem' ); ?></a></li>
+				<li><a href="<?php echo esc_url( 'https://wordpress.org/plugins/wp-pagenavi/' ); ?>" target="_blank"><?php esc_html_e( 'WP-PageNavi', 'esteem' ); ?></a></li>
+				<li><a href="<?php echo esc_url( 'https://wordpress.org/plugins/breadcrumb-navxt/' ); ?>" target="_blank"><?php esc_html_e( 'Breadcrumb NavXT', 'esteem' ); ?></a></li>
+				<li><a href="<?php echo esc_url( 'https://wordpress.org/plugins/woocommerce/' ); ?>" target="_blank"><?php esc_html_e( 'WooCommerce', 'esteem' ); ?></a></li>			
+				<li><a href="<?php echo esc_url( 'https://wordpress.org/plugins/polylang/' ); ?>" target="_blank"><?php esc_html_e( 'Polylang', 'esteem' ); ?></a>
+					<?php esc_html_e('Fully Compatible in Pro Version', 'esteem'); ?>
+				</li>
+				<li><a href="<?php echo esc_url( 'https://wpml.org/' ); ?>" target="_blank"><?php esc_html_e( 'WPML', 'esteem' ); ?></a>
+					<?php esc_html_e('Fully Compatible in Pro Version', 'esteem'); ?>
+				</li>
 			</ol>
 
 		</div>
@@ -365,88 +362,78 @@ class Esteem_Admin {
                     </tr>
                     <tr>
                         <td><h3><?php esc_html_e('Font Size options', 'esteem'); ?></h3></td>
-                        <td><span class="dashicons dashicons-no"></td>
-                        <td><span class="dashicons dashicons-yes"></td>
+                        <td><span class="dashicons dashicons-no"></span></td>
+                        <td><span class="dashicons dashicons-yes"></span></td>
                     </tr>
                     <tr>
                         <td><h3><?php esc_html_e('Primary Color', 'esteem'); ?></h3></td>
-                        <td><span class="dashicons dashicons-yes"></td>
-                        <td><span class="dashicons dashicons-yes"></td>
+                        <td><span class="dashicons dashicons-yes"></span></td>
+                        <td><span class="dashicons dashicons-yes"></span></td>
                     </tr>
                     <tr>
                         <td><h3><?php esc_html_e('Multiple Color Options', 'esteem'); ?></h3></td>
-                        <td><span class="dashicons dashicons-no"></td>
+                        <td><span class="dashicons dashicons-no"></span></td>
                         <td><?php esc_html_e('35+ color options', 'esteem'); ?></td>
                     </tr>
                     <tr>
                         <td><h3><?php esc_html_e('Additional Top Header', 'esteem'); ?></h3></td>
-                        <td><span class="dashicons dashicons-no"></td>
+                        <td><span class="dashicons dashicons-no"></span></td>
                         <td><?php esc_html_e('Social Icons + Menu + Header text option', 'esteem'); ?></td>
                     </tr>
                     <tr>
                         <td><h3><?php esc_html_e('Social Icons', 'esteem'); ?></h3></td>
-                        <td><span class="dashicons dashicons-no"></td>
-                        <td><span class="dashicons dashicons-yes"></td>
+                        <td><span class="dashicons dashicons-no"></span></td>
+                        <td><span class="dashicons dashicons-yes"></span></td>
                     </tr>
                     <tr>
                         <td><h3><?php esc_html_e('Boxed & Wide layout option', 'esteem'); ?></h3></td>
-                        <td><span class="dashicons dashicons-yes"></td>
-                        <td><span class="dashicons dashicons-yes"></td>
+                        <td><span class="dashicons dashicons-yes"></span></td>
+                        <td><span class="dashicons dashicons-yes"></span></td>
                     </tr>
                     <tr>
                         <td><h3><?php esc_html_e('Content Demo', 'esteem'); ?></h3></td>
-                        <td><span class="dashicons dashicons-no"></td>
-                        <td><span class="dashicons dashicons-yes"></td>
+                        <td><span class="dashicons dashicons-no"></span></td>
+                        <td><span class="dashicons dashicons-yes"></span></td>
                     </tr>
                     <tr>
                         <td><h3><?php esc_html_e('WP-PageNavi Compatible', 'esteem'); ?></h3></td>
-                        <td><span class="dashicons dashicons-yes"></td>
-                        <td><span class="dashicons dashicons-yes"></td>
+                        <td><span class="dashicons dashicons-yes"></span></td>
+                        <td><span class="dashicons dashicons-yes"></span></td>
                     </tr>
                     <tr>
                         <td><h3><?php esc_html_e('Breadcrumb NavXT Compatible', 'esteem'); ?></h3></td>
-                        <td><span class="dashicons dashicons-yes"></td>
-                        <td><span class="dashicons dashicons-yes"></td>
-                    </tr>
-                    <tr>
-                        <td><h3><?php esc_html_e('Recent Posts Widget Extended Compatible', 'esteem'); ?></h3></td>
-                        <td><span class="dashicons dashicons-yes"></td>
-                        <td><span class="dashicons dashicons-yes"></td>
-                    </tr>
-                    <tr>
-                        <td><h3><?php esc_html_e('JetPack by WordPress.com Compatible', 'esteem'); ?></h3></td>
-                        <td><span class="dashicons dashicons-yes"></td>
-                        <td><span class="dashicons dashicons-yes"></td>
+                        <td><span class="dashicons dashicons-yes"></span></td>
+                        <td><span class="dashicons dashicons-yes"></span></td>
                     </tr>
                     <tr>
                         <td><h3><?php esc_html_e('Woocommerce Compatible', 'esteem'); ?></h3></td>
-                        <td><span class="dashicons dashicons-no"></td>
-                        <td><span class="dashicons dashicons-yes"></td>
+                        <td><span class="dashicons dashicons-no"></span></td>
+                        <td><span class="dashicons dashicons-yes"></span></td>
                     </tr>
                     <tr>
                         <td><h3><?php esc_html_e('Translation Ready', 'esteem'); ?></h3></td>
-                        <td><span class="dashicons dashicons-yes"></td>
-                        <td><span class="dashicons dashicons-yes"></td>
+                        <td><span class="dashicons dashicons-yes"></span></td>
+                        <td><span class="dashicons dashicons-yes"></span></td>
                     </tr>
                     <tr>
                         <td><h3><?php esc_html_e('WPML Compatible', 'esteem'); ?></h3></td>
-                        <td><span class="dashicons dashicons-no"></td>
-                        <td><span class="dashicons dashicons-yes"></td>
+                        <td><span class="dashicons dashicons-no"></span></td>
+                        <td><span class="dashicons dashicons-yes"></span></td>
                     </tr>
                     <tr>
                         <td><h3><?php esc_html_e('Polylang Compatible', 'esteem'); ?></h3></td>
-                        <td><span class="dashicons dashicons-no"></td>
-                        <td><span class="dashicons dashicons-yes"></td>
+                        <td><span class="dashicons dashicons-no"></span></td>
+                        <td><span class="dashicons dashicons-yes"></span></td>
                     </tr>
                     <tr>
                         <td><h3><?php esc_html_e('Footer Widget Area', 'esteem'); ?></h3></td>
-                        <td><span class="dashicons dashicons-yes"></td>
-                        <td><span class="dashicons dashicons-yes"></td>
+                        <td><span class="dashicons dashicons-yes"></span></td>
+                        <td><span class="dashicons dashicons-yes"></span></td>
                     </tr>
                     <tr>
                         <td><h3><?php esc_html_e('Footer Copyright Editor', 'esteem'); ?></h3></td>
-                        <td><span class="dashicons dashicons-no"></td>
-                        <td><span class="dashicons dashicons-yes"></td>
+                        <td><span class="dashicons dashicons-no"></span></td>
+                        <td><span class="dashicons dashicons-yes"></span></td>
                     </tr>
                     <tr>
                         <td><h3><?php esc_html_e('Support', 'esteem'); ?></h3></td>
@@ -455,33 +442,33 @@ class Esteem_Admin {
                     </tr>
                     <tr>
                         <td><h3><?php esc_html_e('TG: Services widget', 'esteem'); ?></h3></td>
-                        <td><span class="dashicons dashicons-yes"></td>
-                        <td><span class="dashicons dashicons-yes"></td>
+                        <td><span class="dashicons dashicons-yes"></span></td>
+                        <td><span class="dashicons dashicons-yes"></span></td>
                     </tr>
                     <tr>
                         <td><h3><?php esc_html_e('TG: Call to Action widget', 'esteem'); ?></h3></td>
-                        <td><span class="dashicons dashicons-yes"></td>
-                        <td><span class="dashicons dashicons-yes"></td>
+                        <td><span class="dashicons dashicons-yes"></span></td>
+                        <td><span class="dashicons dashicons-yes"></span></td>
                     </tr>
                     <tr>
                         <td><h3><?php esc_html_e('TG: Featured widget', 'esteem'); ?></h3></td>
-                        <td><span class="dashicons dashicons-yes"></td>
-                        <td><span class="dashicons dashicons-yes"></td>
+                        <td><span class="dashicons dashicons-yes"></span></td>
+                        <td><span class="dashicons dashicons-yes"></span></td>
                     </tr>
                     <tr>
                         <td><h3><?php esc_html_e('TG: Testimonial', 'esteem'); ?></h3></td>
-                        <td><span class="dashicons dashicons-yes"></td>
-                        <td><span class="dashicons dashicons-yes"></td>
+                        <td><span class="dashicons dashicons-yes"></span></td>
+                        <td><span class="dashicons dashicons-yes"></span></td>
                     </tr>                   
                     <tr>
                         <td><h3><?php esc_html_e('TG: Featured Posts', 'esteem'); ?></h3></td>
-                        <td><span class="dashicons dashicons-no"></td>
-                        <td><span class="dashicons dashicons-yes"></td>
+                        <td><span class="dashicons dashicons-no"></span></td>
+                        <td><span class="dashicons dashicons-yes"></span></td>
                     </tr>
                     <tr>
                         <td><h3><?php esc_html_e('TG: Our Clients', 'esteem'); ?></h3></td>
-                        <td><span class="dashicons dashicons-no"></td>
-                        <td><span class="dashicons dashicons-yes"></td>
+                        <td><span class="dashicons dashicons-no"></span></td>
+                        <td><span class="dashicons dashicons-yes"></span></td>
                     </tr>
                 </tbody>
             </table>
@@ -493,4 +480,4 @@ class Esteem_Admin {
 
 endif;
 
-return new Esteem_Admin();
+return new Spacious_Admin();
