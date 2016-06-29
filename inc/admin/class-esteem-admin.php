@@ -11,12 +11,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-if ( ! class_exists( 'Spacious_Admin' ) ) :
+if ( ! class_exists( 'Esteem_Admin' ) ) :
 
 /**
- * Spacious_Admin Class.
+ * Esteem_Admin Class.
  */
-class Spacious_Admin {
+class Esteem_Admin {
 
 	/**
 	 * Constructor.
@@ -480,4 +480,4 @@ class Spacious_Admin {
 
 endif;
 
-return new Spacious_Admin();
+return new Esteem_Admin();
