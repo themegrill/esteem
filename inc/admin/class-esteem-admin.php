@@ -1,6 +1,6 @@
 <?php
 /**
- * Spacious Admin Class.
+ * Esteem Admin Class.
  *
  * @author  ThemeGrill
  * @package esteem
@@ -90,9 +90,9 @@ class Spacious_Admin {
 		?>
 		<div id="message" class="updated esteem-message">
 			<a class="esteem-message-close notice-dismiss" href="<?php echo esc_url( wp_nonce_url( remove_query_arg( array( 'activated' ), add_query_arg( 'esteem-hide-notice', 'welcome' ) ), 'spacious_hide_notices_nonce', '_spacious_notice_nonce' ) ); ?>"><?php _e( 'Dismiss', 'esteem' ); ?></a>
-			<p><?php printf( esc_html__( 'Welcome! Thank you for choosing Spacious! To fully take advantage of the best our theme can offer please make sure you visit our %swelcome page%s.', 'esteem' ), '<a href="' . esc_url( admin_url( 'themes.php?page=esteem-welcome' ) ) . '">', '</a>' ); ?></p>
+			<p><?php printf( esc_html__( 'Welcome! Thank you for choosing Esteem! To fully take advantage of the best our theme can offer please make sure you visit our %swelcome page%s.', 'esteem' ), '<a href="' . esc_url( admin_url( 'themes.php?page=esteem-welcome' ) ) . '">', '</a>' ); ?></p>
 			<p class="submit">
-				<a class="button-secondary" href="<?php echo esc_url( admin_url( 'themes.php?page=esteem-welcome' ) ); ?>"><?php esc_html_e( 'Get started with Spacious', 'esteem' ); ?></a>
+				<a class="button-secondary" href="<?php echo esc_url( admin_url( 'themes.php?page=esteem-welcome' ) ); ?>"><?php esc_html_e( 'Get started with Esteem', 'esteem' ); ?></a>
 			</p>
 		</div>
 		<?php
