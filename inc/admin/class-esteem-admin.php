@@ -316,8 +316,10 @@ class Esteem_Admin {
 				</li>
 				<li><a href="<?php echo esc_url( 'https://wordpress.org/plugins/contact-form-7/' ); ?>" target="_blank"><?php esc_html_e( 'Contact Form 7', 'esteem' ); ?></a></li>
 				<li><a href="<?php echo esc_url( 'https://wordpress.org/plugins/wp-pagenavi/' ); ?>" target="_blank"><?php esc_html_e( 'WP-PageNavi', 'esteem' ); ?></a></li>
-				<li><a href="<?php echo esc_url( 'https://wordpress.org/plugins/breadcrumb-navxt/' ); ?>" target="_blank"><?php esc_html_e( 'Breadcrumb NavXT', 'esteem' ); ?></a></li>
-				<li><a href="<?php echo esc_url( 'https://wordpress.org/plugins/woocommerce/' ); ?>" target="_blank"><?php esc_html_e( 'WooCommerce', 'esteem' ); ?></a></li>			
+				<li><a href="<?php echo esc_url( 'https://wordpress.org/plugins/breadcrumb-navxt/' ); ?>" target="_blank"><?php esc_html_e( 'Breadcrumb NavXT', 'esteem' ); ?></a></li>			
+				<li><a href="<?php echo esc_url( 'https://wordpress.org/plugins/woocommerce/' ); ?>" target="_blank"><?php esc_html_e( 'WooCommerce', 'esteem' ); ?></a>
+					<?php esc_html_e('Fully Compatible in Pro Version', 'esteem'); ?>
+				</li>
 				<li><a href="<?php echo esc_url( 'https://wordpress.org/plugins/polylang/' ); ?>" target="_blank"><?php esc_html_e( 'Polylang', 'esteem' ); ?></a>
 					<?php esc_html_e('Fully Compatible in Pro Version', 'esteem'); ?>
 				</li>
@@ -351,7 +353,7 @@ class Esteem_Admin {
                 </thead>
                 <tbody>
                     <tr>
-                        <td><h3><?php esc_html_e('Slider', 'esteem'); ?></h3><span class="table-desc">Number of sliders.</span></td>
+                        <td><h3><?php esc_html_e('Slider', 'esteem'); ?></h3></td>
                         <td><?php esc_html_e('4', 'esteem'); ?></td>
                         <td><?php esc_html_e('Unlimited Slides', 'esteem'); ?></td>
                     </tr>
