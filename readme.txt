@@ -40,7 +40,10 @@ and we will include it within the theme from next version update.
 
 /**********************************************************/
 
-== CHANGE LOG ==
+== Changelog ==
+= Version 1.3.2 =
+* Introduced welcome page for theme.
+
 = Version 1.3.1 =
 * Content width adjusted according to the layout choosed
 * Backward compatibility for WordPress title removed
