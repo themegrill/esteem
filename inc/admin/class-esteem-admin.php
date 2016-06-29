@@ -57,10 +57,10 @@ class Esteem_Admin {
 		// Let's bail on theme activation.
 		if ( 'themes.php' == $pagenow && isset( $_GET['activated'] ) ) {
 			add_action( 'admin_notices', array( $this, 'welcome_notice' ) );
-			update_option( 'spacious_admin_notice_welcome', 1 );
+			update_option( 'esteem_admin_notice_welcome', 1 );
 
 		// No option? Let run the notice wizard again..
-		} elseif( ! get_option( 'spacious_admin_notice_welcome' ) ) {
+		} elseif( ! get_option( 'esteem_admin_notice_welcome' ) ) {
 			add_action( 'admin_notices', array( $this, 'welcome_notice' ) );
 		}
 	}
@@ -69,8 +69,8 @@ class Esteem_Admin {
 	 * Hide a notice if the GET variable is set.
 	 */
 	public static function hide_notices() {
-		if ( isset( $_GET['esteem-hide-notice'] ) && isset( $_GET['_spacious_notice_nonce'] ) ) {
-			if ( ! wp_verify_nonce( $_GET['_spacious_notice_nonce'], 'spacious_hide_notices_nonce' ) ) {
+		if ( isset( $_GET['esteem-hide-notice'] ) && isset( $_GET['_esteem_notice_nonce'] ) ) {
+			if ( ! wp_verify_nonce( $_GET['_esteem_notice_nonce'], 'esteem_hide_notices_nonce' ) ) {
 				wp_die( __( 'Action failed. Please refresh the page and retry.', 'esteem' ) );
 			}
 
@@ -79,7 +79,7 @@ class Esteem_Admin {
 			}
 
 			$hide_notice = sanitize_text_field( $_GET['esteem-hide-notice'] );
-			update_option( 'spacious_admin_notice_' . $hide_notice, 1 );
+			update_option( 'esteem_admin_notice_' . $hide_notice, 1 );
 		}
 	}
 
@@ -89,7 +89,7 @@ class Esteem_Admin {
 	public function welcome_notice() {
 		?>
 		<div id="message" class="updated esteem-message">
-			<a class="esteem-message-close notice-dismiss" href="<?php echo esc_url( wp_nonce_url( remove_query_arg( array( 'activated' ), add_query_arg( 'esteem-hide-notice', 'welcome' ) ), 'spacious_hide_notices_nonce', '_spacious_notice_nonce' ) ); ?>"><?php _e( 'Dismiss', 'esteem' ); ?></a>
+			<a class="esteem-message-close notice-dismiss" href="<?php echo esc_url( wp_nonce_url( remove_query_arg( array( 'activated' ), add_query_arg( 'esteem-hide-notice', 'welcome' ) ), 'esteem_hide_notices_nonce', '_esteem_notice_nonce' ) ); ?>"><?php _e( 'Dismiss', 'esteem' ); ?></a>
 			<p><?php printf( esc_html__( 'Welcome! Thank you for choosing Esteem! To fully take advantage of the best our theme can offer please make sure you visit our %swelcome page%s.', 'esteem' ), '<a href="' . esc_url( admin_url( 'themes.php?page=esteem-welcome' ) ) . '">', '</a>' ); ?></p>
 			<p class="submit">
 				<a class="button-secondary" href="<?php echo esc_url( admin_url( 'themes.php?page=esteem-welcome' ) ); ?>"><?php esc_html_e( 'Get started with Esteem', 'esteem' ); ?></a>
@@ -257,7 +257,7 @@ class Esteem_Admin {
 			<p class="about-description"><?php esc_html_e( 'View changelog below:', 'esteem' ); ?></p>
 
 			<?php
-				$changelog_file = apply_filters( 'spacious_changelog_file', get_template_directory() . '/readme.txt' );
+				$changelog_file = apply_filters( 'esteem_changelog_file', get_template_directory() . '/readme.txt' );
 
 				// Check if the changelog file exists and is readable.
 				if ( $changelog_file && is_readable( $changelog_file ) ) {
