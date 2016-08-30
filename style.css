@@ -504,6 +504,9 @@ a:active {
 }
 
 /* Small menu */
+.sub-toggle{
+	display: none;
+}
 .menu-toggle {
 	display: none;
 	cursor: pointer;
