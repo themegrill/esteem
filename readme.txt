@@ -24,7 +24,7 @@ Esteem is distributed under the terms of the GNU GPL
 == THEME USAGE ==
 
 = Theme Instruction =
-Get theme instruction at http://themegrill.com/theme-instruction/esteem
+Get theme instruction at http://docs.themegrill.com/esteem/
 
 = Free Support =
 Get free support at http://themegrill.com/support-forum
@@ -35,14 +35,15 @@ All available options can be used from Appearance->Theme Options
 /**********************************************************/
 
 == TRANSLATIONS ==
-If you've translated this theme into your language, feel free to send the translation over to themegrill@gmail.com
-and we will include it within the theme from next version update.
+If you want to translate this theme to your language, Please visit:- https://translate.wordpress.org/projects/wp-themes/esteem
 
 /**********************************************************/
 
 == Changelog ==
-= Version 1.3.2 =
-* Introduced welcome page for theme.
+= Version 1.3.2 - 2016-08-30 =
+* Tweaks - Introduced welcome page for theme.
+* Feature - Theme is now compatible with WooCommerce.
+* Feature - Added new responsive menu design.
 
 = Version 1.3.1 =
 * Content width adjusted according to the layout choosed
