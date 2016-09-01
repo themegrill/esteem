@@ -15,13 +15,13 @@
 	}
 }
 @media screen and (max-width: 768px) {
-	    #site-navigation ul li .sub-menu {
+	.better-responsive-menu #site-navigation ul li .sub-menu {
         display: none;
     }
     .main-small-navigation li {
         position: relative;
     }
-    .sub-toggle {
+    .better-responsive-menu .sub-toggle {
         background-color: #ED564B;
         cursor: pointer;
         display: block;

@@ -63,6 +63,9 @@ function esteem_setup() {
 	// Supporting title tag via add_theme_support (since WordPress 4.1)
    add_theme_support( 'title-tag' );
 
+   // Added WooCommerce support.
+   add_theme_support( 'woocommerce' );
+
 	// Switches default core markup for comment form, and comments
 	// to output valid HTML5.
    add_theme_support('html5', array(

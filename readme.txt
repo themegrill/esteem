@@ -40,7 +40,7 @@ If you want to translate this theme to your language, Please visit:- https://tra
 /**********************************************************/
 
 == Changelog ==
-= Version 1.3.2 - 2016-08-30 =
+= Version 1.3.2 - 2016-09-01 =
 * Tweaks - Introduced welcome page for theme.
 * Feature - Theme is now compatible with WooCommerce.
 * Feature - Added new responsive menu design.

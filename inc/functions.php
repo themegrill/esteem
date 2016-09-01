@@ -172,6 +172,10 @@ function esteem_body_class( $classes ) {
 		$classes[] = 'wide';
 	}
 
+	if( get_theme_mod( 'esteem_new_menu_enable', '1' ) == '1' ) {
+		$classes[] = 'better-responsive-menu';
+	}
+
 	return $classes;
 }
 

@@ -115,6 +115,24 @@ function esteem_customize_register($wp_customize) {
       )
    ));
 
+   // New Responsive Menu
+   $wp_customize->add_section('esteem_new_menu', array(
+      'priority' => 14,
+      'title'    => __('Responsive Menu Style', 'esteem'),
+      'panel'    => 'esteem_header_options'
+   ));
+
+   $wp_customize->add_setting('esteem_new_menu_enable',	array(
+		'default' => '1',
+      	'capability' => 'edit_theme_options',
+		'sanitize_callback' => 'esteem_sanitize_checkbox'
+	));
+	$wp_customize->add_control('esteem_new_menu_enable',	array(
+		'type' => 'checkbox',
+		'label' => __('Switch to new responsive menu.', 'esteem' ),
+		'section' => 'esteem_new_menu'
+	));
+
    // Promo bar
    $wp_customize->add_section('esteem_slogan_setting', array(
       'priority' => 20,
