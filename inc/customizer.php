@@ -8,6 +8,61 @@
  */
 function esteem_customize_register($wp_customize) {
 
+	// Theme important links started
+   class Esteem_Important_Links extends WP_Customize_Control {
+
+      public $type = "esteem-important-links";
+
+      public function render_content() {
+         //Add Theme instruction, Support Forum, Demo Link, Rating Link
+         $important_links = array(
+            'theme-info' => array(
+               'link' => esc_url('http://themegrill.com/themes/esteem-pro/'),
+               'text' => __('View Pro', 'esteem'),
+            ),
+            'support' => array(
+               'link' => esc_url('http://themegrill.com/support-forum/'),
+               'text' => __('Support Forum', 'esteem'),
+            ),
+            'documentation' => array(
+               'link' => esc_url('http://docs.themegrill.com/esteem/'),
+               'text' => __('Documentation', 'esteem'),
+            ),
+            'demo' => array(
+               'link' => esc_url('http://demo.themegrill.com/esteem/'),
+               'text' => __('View Demo', 'esteem'),
+            ),
+            'rating' => array(
+               'link' => esc_url('http://wordpress.org/support/view/theme-reviews/esteem?filter=5'),
+               'text' => __('Rate this theme', 'esteem'),
+            ),
+         );
+         foreach ($important_links as $important_link) {
+            echo '<p><a target="_blank" href="' . $important_link['link'] . '" >' . esc_attr($important_link['text']) . ' </a></p>';
+         }
+      }
+
+   }
+
+   $wp_customize->add_section('esteem_important_links', array(
+      'priority' => 1,
+      'title' => __('Esteem Important Links', 'esteem'),
+   ));
+
+   /**
+    * This setting has the dummy Sanitization function as it contains no value to be sanitized
+    */
+   $wp_customize->add_setting('esteem_important_links', array(
+      'capability' => 'edit_theme_options',
+      'sanitize_callback' => 'esteem_links_sanitize'
+   ));
+
+   $wp_customize->add_control(new Esteem_Important_Links($wp_customize, 'important_links', array(
+      'section' => 'esteem_important_links',
+      'settings' => 'esteem_important_links'
+   )));
+   // Theme Important Links Ended
+
 	/* Header Options Area */
    $wp_customize->add_panel('esteem_header_options', array(
       'capabitity' => 'edit_theme_options',
@@ -522,68 +577,6 @@ function esteem_customize_register($wp_customize) {
 
  /**************************************************************************************/
 
-	// Theme important links started
-   class ESTEEM_Important_Links extends WP_Customize_Control {
-
-      public $type = "esteem-important-links";
-
-      public function render_content() {
-         //Add Theme instruction, Support Forum, Demo Link, Rating Link
-         $important_links = array(
-            'upgrade' => array(
-               'link' => esc_url('http://themegrill.com/themes/esteem-pro/'),
-               'text' => __('Upgrade to Pro', 'esteem'),
-            ),
-            'support' => array(
-               'link' => esc_url('http://themegrill.com/support-forum/'),
-               'text' => __('Free Support', 'esteem'),
-            ),
-            'documentation' => array(
-               'link' => esc_url('http://themegrill.com/theme-instruction/esteem/'),
-               'text' => __('Documentation', 'esteem'),
-            ),
-            'demo' => array(
-               'link' => esc_url('http://demo.themegrill.com/esteem/'),
-               'text' => __('View Demo', 'esteem'),
-            )
-         );
-         foreach ($important_links as $important_link) {
-            echo '<p><a target="_blank" href="' . $important_link['link'] . '" >' . esc_attr($important_link['text']) . ' </a></p>';
-         } ?>
-         <label>
-            <span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
-            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-					<input type="hidden" name="cmd" value="_s-xclick">
-					<input type="hidden" name="hosted_button_id" value="8AHDCA8CDGAJG">
-					<input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal">
-					<img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
-				</form>
-         </label>
-      <?php }
-   }
-
-   $wp_customize->add_section('esteem_important_links', array(
-      'priority' => 700,
-      'title' => __('About Esteem', 'esteem'),
-   ));
-
-   /**
-    * This setting has the dummy Sanitization function as it contains no value to be sanitized
-    */
-   $wp_customize->add_setting('esteem_important_links', array(
-      'capability' => 'edit_theme_options',
-      'sanitize_callback' => 'esteem_links_sanitize'
-   ));
-
-   $wp_customize->add_control(new ESTEEM_Important_Links($wp_customize, 'important_links', array(
-   	'label' => __('If you like our work. Buy us a beer.', 'esteem'),
-      'section' => 'esteem_important_links',
-      'settings' => 'esteem_important_links'
-   )));
-   // Theme Important Links Ended
-
- /**************************************************************************************/
-
 	function esteem_sanitize_checkbox($input) {
       if ( $input == 1 ) {
          return 1;
@@ -639,17 +632,38 @@ add_action('customize_register', 'esteem_customize_register');
 
 /*****************************************************************************************/
 
-/**
- * Enqueue scripts for customizer
+/*
+ * Custom Scripts
  */
-function esteem_customizer_js() {
-   wp_enqueue_script( 'esteem_customizer_script', get_template_directory_uri() . '/js/esteem_customizer.js', array("jquery"), 'false', true  );
+add_action( 'customize_controls_print_footer_scripts', 'esteem_customizer_custom_scripts' );
 
-   wp_localize_script( 'esteem_customizer_script', 'esteem_customizer_obj', array(
+function esteem_customizer_custom_scripts() { ?>
+<style>
+	/* Theme Instructions Panel CSS */
+	li#accordion-section-esteem_important_links h3.accordion-section-title, li#accordion-section-esteem_important_links h3.accordion-section-title:focus { background-color: #ED564B !important; color: #fff !important; }
+	li#accordion-section-esteem_important_links h3.accordion-section-title:hover { background-color: #ED564B !important; color: #fff !important; }
+	li#accordion-section-esteem_important_links h3.accordion-section-title:after { color: #fff !important; }
+	/* Upsell button CSS */
+	.customize-control-esteem-important-links a {
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#8fc800+0,8fc800+100;Green+Flat+%232 */
+		background: #008EC2;
+		color: #fff;
+		display: block;
+		margin: 15px 0 0;
+		padding: 5px 0;
+		text-align: center;
+		font-weight: 600;
+	}
 
-      'info' => __( 'Theme Info', 'esteem' ),
-      'pro' => __('View PRO version','esteem')
+	.customize-control-esteem-important-links a{
+		padding: 8px 0;
+	}
 
-   ) );
+	.customize-control-esteem-important-links a:hover {
+		color: #ffffff;
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#006e2e+0,006e2e+100;Green+Flat+%233 */
+		background:#2380BA;
+	}
+</style>
+<?php
 }
-add_action( 'customize_controls_enqueue_scripts', 'esteem_customizer_js' );
