@@ -190,7 +190,7 @@ class Esteem_Admin {
 					<div class="col">
 						<h3><?php esc_html_e( 'Documentation', 'esteem' ); ?></h3>
 						<p><?php esc_html_e( 'Please view our documentation page to setup the theme.', 'esteem' ) ?></p>
-						<p><a href="<?php echo esc_url( 'http://themegrill.com/theme-instruction/esteem/' ); ?>" class="button button-secondary"><?php esc_html_e( 'Documentation', 'esteem' ); ?></a></p>
+						<p><a href="<?php echo esc_url( 'http://docs.themegrill.com/esteem/' ); ?>" class="button button-secondary"><?php esc_html_e( 'Documentation', 'esteem' ); ?></a></p>
 					</div>
 
 					<div class="col">
@@ -316,7 +316,7 @@ class Esteem_Admin {
 				</li>
 				<li><a href="<?php echo esc_url( 'https://wordpress.org/plugins/contact-form-7/' ); ?>" target="_blank"><?php esc_html_e( 'Contact Form 7', 'esteem' ); ?></a></li>
 				<li><a href="<?php echo esc_url( 'https://wordpress.org/plugins/wp-pagenavi/' ); ?>" target="_blank"><?php esc_html_e( 'WP-PageNavi', 'esteem' ); ?></a></li>
-				<li><a href="<?php echo esc_url( 'https://wordpress.org/plugins/breadcrumb-navxt/' ); ?>" target="_blank"><?php esc_html_e( 'Breadcrumb NavXT', 'esteem' ); ?></a></li>			
+				<li><a href="<?php echo esc_url( 'https://wordpress.org/plugins/breadcrumb-navxt/' ); ?>" target="_blank"><?php esc_html_e( 'Breadcrumb NavXT', 'esteem' ); ?></a></li>
 				<li><a href="<?php echo esc_url( 'https://wordpress.org/plugins/woocommerce/' ); ?>" target="_blank"><?php esc_html_e( 'WooCommerce', 'esteem' ); ?></a>
 					<?php esc_html_e('Fully Compatible in Pro Version', 'esteem'); ?>
 				</li>
@@ -461,7 +461,7 @@ class Esteem_Admin {
                         <td><h3><?php esc_html_e('TG: Testimonial', 'esteem'); ?></h3></td>
                         <td><span class="dashicons dashicons-yes"></span></td>
                         <td><span class="dashicons dashicons-yes"></span></td>
-                    </tr>                   
+                    </tr>
                     <tr>
                         <td><h3><?php esc_html_e('TG: Featured Posts', 'esteem'); ?></h3></td>
                         <td><span class="dashicons dashicons-no"></span></td>
