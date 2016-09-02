@@ -23,12 +23,12 @@ function esteem_custom_header_setup() {
 		'default-text-color'     => '',
 		'width'                  => 1400,
 		'height'                 => 400,
-		'flex-width'				 => true,
+		'flex-width'			 => true,
 		'flex-height'            => true,
 		'wp-head-callback'       => '',
 		'admin-head-callback'    => '',
 		'admin-preview-callback' => 'esteem_admin_header_image',
-	) ) );	
+	) ) );
 }
 add_action( 'after_setup_theme', 'esteem_custom_header_setup' );
 

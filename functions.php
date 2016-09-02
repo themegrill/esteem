@@ -234,7 +234,7 @@ do_action( 'esteem_init' );
 
 
 /**
- * Assign the Spacious version to a variable.
+ * Assign the Esteem version to a variable.
  */
 $theme            = wp_get_theme( 'esteem' );
 $esteem_version = $theme['Version'];
