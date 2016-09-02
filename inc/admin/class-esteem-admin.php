@@ -418,6 +418,11 @@ class Esteem_Admin {
                         <td><span class="dashicons dashicons-yes"></span></td>
                     </tr>
                     <tr>
+                        <td><h3><?php esc_html_e('RTL Support', 'esteem'); ?></h3></td>
+                        <td><span class="dashicons dashicons-no"></span></td>
+                        <td><span class="dashicons dashicons-yes"></span></td>
+                    </tr>
+                    <tr>
                         <td><h3><?php esc_html_e('WPML Compatible', 'esteem'); ?></h3></td>
                         <td><span class="dashicons dashicons-no"></span></td>
                         <td><span class="dashicons dashicons-yes"></span></td>
@@ -472,6 +477,28 @@ class Esteem_Admin {
                         <td><span class="dashicons dashicons-no"></span></td>
                         <td><span class="dashicons dashicons-yes"></span></td>
                     </tr>
+                    <tr>
+                        <td><h3><?php esc_html_e('TG: Pricing Table', 'esteem'); ?></h3></td>
+                        <td><span class="dashicons dashicons-no"></span></td>
+                        <td><span class="dashicons dashicons-yes"></span></td>
+                    </tr>
+                    <tr>
+                        <td><h3><?php esc_html_e('TG: Team', 'esteem'); ?></h3></td>
+                        <td><span class="dashicons dashicons-no"></span></td>
+                        <td><span class="dashicons dashicons-yes"></span></td>
+                    </tr>
+                    <tr>
+                        <td><h3><?php esc_html_e('TG: Fun Facts', 'esteem'); ?></h3></td>
+                        <td><span class="dashicons dashicons-no"></span></td>
+                        <td><span class="dashicons dashicons-yes"></span></td>
+                    </tr>
+                    <tr>
+						<td></td>
+						<td></td>
+						<td class="btn-wrapper">
+							<a href="<?php echo esc_url( apply_filters( 'esteem_pro_theme_url', 'http://themegrill.com/themes/esteem/' ) ); ?>" class="button button-secondary docs" target="_blank"><?php _e( 'View Pro', 'estore' ); ?></a>
+						</td>
+					</tr>
                 </tbody>
             </table>
 
