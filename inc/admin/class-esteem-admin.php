@@ -496,7 +496,7 @@ class Esteem_Admin {
 						<td></td>
 						<td></td>
 						<td class="btn-wrapper">
-							<a href="<?php echo esc_url( apply_filters( 'esteem_pro_theme_url', 'http://themegrill.com/themes/esteem/' ) ); ?>" class="button button-secondary docs" target="_blank"><?php _e( 'View Pro', 'estore' ); ?></a>
+							<a href="<?php echo esc_url( apply_filters( 'esteem_pro_theme_url', 'http://themegrill.com/themes/esteem/' ) ); ?>" class="button button-secondary docs" target="_blank"><?php _e( 'View Pro', 'esteem' ); ?></a>
 						</td>
 					</tr>
                 </tbody>
