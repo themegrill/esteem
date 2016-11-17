@@ -390,4 +390,16 @@ function esteem_wrapper_start() {
 function esteem_wrapper_end() {
   echo '</div>';
 }
+
+// Displays the site logo
+if ( ! function_exists( 'esteem_the_custom_logo' ) ) {
+	/**
+	 * Displays the optional custom logo.
+	 */
+	function esteem_the_custom_logo() {
+		if ( function_exists( 'the_custom_logo' )  && ( get_theme_mod( 'esteem_header_logo_image','' ) == '') ) {
+			the_custom_logo();
+		}
+	}
+}
 ?>

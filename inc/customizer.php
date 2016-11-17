@@ -81,19 +81,21 @@ function esteem_customize_register($wp_customize) {
   		'panel' => 'esteem_header_options'
 	));
 
-	$wp_customize->add_setting('esteem_header_logo_image', array(
-		'default' => '',
-      'capability' => 'edit_theme_options',
-      'sanitize_callback' => 'esteem_sanitize_url',
-      'sanitize_js_callback' => 'esteem_sanitize_js_url'
-	));
-	$wp_customize->add_control(
-		new WP_Customize_Image_Control($wp_customize, 'esteem_header_logo_image', array(
-			'label' 		=> __( 'Upload logo for your header.', 'esteem' ),
-			'section' 	=> 'esteem_header_title_logo',
-			'settings' 	=> 'esteem_header_logo_image'
-		))
-	);
+	if ( !function_exists('the_custom_logo') || ( get_theme_mod('esteem_header_logo_image', '') != '' ) ) {
+		$wp_customize->add_setting('esteem_header_logo_image', array(
+			'default' => '',
+	      'capability' => 'edit_theme_options',
+	      'sanitize_callback' => 'esteem_sanitize_url',
+	      'sanitize_js_callback' => 'esteem_sanitize_js_url'
+		));
+		$wp_customize->add_control(
+			new WP_Customize_Image_Control($wp_customize, 'esteem_header_logo_image', array(
+				'label' 		=> __( 'Upload logo for your header.', 'esteem' ),
+				'section' 	=> 'esteem_header_title_logo',
+				'settings' 	=> 'esteem_header_logo_image'
+			))
+		);
+	}
 
 	// Header logo and text display type option
 	$wp_customize->add_section('esteem_show_logo_text_setting', array(
