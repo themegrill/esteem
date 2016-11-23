@@ -91,6 +91,7 @@ function esteem_customize_register($wp_customize) {
 		$wp_customize->add_control(
 			new WP_Customize_Image_Control($wp_customize, 'esteem_header_logo_image', array(
 				'label' 		=> __( 'Upload logo for your header.', 'esteem' ),
+				'description' => sprintf(__( '%sInfo:%s This option will be removed in upcoming update. Please go to Site Identity section to upload the theme logo.', 'esteem'  ), '<strong>', '</strong>'),
 				'section' 	=> 'esteem_header_title_logo',
 				'settings' 	=> 'esteem_header_logo_image'
 			))
