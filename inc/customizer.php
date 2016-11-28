@@ -435,6 +435,7 @@ function esteem_customize_register($wp_customize) {
       }
    }
 
+   if ( ! function_exists( 'wp_update_custom_css_post' ) ) {
    $wp_customize->add_section('esteem_custom_css_setting', array(
       'priority' => 70,
       'title' => __('Custom CSS', 'esteem'),
@@ -454,6 +455,7 @@ function esteem_customize_register($wp_customize) {
 	      'settings' => 'esteem_custom_css'
    	))
    );
+}
    // End of the Design Options
 
  /**************************************************************************************/
