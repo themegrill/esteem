@@ -438,25 +438,27 @@ function esteem_customize_register($wp_customize) {
       }
    }
 
-   $wp_customize->add_section('esteem_custom_css_setting', array(
-      'priority' => 70,
-      'title' => __('Custom CSS', 'esteem'),
-      'panel' => 'esteem_design_options'
-   ));
+   if ( ! function_exists( 'wp_update_custom_css_post' ) ) {
+	   $wp_customize->add_section('esteem_custom_css_setting', array(
+	      'priority' => 70,
+	      'title' => __('Custom CSS', 'esteem'),
+	      'panel' => 'esteem_design_options'
+	   ));
 
-   $wp_customize->add_setting('esteem_custom_css', array(
-      'default' => '',
-      'capability' => 'edit_theme_options',
-      'sanitize_callback' => 'wp_filter_nohtml_kses',
-      'sanitize_js_callback' => 'wp_filter_nohtml_kses'
-   ));
-   $wp_customize->add_control(
-   	new ESTEEM_Custom_CSS_Control($wp_customize, 'esteem_custom_css', array(
-	      'label' => __('Write your custom css.', 'esteem'),
-	      'section' => 'esteem_custom_css_setting',
-	      'settings' => 'esteem_custom_css'
-   	))
-   );
+	   $wp_customize->add_setting('esteem_custom_css', array(
+	      'default' => '',
+	      'capability' => 'edit_theme_options',
+	      'sanitize_callback' => 'wp_filter_nohtml_kses',
+	      'sanitize_js_callback' => 'wp_filter_nohtml_kses'
+	   ));
+	   $wp_customize->add_control(
+	   	new ESTEEM_Custom_CSS_Control($wp_customize, 'esteem_custom_css', array(
+		      'label' => __('Write your custom css.', 'esteem'),
+		      'section' => 'esteem_custom_css_setting',
+		      'settings' => 'esteem_custom_css'
+	   	))
+	   );
+	}
    // End of the Design Options
 
  /**************************************************************************************/
