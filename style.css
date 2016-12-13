@@ -759,6 +759,8 @@ h3#site-title{
 }
 .header-logo-image img{
 	display: block;
+	height: auto;
+	width: auto;
 }
 .header-text {
 	float: left;

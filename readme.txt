@@ -40,7 +40,9 @@ If you want to translate this theme to your language, Please visit:- https://tra
 /**********************************************************/
 
 == Changelog ==
-= Version TBD =
+
+= Version 1.3.3 TBD =
+* Feature - Added the Custom Site Logo feature introduced in WordPress 4.5
 * Feature - Migrated the Custom CSS code added in theme settings to Additional CSS section introduced in WordPress 4.7
 
 = Version 1.3.2 - 2016-09-02 =
