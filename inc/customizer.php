@@ -81,7 +81,7 @@ function esteem_customize_register($wp_customize) {
   		'panel' => 'esteem_header_options'
 	));
 
-	if ( !function_exists('the_custom_logo') || ( get_theme_mod('esteem_header_logo_image', '') != '' ) ) {
+	if ( !function_exists('the_custom_logo') ) {
 		$wp_customize->add_setting('esteem_header_logo_image', array(
 			'default' => '',
 	      'capability' => 'edit_theme_options',
