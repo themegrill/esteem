@@ -40,6 +40,10 @@ If you want to translate this theme to your language, Please visit:- https://tra
 /**********************************************************/
 
 == Changelog ==
+
+= Version 1.3.2 TBD =
+* Feature - Added the Custom Site Logo feature introduced in WordPress 4.5
+
 = Version 1.3.2 - 2016-09-02 =
 * Tweaks - Introduced welcome page for theme.
 * Feature - Theme is now compatible with WooCommerce.
