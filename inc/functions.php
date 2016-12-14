@@ -56,11 +56,8 @@ function esteem_scripts_styles_method() {
    /**
     * Browser specific queuing i.e
     */
-	$esteem_user_agent = strtolower($_SERVER['HTTP_USER_AGENT']);
 	wp_enqueue_script( 'html5', ESTEEM_JS_URL . '/html5shiv.min.js', true );
-	if(preg_match('/(?i)msie [1-8]/',$esteem_user_agent)) {
-		wp_script_add_data( 'html5', 'conditional', 'lte IE 8' );
-	}
+	wp_script_add_data( 'html5', 'conditional', 'lte IE 8' );
 
 	wp_enqueue_script( 'esteem-navigation', ESTEEM_JS_URL . '/navigation.js', array( 'jquery' ), false, true );
 
