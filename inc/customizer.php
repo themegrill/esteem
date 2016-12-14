@@ -470,44 +470,46 @@ function esteem_customize_register($wp_customize) {
       'title' => __('Additional', 'esteem')
    ));
 
-	// Favicon Activate Option
-	$wp_customize->add_section('esteem_favicon_setting', array(
-		'title'     => __( 'Activate favicon', 'esteem' ),
-		'priority'  => 10,
-  		'panel' => 'esteem_additional_options'
-	));
+	if ( ! function_exists( 'has_site_icon' ) || ( ! has_site_icon() && ( get_theme_mod( 'esteem_favicon', '' ) != '' ) ) ) {
+		// Favicon Activate Option
+		$wp_customize->add_section('esteem_favicon_setting', array(
+			'title'     => __( 'Activate favicon', 'esteem' ),
+			'priority'  => 10,
+	  		'panel' => 'esteem_additional_options'
+		));
 
-	$wp_customize->add_setting('esteem_activate_favicon',	array(
-		'default' => 0,
-      'capability' => 'edit_theme_options',
-		'sanitize_callback' => 'esteem_sanitize_checkbox'
-	));
-	$wp_customize->add_control('esteem_activate_favicon',	array(
-		'type' => 'checkbox',
-		'label' => __('Check to activate favicon. Upload fav icon from below option', 'esteem' ),
-		'section' => 'esteem_favicon_setting'
-	));
+		$wp_customize->add_setting('esteem_activate_favicon',	array(
+			'default' => 0,
+	      'capability' => 'edit_theme_options',
+			'sanitize_callback' => 'esteem_sanitize_checkbox'
+		));
+		$wp_customize->add_control('esteem_activate_favicon',	array(
+			'type' => 'checkbox',
+			'label' => __('Check to activate favicon. Upload fav icon from below option', 'esteem' ),
+			'section' => 'esteem_favicon_setting'
+		));
 
-	// Favicon Upload Option
-	$wp_customize->add_section('esteem_favicon_upload_setting', array(
-		'title'     => __( 'Upload favicon', 'esteem' ),
-		'priority'  => 20,
-  		'panel' => 'esteem_additional_options'
-	));
+		// Favicon Upload Option
+		$wp_customize->add_section('esteem_favicon_upload_setting', array(
+			'title'     => __( 'Upload favicon', 'esteem' ),
+			'priority'  => 20,
+	  		'panel' => 'esteem_additional_options'
+		));
 
-	$wp_customize->add_setting('esteem_favicon', array(
-		'default' => '',
-      'capability' => 'edit_theme_options',
-      'sanitize_callback' => 'esteem_sanitize_url',
-      'sanitize_js_callback' => 'esteem_sanitize_js_url'
-	));
-	$wp_customize->add_control(
-		new WP_Customize_Image_Control($wp_customize, 'esteem_favicon', array(
-			'label' 		=> __( 'Upload favicon for your site.', 'esteem' ),
-			'section' 	=> 'esteem_favicon_upload_setting',
-			'settings' 	=> 'esteem_favicon'
-		))
-	);
+		$wp_customize->add_setting('esteem_favicon', array(
+			'default' => '',
+	      'capability' => 'edit_theme_options',
+	      'sanitize_callback' => 'esteem_sanitize_url',
+	      'sanitize_js_callback' => 'esteem_sanitize_js_url'
+		));
+		$wp_customize->add_control(
+			new WP_Customize_Image_Control($wp_customize, 'esteem_favicon', array(
+				'label' 		=> __( 'Upload favicon for your site.', 'esteem' ),
+				'section' 	=> 'esteem_favicon_upload_setting',
+				'settings' 	=> 'esteem_favicon'
+			))
+		);
+	}
 
  /**************************************************************************************/
 
