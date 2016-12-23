@@ -41,7 +41,7 @@ If you want to translate this theme to your language, Please visit:- https://tra
 
 == Changelog ==
 
-= Version 1.3.3 TBD =
+= Version 1.3.3 - 2016-12-23 =
 * Feature - Added the Custom Site Logo feature introduced in WordPress 4.5
 * Feature - Migrated the Custom CSS code added in theme settings to Additional CSS section introduced in WordPress 4.7
 * Feature - Added support for Site Icon introduced in WordPress 4.3
