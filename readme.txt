@@ -43,6 +43,7 @@ If you want to translate this theme to your language, Please visit:- https://tra
 
 = Version =
 * Added - Support for Video Headers introduced in WordPress 4.7.
+* Tweaks - Remove the older header logo data properly.
 
 = Version 1.3.3 - 2016-12-23 =
 * Feature - Added the Custom Site Logo feature introduced in WordPress 4.5
