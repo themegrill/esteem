@@ -41,7 +41,7 @@ If you want to translate this theme to your language, Please visit:- https://tra
 
 == Changelog ==
 
-= Version =
+= Version 1.3.4 - 2016-01-18 =
 * Added - Support for Video Headers introduced in WordPress 4.7.
 * Tweaks - Remove the older header logo data properly.
 
