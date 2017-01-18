@@ -30,15 +30,13 @@ wp_head();
 						<?php if( ( get_theme_mod( 'esteem_show_header_logo_text', 'text_only' ) == 'both' || get_theme_mod( 'esteem_show_header_logo_text', 'text_only' ) == 'logo_only' ) ) {
 						?>
 							<div class="header-logo-image">
-								<?php if ( get_theme_mod('esteem_header_logo_image', '') != '') { ?>
+								<?php if ( function_exists( 'the_custom_logo' ) && has_custom_logo( $blog_id = 0 ) ) {
+									the_custom_logo();
+								} elseif ( get_theme_mod('esteem_header_logo_image', '') != '' ) { ?>
 									<a rel="home" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" href="<?php echo esc_url( home_url( '/' ) ); ?>">
 										<img alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" src="<?php echo get_theme_mod( 'esteem_header_logo_image', '' ); ?>">
 									</a>
 								<?php } ?>
-
-								<?php if (function_exists('the_custom_logo') && has_custom_logo( $blog_id = 0 )) {
-									esteem_the_custom_logo();
-								} ?>
 							</div><!-- .header-logo-image -->
 						<?php }
 

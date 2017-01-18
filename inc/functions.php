@@ -392,18 +392,6 @@ function esteem_custom_css_migrate() {
 }
 add_action( 'after_setup_theme', 'esteem_custom_css_migrate' );
 
-// Displays the site logo
-if ( ! function_exists( 'esteem_the_custom_logo' ) ) {
-	/**
-	 * Displays the optional custom logo.
-	 */
-	function esteem_the_custom_logo() {
-		if ( function_exists( 'the_custom_logo' )  && ( get_theme_mod( 'esteem_header_logo_image','' ) == '') ) {
-			the_custom_logo();
-		}
-	}
-}
-
 /**
  * Function to transfer the Header Logo added in Customizer Options of theme to Site Logo in Site Identity section
  */
