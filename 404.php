@@ -6,9 +6,8 @@
  * @subpackage Esteem
  * @since Esteem 1.0
  */
-?>
 
-<?php get_header(); ?>
+get_header(); ?>
 
 	<?php do_action( 'esteem_before_body_content' ); ?>
 

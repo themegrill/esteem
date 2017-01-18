@@ -8,13 +8,12 @@
  * @subpackage Esteem
  * @since Esteem 1.0
  */
-?>
 
-<?php get_header(); // Loads the header.php template. ?>
+get_header(); // Loads the header.php template. ?>
 
 
 	<div id="content" class="site-content">
-		<?php 
+		<?php
 		if( is_active_sidebar( 'esteem_business_page_sidebar' ) ) {
 			// Calling the business page top section sidebar if it exists.
 			if ( !function_exists( 'dynamic_sidebar' ) || !dynamic_sidebar( 'esteem_business_page_sidebar' ) ):
