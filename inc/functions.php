@@ -416,7 +416,7 @@ function esteem_site_logo_migrate() {
 			set_theme_mod( 'custom_logo', $customizer_site_logo_id );
 
 			// Delete the old Site Logo theme_mod option.
-			remove_theme_mod( 'esteem_logo' );
+			remove_theme_mod( 'esteem_header_logo_image' );
 		}
 	}
 }
