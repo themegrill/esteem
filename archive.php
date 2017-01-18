@@ -6,9 +6,8 @@
  * @subpackage Esteem
  * @since Esteem 1.0
  */
-?>
 
-<?php get_header(); ?>
+get_header(); ?>
 
 	<?php do_action( 'esteem_before_body_content' ); ?>
 
@@ -28,14 +27,14 @@
 			<?php else : ?>
 
 				<?php get_template_part( 'no-results', 'archive' ); ?>
-				
+
 			<?php endif; ?>
 
 		</div><!-- #content -->
 	</div><!-- #primary -->
-	
+
 	<?php esteem_sidebar_select(); ?>
-	
+
 	<?php do_action( 'esteem_after_body_content' ); ?>
 
 <?php get_footer(); ?>

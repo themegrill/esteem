@@ -1,4 +1,4 @@
-<?php 
+<?php
 /**
  * Theme Page Section for our theme.
  *
@@ -6,9 +6,8 @@
  * @subpackage Esteem
  * @since Esteem 1.0
  */
-?>
 
-<?php get_header(); ?>
+get_header(); ?>
 
 	<?php do_action( 'esteem_before_body_content' ); ?>
 
@@ -22,7 +21,7 @@
 					do_action( 'esteem_before_comments_template' );
 					// If comments are open or we have at least one comment, load up the comment template
 					if ( comments_open() || '0' != get_comments_number() )
-						comments_template();					
+						comments_template();
 	      			do_action ( 'esteem_after_comments_template' );
 				?>
 
@@ -30,7 +29,7 @@
 
 		</div><!-- #content -->
 	</div><!-- #primary -->
-	
+
 	<?php esteem_sidebar_select(); ?>
 
 	<?php do_action( 'esteem_after_body_content' ); ?>
