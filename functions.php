@@ -240,6 +240,12 @@ function esteem_include_files() {
 }
 do_action( 'esteem_init' );
 
+/**
+ * Load Demo Importer Configs.
+ */
+if ( class_exists( 'TG_Demo_Importer' ) ) {
+	require get_template_directory() . '/inc/demo-config.php';
+}
 
 /**
  * Assign the Esteem version to a variable.
