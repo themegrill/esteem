@@ -239,7 +239,7 @@ function esteem_footer_copyright() {
 
 	$wp_link = '<a href="'.esc_url( 'http://wordpress.org' ).'" target="_blank" title="' . esc_attr__( 'WordPress', 'esteem' ) . '"><span>' . __( 'WordPress', 'esteem' ) . '</span></a>';
 
-	$tg_link =  '<a href="'.esc_url( 'http://themegrill.com/themes/esteem' ).'" target="_blank" title="'.esc_attr__( 'ThemeGrill', 'esteem' ).'" rel="designer"><span>'.__( 'ThemeGrill', 'esteem') .'</span></a>';
+	$tg_link =  '<a href="'.esc_url( 'https://themegrill.com/themes/esteem' ).'" target="_blank" title="'.esc_attr__( 'ThemeGrill', 'esteem' ).'" rel="designer"><span>'.__( 'ThemeGrill', 'esteem') .'</span></a>';
 
 	$default_footer_value = sprintf( __( 'Copyright &copy; %1$s %2$s.', 'esteem' ), date( 'Y' ), $site_link ).' '.sprintf( __( 'Powered by %s.', 'esteem' ), $wp_link ).' '.sprintf( __( 'Theme: %1$s by %2$s.', 'esteem' ), 'Esteem', $tg_link );
 

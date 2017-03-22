@@ -17,23 +17,23 @@ function esteem_customize_register($wp_customize) {
          //Add Theme instruction, Support Forum, Demo Link, Rating Link
          $important_links = array(
             'theme-info' => array(
-               'link' => esc_url('http://themegrill.com/themes/esteem/'),
+               'link' => esc_url('https://themegrill.com/themes/esteem/'),
                'text' => __('Theme Info', 'esteem'),
             ),
             'support' => array(
-               'link' => esc_url('http://themegrill.com/support-forum/'),
+               'link' => esc_url('https://themegrill.com/support-forum/'),
                'text' => __('Support Forum', 'esteem'),
             ),
             'documentation' => array(
-               'link' => esc_url('http://docs.themegrill.com/esteem/'),
+               'link' => esc_url('https://docs.themegrill.com/esteem/'),
                'text' => __('Documentation', 'esteem'),
             ),
             'demo' => array(
-               'link' => esc_url('http://themegrill.com/themes/esteem-pro/'),
+               'link' => esc_url('https://themegrill.com/themes/esteem-pro/'),
                'text' => __('View Pro', 'esteem'),
             ),
             'view-pro' => array(
-               'link' => esc_url('http://demo.themegrill.com/esteem/'),
+               'link' => esc_url('https://demo.themegrill.com/esteem/'),
                'text' => __('View Demo', 'esteem'),
             ),
             'rating' => array(

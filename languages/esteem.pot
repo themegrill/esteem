@@ -907,7 +907,7 @@ msgid "Meta"
 msgstr ""
 
 #. Theme URI of the plugin/theme
-msgid "http://themegrill.com/themes/esteem/"
+msgid "https://themegrill.com/themes/esteem/"
 msgstr ""
 
 #. Description of the plugin/theme
@@ -918,12 +918,12 @@ msgid ""
 "built in options panel to configure primary color, site logo, slider, "
 "sidebar layout and 3 blog layout. It's also fully compatible with popular "
 "plugins like contact Form 7, WP PageNavi and Breadcrumb Navxt and is "
-"translation ready. Get free support at http://themegrill.com/support-forum/ "
-"and check the demo at http://demo.themegrill.com/esteem/."
+"translation ready. Get free support at https://themegrill.com/support-forum/ "
+"and check the demo at https://demo.themegrill.com/esteem/."
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "http://themegrill.com"
+msgid "https://themegrill.com"
 msgstr ""
 
 #. Template Name of the plugin/theme
