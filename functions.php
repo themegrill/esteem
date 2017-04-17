@@ -71,8 +71,11 @@ function esteem_setup() {
 	   	)
 	);
 
-   // Added WooCommerce support.
-   add_theme_support( 'woocommerce' );
+	// Added WooCommerce support.
+	add_theme_support( 'woocommerce' );
+	add_theme_support( 'wc-product-gallery-zoom' );
+	add_theme_support( 'wc-product-gallery-lightbox' );
+	add_theme_support( 'wc-product-gallery-slider' );
 
 	// Switches default core markup for comment form, and comments
 	// to output valid HTML5.
