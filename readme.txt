@@ -40,7 +40,7 @@ If you want to translate this theme to your language, Please visit:- https://tra
 /**********************************************************/
 
 == Changelog ==
-= Version TBD =
+= Version 1.3.5 - 2017-05-01 =
 * Feature - Added compatibility for ThemeGrill Demo Importer plugin
 * Tweaks - Add theme support for WooCommerce 3.0's new gallery feature
 
