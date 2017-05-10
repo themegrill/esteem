@@ -12,6 +12,7 @@ Resources packed within the theme.
 * Image used on screenshot is our own creation[licensed under GPL] which also makes use of this image http://www.pexels.com/photo/922/ which is under CC0 License.
 * HTML5 Shiv @afarkas @jdalton @jon_neal @rem | MIT/GPL2 Licensed
 * The script jquery.cycle.all.js is dual licensed under GPL & MIT
+* TGM-Plugin-Activation by Thomas Griffin, Gary Jones, Juliette Reinders Folmer | GPL v2 Licensed
 * Other custom js files are our own creation and is licensed under the same license as this theme.
 
 All other resources and theme elements are licensed under the [GNU GPL](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html), version 2 or later.
@@ -40,10 +41,12 @@ If you want to translate this theme to your language, Please visit:- https://tra
 /**********************************************************/
 
 == Changelog ==
+= Version TBD =
+* Tweaks - Add TGMPA to recommend ThemeGrill Demo Importer plugin
+
 = Version 1.3.5 - 2017-05-01 =
 * Feature - Added compatibility for ThemeGrill Demo Importer plugin
 * Tweaks - Add theme support for WooCommerce 3.0's new gallery feature
-
 
 = Version 1.3.4 - 2016-01-18 =
 * Added - Support for Video Headers introduced in WordPress 4.7.

@@ -261,4 +261,9 @@ if ( is_admin() ) {
 	require get_template_directory() . '/inc/admin/class-esteem-admin.php';
 }
 
+/**
+ * Load TGMPA Configs.
+ */
+require_once( ESTEEM_INCLUDES_DIR . '/tgm-plugin-activation/class-tgm-plugin-activation.php' );
+require_once( ESTEEM_INCLUDES_DIR . '/tgm-plugin-activation/tgmpa-esteem.php' );
 ?>
