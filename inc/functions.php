@@ -200,7 +200,7 @@ function esteem_continue_reading() {
 
 /****************************************************************************************/
 
-add_action('wp_head', 'esteem_custom_css');
+add_action('wp_head', 'esteem_custom_css', 100);
 /**
  * Hooks the Custom Internal CSS to head section
  */
