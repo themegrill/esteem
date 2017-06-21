@@ -46,7 +46,7 @@ function esteem_scripts_styles_method() {
 	 */
 	if( get_theme_mod( 'esteem_activate_slider', '0' ) == '1' ) {
 		if ( is_home() || is_front_page() ) {
-			wp_enqueue_script( 'esteem-slider', ESTEEM_JS_URL . '/esteem-slider-setting.js', array( 'jquery_cycle', 'jquery-cycle2-swipe' ), false, true );
+			wp_enqueue_script( 'esteem_slider', ESTEEM_JS_URL . '/esteem-slider-setting.js', array( 'jquery_cycle', 'jquery-cycle2-swipe' ), false, true );
 
 		}
 	}
