@@ -89,9 +89,8 @@ function esteem_slider() { ?>
 				}
 			}
 			?>
+			<nav id="controllers" class="clearfix"></nav><!-- #controllers -->
 		</div>
-		<nav id="controllers" class="clearfix">
-		</nav><!-- #controllers -->
 	</div><!-- .slider-cycle -->
 <?php
 }

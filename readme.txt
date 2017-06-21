@@ -41,6 +41,9 @@ If you want to translate this theme to your language, Please visit:- https://tra
 /**********************************************************/
 
 == Changelog ==
+= TBD =
+* Feature - jQuery cycle plugin for slider upgraded to jQuery cycle2 v2.1.6 with swipe.
+
 = Version 1.3.6 - 2017-05-10 =
 * Tweaks - Add TGMPA to recommend ThemeGrill Demo Importer plugin
 

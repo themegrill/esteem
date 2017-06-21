@@ -36,16 +36,17 @@ function esteem_scripts_styles_method() {
 		wp_enqueue_script( 'comment-reply' );
 
 	/**
-	 * Register JQuery cycle js file for slider.
+	 * Register JQuery cycle 2 js file for slider.
 	 */
-	wp_register_script( 'jquery_cycle', ESTEEM_JS_URL . '/jquery.cycle.all.min.js', array( 'jquery' ), '3.0.3', true );
+	wp_register_script( 'jquery_cycle', ESTEEM_JS_URL . '/jquery.cycle2.min.js', array( 'jquery' ), '2.1.6', true );
+	wp_register_script( 'jquery-cycle2-swipe', ESTEEM_JS_URL . '/jquery.cycle2.swipe.min.js', array( 'jquery' ), false, true );
 
 	/**
 	 * Enqueue Slider setup js file.
 	 */
 	if( get_theme_mod( 'esteem_activate_slider', '0' ) == '1' ) {
 		if ( is_home() || is_front_page() ) {
-			wp_enqueue_script( 'esteem_slider', ESTEEM_JS_URL . '/esteem-slider-setting.js', array( 'jquery_cycle' ), false, true );
+			wp_enqueue_script( 'esteem_slider', ESTEEM_JS_URL . '/esteem-slider-setting.js', array( 'jquery_cycle', 'jquery-cycle2-swipe' ), false, true );
 
 		}
 	}
