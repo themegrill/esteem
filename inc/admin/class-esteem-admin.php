@@ -122,7 +122,7 @@ class Esteem_Admin {
 				<div class="about-text"><?php echo $theme->display( 'Description' ); ?></div>
 
 				<div class="esteem-screenshot">
-					<img src="<?php echo esc_url( get_template_directory_uri() ) . '/screenshot.png'; ?>" />
+					<img src="<?php echo esc_url( get_template_directory_uri() ) . '/screenshot.jpg'; ?>" />
 				</div>
 			</div>
 		</div>
@@ -134,7 +134,7 @@ class Esteem_Admin {
 
 			<a href="<?php echo esc_url( 'https://themegrill.com/themes/esteem-pro/' ); ?>" class="button button-primary docs" target="_blank"><?php esc_html_e( 'View PRO version', 'esteem' ); ?></a>
 
-			<a href="<?php echo esc_url( 'https://wordpress.org/support/view/theme-reviews/esteem?filter=5#postform' ); ?>" class="button button-secondary docs" target="_blank"><?php esc_html_e( 'Rate this theme', 'esteem' ); ?></a>
+			<a href="<?php echo esc_url( 'https://wordpress.org/support/theme/esteem/reviews/?filter=5' ); ?>" class="button button-secondary docs" target="_blank"><?php esc_html_e( 'Rate this theme', 'esteem' ); ?></a>
 		</p>
 
 		<h2 class="nav-tab-wrapper">
