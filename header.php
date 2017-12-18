@@ -98,7 +98,7 @@ wp_head();
 				}
    			}
 
-			$esteem_slogan 				= get_theme_mod('esteem_slogan');
+			$esteem_slogan 				    = get_theme_mod('esteem_slogan');
 			$esteem_sub_slogan		 		= get_theme_mod('esteem_sub_slogan');
 			$esteem_button_text 			= get_theme_mod('esteem_button_text');
 			$esteem_button_redirect_link 	= get_theme_mod('esteem_button_redirect_link');

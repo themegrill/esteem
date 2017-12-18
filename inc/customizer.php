@@ -7,20 +7,23 @@
  * @since Esteem 1.2.7
  */
 function esteem_customize_register($wp_customize) {
+   // Transport postMessage variable set
+   $customizer_selective_refresh = isset( $wp_customize->selective_refresh ) ? 'postMessage' : 'refresh';
+
    $wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
    $wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 
-   // if ( isset( $wp_customize->selective_refresh ) ) {
-   //   $wp_customize->selective_refresh->add_partial( 'blogname', array(
-   //      'selector'        => '#site-title a',
-   //      'render_callback' => 'esteem_customize_partial_blogname',
-   //   ) );
+   if ( isset( $wp_customize->selective_refresh ) ) {
+     $wp_customize->selective_refresh->add_partial( 'blogname', array(
+        'selector'        => '#site-title a',
+        'render_callback' => 'esteem_customize_partial_blogname',
+     ) );
 
-   //   $wp_customize->selective_refresh->add_partial( 'blogdescription', array(
-   //      'selector'        => '.site-description',
-   //      'render_callback' => 'esteem_customize_partial_blogdescription',
-   //   ) );
-   // }
+     $wp_customize->selective_refresh->add_partial( 'blogdescription', array(
+        'selector'        => '.site-description',
+        'render_callback' => 'esteem_customize_partial_blogdescription',
+     ) );
+   }
 
 	// Theme important links started
    class Esteem_Important_Links extends WP_Customize_Control {
@@ -162,14 +165,23 @@ function esteem_customize_register($wp_customize) {
    ));
 
 	$wp_customize->add_setting('esteem_slogan', array(
-		'default' => '',
-      'capability' => 'edit_theme_options',
+		'default'           => '',
+      'capability'        => 'edit_theme_options',
+      'transport'         => $customizer_selective_refresh,
       'sanitize_callback' => 'esteem_text_sanitize'
 	));
 	$wp_customize->add_control('esteem_slogan', array(
-		'label' => __( 'Enter the main Slogan', 'esteem' ),
+		'label'   => __( 'Enter the main Slogan', 'esteem' ),
 		'section' => 'esteem_slogan_setting'
 	));
+
+   // Selective refresh for slogan
+   if ( isset( $wp_customize->selective_refresh ) ) {
+      $wp_customize->selective_refresh->add_partial( 'esteem_slogan', array(
+         'selector'        => '.promo-title',
+         'render_callback' => 'esteem_slogan',
+      ) );
+   }
 
 	// Promo Sub Slogan
    $wp_customize->add_section('esteem_sub_slogan_setting', array(
@@ -179,14 +191,24 @@ function esteem_customize_register($wp_customize) {
    ));
 
 	$wp_customize->add_setting('esteem_sub_slogan', array(
-		'default' => '',
-      'capability' => 'edit_theme_options',
+		'default'           => '',
+      'capability'        => 'edit_theme_options',
+      'transport'         => $customizer_selective_refresh,
       'sanitize_callback' => 'esteem_text_sanitize'
 	));
+
 	$wp_customize->add_control('esteem_sub_slogan', array(
 		'label' => __( 'Enter the sub slogan', 'esteem' ),
 		'section' => 'esteem_sub_slogan_setting'
 	));
+
+   // Selective refresh for sub slogan
+   if ( isset( $wp_customize->selective_refresh ) ) {
+      $wp_customize->selective_refresh->add_partial( 'esteem_sub_slogan', array(
+         'selector'        => '.promo-text',
+         'render_callback' => 'esteem_sub_slogan',
+      ) );
+   }
 
 	// Promo Button Text
    $wp_customize->add_section('esteem_button_text_setting', array(
@@ -196,14 +218,23 @@ function esteem_customize_register($wp_customize) {
    ));
 
 	$wp_customize->add_setting('esteem_button_text', array(
-		'default' => '',
-      'capability' => 'edit_theme_options',
+		'default'           => '',
+      'capability'        => 'edit_theme_options',
+      'transport'         => $customizer_selective_refresh,
       'sanitize_callback' => 'wp_filter_nohtml_kses'
 	));
 	$wp_customize->add_control('esteem_button_text', array(
 		'label' => __( 'Button Text', 'esteem' ),
 		'section' => 'esteem_button_text_setting'
 	));
+
+   // Selective refresh for read more button
+   if ( isset( $wp_customize->selective_refresh ) ) {
+      $wp_customize->selective_refresh->add_partial( 'esteem_button_text', array(
+         'selector'        => '.promo-action',
+         'render_callback' => 'esteem_button_text',
+      ) );
+   }
 
 	// Promo Button Text Link
    $wp_customize->add_section('esteem_button_link_setting', array(
@@ -699,6 +730,24 @@ function esteem_customize_partial_blogname() {
  */
 function esteem_customize_partial_blogdescription() {
    bloginfo( 'description' );
+}
+
+// Function for slogan to support selective refresh
+function esteem_slogan() {
+   $esteem_slogan = get_theme_mod('esteem_slogan');
+   echo esc_html( $esteem_slogan );
+}
+
+// Function for sub slogan to support selective refresh
+function esteem_sub_slogan() {
+   $esteem_sub_slogan = get_theme_mod('esteem_sub_slogan');
+   echo esc_html( $esteem_sub_slogan );
+}
+
+// Function for slogn readmor button to support selective refresh
+function esteem_button_text() {
+   $esteem_button_text = get_theme_mod('esteem_button_text');
+   echo esc_html( $esteem_button_text );
 }
 
 /*****************************************************************************************/
