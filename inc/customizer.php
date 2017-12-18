@@ -574,8 +574,9 @@ function esteem_customize_register($wp_customize) {
 	));
 
 	$wp_customize->add_setting('esteem_activate_slider',	array(
-		'default' => 0,
-      'capability' => 'edit_theme_options',
+		'default'           => 0,
+      'capability'        => 'edit_theme_options',
+      'transport'         => $customizer_selective_refresh,
 		'sanitize_callback' => 'esteem_sanitize_checkbox'
 	));
 	$wp_customize->add_control('esteem_activate_slider',	array(
@@ -583,6 +584,14 @@ function esteem_customize_register($wp_customize) {
 		'label' => __('Check to activate slider.', 'esteem' ),
 		'section' => 'esteem_activate_slider_setting'
 	));
+
+   // Selective refresh for slider activation
+   if ( isset( $wp_customize->selective_refresh ) ) {
+      $wp_customize->selective_refresh->add_partial( 'esteem_activate_slider', array(
+         'selector'        => '#featured-slider',
+         'render_callback' => '',
+      ) );
+   }
 
 	// Slide options
 	for( $i=1; $i<=4; $i++) {
