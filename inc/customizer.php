@@ -456,9 +456,10 @@ function esteem_customize_register($wp_customize) {
    ));
 
    $wp_customize->add_setting('esteem_primary_color', array(
-      'default' => '#ED564B',
-      'capability' => 'edit_theme_options',
-      'sanitize_callback' => 'esteem_color_option_hex_sanitize',
+      'default'              => '#ED564B',
+      'capability'           => 'edit_theme_options',
+      'transport'            => 'postMessage',
+      'sanitize_callback'    => 'esteem_color_option_hex_sanitize',
       'sanitize_js_callback' => 'esteem_color_escaping_option_sanitize'
    ));
    $wp_customize->add_control(
