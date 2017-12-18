@@ -270,13 +270,14 @@ function esteem_customize_register($wp_customize) {
 	));
 
 	$wp_customize->add_setting('esteem_site_layout', array(
-      'default' => 'box',
-      'capability' => 'edit_theme_options',
+      'default'           => 'box',
+      'capability'        => 'edit_theme_options',
+      'transport'         => 'postMessage',
       'sanitize_callback' => 'esteem_radio_sanitize'
    ));
    $wp_customize->add_control('esteem_site_layout', array(
-      'type' => 'radio',
-      'label' => __('Choose your site layout. The change is reflected in whole site.', 'esteem'),
+      'type'    => 'radio',
+      'label'   => __('Choose your site layout. The change is reflected in whole site.', 'esteem'),
       'section' => 'esteem_site_layout_setting',
       'choices' => array(
          'box' => __('Boxed layout', 'esteem'),
