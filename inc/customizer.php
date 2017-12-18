@@ -10,17 +10,17 @@ function esteem_customize_register($wp_customize) {
    $wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
    $wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 
-   if ( isset( $wp_customize->selective_refresh ) ) {
-     $wp_customize->selective_refresh->add_partial( 'blogname', array(
-        'selector'        => '#site-title a',
-        'render_callback' => 'esteem_customize_partial_blogname',
-     ) );
+   // if ( isset( $wp_customize->selective_refresh ) ) {
+   //   $wp_customize->selective_refresh->add_partial( 'blogname', array(
+   //      'selector'        => '#site-title a',
+   //      'render_callback' => 'esteem_customize_partial_blogname',
+   //   ) );
 
-     $wp_customize->selective_refresh->add_partial( 'blogdescription', array(
-        'selector'        => '.site-description',
-        'render_callback' => 'esteem_customize_partial_blogdescription',
-     ) );
-   }
+   //   $wp_customize->selective_refresh->add_partial( 'blogdescription', array(
+   //      'selector'        => '.site-description',
+   //      'render_callback' => 'esteem_customize_partial_blogdescription',
+   //   ) );
+   // }
 
 	// Theme important links started
    class Esteem_Important_Links extends WP_Customize_Control {
@@ -672,6 +672,16 @@ function esteem_customize_register($wp_customize) {
    }
 }
 add_action('customize_register', 'esteem_customize_register');
+
+/**
+ * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
+ *
+ * @since Ample 1.1.8
+ */
+function esteem_customize_preview_js() {
+   wp_enqueue_script( 'esteem-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), false, true );
+}
+add_action( 'customize_preview_init', 'esteem_customize_preview_js' );
 
 /**
  * Render the site title for the selective refresh partial.
