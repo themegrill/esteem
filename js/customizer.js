@@ -33,7 +33,20 @@
 		});
 	});
 
-		// Primary color option
+	/*
+	 * Shows a live preview of changing the site title color.
+	 */
+	wp.customize( 'header_textcolor', function( value ) {
+
+		value.bind( function( to ) {
+
+			jQuery( '#site-title a' ).css( 'color', to );
+
+		} ); // value.bind
+
+	} ); // wp.customize
+
+	// Primary color option
 	wp.customize( 'esteem_primary_color', function ( value ) {
 		value.bind( function ( primaryColor ) {
 			// Store internal style for primary color
