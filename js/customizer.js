@@ -50,7 +50,7 @@
 	wp.customize( 'esteem_primary_color', function ( value ) {
 		value.bind( function ( primaryColor ) {
 			// Store internal style for primary color
-			var primaryColorStyle = '<style id="spacious-internal-primary-color"> blockquote{border-left: 3px solid '  + primaryColor +'}' +
+			var primaryColorStyle = '<style id="esteem-internal-primary-color"> blockquote{border-left: 3px solid '  + primaryColor +'}' +
 			'button,html input[type="button"],input[type="reset"],input[type="submit"],#slider-title a{background:' + primaryColor +'}' +
 			'a,a:visited,a:hover,a:focus,a:active,.main-navigation li:hover > a,.main-navigation li.current_page_item > a,.main-navigation li.current-menu-item > a,.main-navigation li.current-menu-ancestor > a,#site-title a span,#site-title a:hover,#site-title a:focus,#site-title a:active,#controllers a:hover, #controllers a.active,.widget ul li a:hover,.widget ul li a:hover:before,.services-block .read-more:hover,.service-image-wrap,.service-title a:hover,.entry-meta a:hover,.entry-title a:hover,.search-wrap button:before,#site-generator a:hover, #colophon .widget a:hover,.menu-toggle:before{color: ' + primaryColor +'}' +
 			'.main-navigation ul ul {border-top: 4px solid' + primaryColor +'}' +
