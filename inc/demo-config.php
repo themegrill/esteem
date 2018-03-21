@@ -16,6 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Setup demo importer packages.
  *
  * @param  array $packages
+ *
  * @return array
  */
 function esteem_demo_importer_packages( $packages ) {
@@ -23,6 +24,11 @@ function esteem_demo_importer_packages( $packages ) {
 		'esteem-free' => array(
 			'name'    => esc_html__( 'Esteem', 'esteem' ),
 			'preview' => 'https://demo.themegrill.com/esteem/',
+		),
+		'esteem-pro'  => array(
+			'name'     => esc_html__( 'Esteem Pro', 'esteem' ),
+			'preview'  => 'https://demo.themegrill.com/esteem-pro/',
+			'pro_link' => 'https://themegrill.com/themes/esteem/',
 		),
 	);
 
