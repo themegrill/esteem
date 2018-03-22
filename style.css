@@ -47,6 +47,11 @@ html {
 body {
 	background: #eaeaea;
 }
+
+* {
+    box-sizing: border-box;
+}
+
 article,
 aside,
 details,
@@ -681,7 +686,7 @@ input[type="password"] {
 	display: none;
 }
 #masthead input.s {
-	width: 150px;
+	width: 167px;
 }
 #search-form span {
 	background-color: #0FBE7C;
@@ -1408,7 +1413,7 @@ h3#site-title{
 	border-left: 1px solid #eaeaea;
 	border-right: 1px solid #eaeaea;
 	border-bottom: 1px solid #eaeaea;
-	width: 222px;
+	width: 250px;
 }
 .search-wrap button:before {
 	color: #ED564B;
