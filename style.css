@@ -885,6 +885,13 @@ h3#site-title{
 	background-color: #ED564B;
 }
 
+/* =SLIDER width
+----------------------------------------------- */
+
+#featured-slider {
+    width: 100%;
+}
+
 /* =PROMO BOX
 ----------------------------------------------- */
 .promo-wrap {
