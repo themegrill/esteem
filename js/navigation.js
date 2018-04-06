@@ -4,14 +4,15 @@
  * Handles toggling the navigation menu for small screens.
  */
 ( function() {
-	var container, button, menu;
+	var container, button, menu, links, i, len;
 
 	container = document.getElementById( 'site-navigation' );
 	if ( ! container ) {
 		return;
 	}
 
-	button = container.getElementsByTagName( 'h3' )[0];
+	// hamburger button
+	button = container.getElementsByClassName( 'menu-toggle' )[0];
 	if ( 'undefined' === typeof button ) {
 		return;
 	}
@@ -24,15 +25,20 @@
 		return;
 	}
 
+	menu.setAttribute( 'aria-expanded', 'false' );
 	if ( -1 === menu.className.indexOf( 'nav-menu' ) ) {
-		menu.className += 'nav-menu';
+		menu.className += ' nav-menu';
 	}
 
 	button.onclick = function() {
 		if ( -1 !== container.className.indexOf( 'main-small-navigation' ) ) {
 			container.className = container.className.replace( 'main-small-navigation', 'main-navigation' );
+			button.setAttribute( 'aria-expanded', 'false' );
+			menu.setAttribute( 'aria-expanded', 'false' );
 		} else {
 			container.className = container.className.replace( 'main-navigation', 'main-small-navigation' );
+			button.setAttribute( 'aria-expanded', 'true' );
+			menu.setAttribute( 'aria-expanded', 'true' );
 		}
 	};
 
