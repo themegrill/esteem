@@ -60,7 +60,7 @@
 			'.service-border{ border: 3px solid ' + primaryColor +'}' +
 			'.blog-medium .post-featured-image, .blog-large .post-featured-image, .category .post-featured-image, .search .post-featured-image{border-bottom: 4px solid ' + primaryColor +'}' +
 			'.search-form-top,#colophon{border-top: 3px solid ' + primaryColor +'}' +
-			'a#scroll-up{ background-color: ' + primaryColor +'}' +
+			'a#scroll-up,.better-responsive-menu .sub-toggle { background-color: ' + primaryColor +'}' +
 			 '.woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt, .woocommerce span.onsale,.woocommerce #respond input#submit:hover, .woocommerce a.button:hover, .woocommerce button.button:hover, .woocommerce input.button:hover, .woocommerce #respond input#submit.alt:hover, .woocommerce a.button.alt:hover, .woocommerce button.button.alt:hover, .woocommerce input.button.alt:hover {background-color: ' + primaryColor +';}' +
 			  '.woocommerce ul.products li.product .price .amount,.entry-summary .price .amount,.woocommerce .woocommerce-message::before, .count{color: ' + primaryColor +';}' +
 			   '.woocommerce .woocommerce-message {border-top-color: ' + primaryColor +';} </style>';
