@@ -507,7 +507,9 @@ a:active {
 .main-navigation li.current-menu-ancestor > a{
 	color: #ED564B;
 }
-
+.main-navigation ul li.focus > ul {
+	display: block;
+}
 /* Small menu */
 .sub-toggle{
 	display: none;
