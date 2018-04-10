@@ -1,7 +1,47 @@
 jQuery( document ).ready( function () {
-	jQuery( '.search-top' ).click( function () {
-		jQuery( '#masthead .search-form-top' ).toggle();
-	} );
+	/**
+	 * Search
+	 */
+	( function () {
+		var searchBox, icon;
+
+		searchBox = document.getElementById( 'masthead' ).getElementsByClassName( 'search-form-top' )[0];
+		icon = document.getElementById( 'masthead' ).getElementsByClassName( 'search-top' )[0];
+
+		var showHideSearchForm = function( action ) {
+			if ( action === 'hide' ) {
+				searchBox.classList.remove( 'active' );
+				return;
+			}
+			// Show/hide search form
+			searchBox.classList.toggle( 'active' );
+
+			// autofocus
+			if ( searchBox.classList.contains( 'active' ) ) {
+				searchBox.getElementsByTagName( 'input' )[0].focus();
+			}
+		};
+
+		// on search icon click
+		icon.onclick = function () {
+			showHideSearchForm();
+		};
+
+		// on esc key
+		document.addEventListener( 'keyup', function ( e ) {
+			if ( searchBox.classList.contains( 'active' ) && e.keyCode === 27 ) {
+				showHideSearchForm( 'hide' );
+			}
+		} );
+
+		// on click outside form
+		document.addEventListener( 'click', function (ev) {
+			if ( ev.target.closest('.search-form-top') || ev.target.closest('.search-top') ) {
+				return;
+			}
+			showHideSearchForm( 'hide' );
+		} );
+	} )();
 
 	jQuery( '#scroll-up' ).hide();
 
