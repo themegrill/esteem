@@ -1426,6 +1426,9 @@ h3#site-title{
 	border-bottom: 1px solid #eaeaea;
 	width: 250px;
 }
+.search-form-top.active {
+	display: block;
+}
 .search-wrap button:before {
 	color: #ED564B;
     content: "\f0d9";
