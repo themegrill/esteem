@@ -778,7 +778,8 @@ h3#site-title{
 }
 .hgroup-wrap-right {
 	position: relative;
-	float: right
+	float: right;
+	padding-right: 20px;
 }
 .home .site-header {
     border-bottom: 1px solid #eaeaea;
@@ -1407,7 +1408,8 @@ h3#site-title{
 	position: absolute;
     right: 0;
     top: 39px;
-    cursor: pointer;
+	cursor: pointer;
+	padding: 0 5px;
 }
 .search-form-top {
 	position: absolute;

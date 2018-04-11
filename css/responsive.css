@@ -42,6 +42,7 @@
 	}
 	.hgroup-wrap-right {
 		float: none;
+		padding-right: 0;
 	}
 	.menu-toggle,
 	.main-navigation.toggled .nav-menu {
