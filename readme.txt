@@ -41,7 +41,7 @@ If you want to translate this theme to your language, Please visit:- https://tra
 /**********************************************************/
 
 == Changelog ==
-= TBD =
+= Version 1.3.8 - 2018-04-12 =
 * Tweak - Submenu accessible in touchscreen.
 * Fix   - Submenu issue on menu item click in desktop.
 
