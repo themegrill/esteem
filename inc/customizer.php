@@ -562,6 +562,28 @@ function esteem_customize_register($wp_customize) {
 
  /**************************************************************************************/
 
+   // Author Bio Option.
+   $wp_customize->add_section( 'esteem_author_bio_section', array(
+      'priority' => 7,
+      'title'    => esc_html__( 'Author Bio Option', 'esteem' ),
+      'panel'    => 'esteem_additional_options',
+   ) );
+
+   $wp_customize->add_setting( 'esteem_author_bio_setting', array(
+      'default'           => 3,
+      'capability'        => 'edit_theme_options',
+      'sanitize_callback' => 'esteem_sanitize_checkbox',
+   ) );
+
+   $wp_customize->add_control( 'esteem_author_bio_setting', array(
+      'type'    => 'checkbox',
+      'label'   => esc_html__( 'Check to display the author bio.', 'esteem' ),
+      'setting' => 'esteem_author_bio_setting',
+      'section' => 'esteem_author_bio_section',
+   ) );
+
+ /**************************************************************************************/
+
 	/* Slider Options Area */
    $wp_customize->add_panel('esteem_slider_options', array(
       'capabitity' => 'edit_theme_options',
