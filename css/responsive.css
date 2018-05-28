@@ -113,6 +113,9 @@
 		width: 100%;
 		text-align: center;
 	}
+	.related-posts-wrapper .tg-one-third {
+		margin-bottom: 30px;
+	}
 }
 @media screen and (max-width: 600px) {
 	.search-form-top {
