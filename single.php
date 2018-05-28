@@ -19,6 +19,11 @@ get_header(); ?>
 
 				<?php get_template_part( 'navigation', 'archive' ); ?>
 
+				<?php if ( get_theme_mod( 'esteem_related_posts_activate', 0 ) == 1 ) {
+				get_template_part( 'inc/related-posts' );
+				}
+				?>
+
 				<?php
 					do_action( 'esteem_before_comments_template' );
 					// If comments are open or we have at least one comment, load up the comment template
