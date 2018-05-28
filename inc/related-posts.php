@@ -5,7 +5,7 @@
 	<div class="related-posts-wrapper">
 
 		<h4 class="related-posts-main-title">
-			<i class="fa fa-thumbs-up"></i><span><?php esc_html_e( 'You May Also Like', 'esteem' ); ?></span>
+			<i class=" icon-thumbs-up"></i><span><?php esc_html_e( 'You May Also Like', 'esteem' ); ?></span>
 		</h4>
 
 		<div class="related-posts clearfix">
