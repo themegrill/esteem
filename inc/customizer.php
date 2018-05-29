@@ -570,7 +570,7 @@ function esteem_customize_register($wp_customize) {
    ) );
 
    $wp_customize->add_setting( 'esteem_author_bio_setting', array(
-      'default'           => 3,
+      'default'           => 0,
       'capability'        => 'edit_theme_options',
       'sanitize_callback' => 'esteem_sanitize_checkbox',
    ) );
