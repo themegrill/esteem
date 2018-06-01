@@ -1092,6 +1092,32 @@ h3#site-title{
 	margin-right: 0;
 }
 
+
+/* author bio
+----------------------------------------------- */
+
+.author-box {
+	border: 1px solid #E8E8E8;
+	padding: 20px;
+	background: #F8F8F8;
+}
+
+.author-img {
+	float: left;
+    width: 80px;
+	margin-right: 18px;
+}
+
+.avatar {
+	border-radius: 50%;
+}
+
+.author-description-wrapper h4 {
+	clear: initial;
+}
+
+
+
 /* =WIDGET
 ----------------------------------------------- */
 .widget {
