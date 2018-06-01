@@ -41,7 +41,7 @@ If you want to translate this theme to your language, Please visit:- https://tra
 /**********************************************************/
 
 == Changelog ==
-= TBD =
+= Version 1.3.9 - 2018-06-01 =
 * Feature - Added Author Bio display option
 * Feature - Added Related posts display option
 
