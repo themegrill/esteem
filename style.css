@@ -1022,6 +1022,9 @@ h3#site-title{
 .related-posts-main-title {
 	margin-bottom: 20px;
 }
+.related-posts-wrapper {
+	margin-bottom: 30px;
+}
 .related-posts-wrapper .post-thumbnails {
 	margin-bottom: 10px;
 }
