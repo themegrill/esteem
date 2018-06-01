@@ -30,12 +30,16 @@ get_header(); ?>
 					</div>
 				<?php } ?>
 
+				<?php if ( get_theme_mod( 'esteem_related_posts_activate', 0 ) == 1 ) {
+					get_template_part( 'inc/related-posts' );
+				} ?>
+
 				<?php
-					do_action( 'esteem_before_comments_template' );
-					// If comments are open or we have at least one comment, load up the comment template
-					if ( comments_open() || '0' != get_comments_number() )
-						comments_template();
-	      		do_action ( 'esteem_after_comments_template' );
+				do_action( 'esteem_before_comments_template' );
+				// If comments are open or we have at least one comment, load up the comment template
+				if ( comments_open() || '0' != get_comments_number() )
+					comments_template();
+				do_action ( 'esteem_after_comments_template' );
 				?>
 
 			<?php endwhile; ?>
