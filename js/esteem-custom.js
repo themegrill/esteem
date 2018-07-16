@@ -6,9 +6,13 @@ jQuery( document ).ready( function () {
 		var searchBox, icon;
 
 		searchBox = document.getElementById( 'masthead' ).getElementsByClassName( 'search-form-top' )[0];
-		icon = document.getElementById( 'masthead' ).getElementsByClassName( 'search-top' )[0];
+		icon      = document.getElementById( 'masthead' ).getElementsByClassName( 'search-top' )[0];
 
-		var showHideSearchForm = function( action ) {
+		if ( typeof icon === 'undefined' ) {
+			return;
+		}
+
+		var showHideSearchForm = function ( action ) {
 			if ( action === 'hide' ) {
 				searchBox.classList.remove( 'active' );
 				return;
@@ -35,8 +39,8 @@ jQuery( document ).ready( function () {
 		} );
 
 		// on click outside form
-		document.addEventListener( 'click', function (ev) {
-			if ( ev.target.closest('.search-form-top') || ev.target.closest('.search-top') ) {
+		document.addEventListener( 'click', function ( ev ) {
+			if ( ev.target.closest( '.search-form-top' ) || ev.target.closest( '.search-top' ) ) {
 				return;
 			}
 			showHideSearchForm( 'hide' );
@@ -56,7 +60,7 @@ jQuery( document ).ready( function () {
 
 		jQuery( 'a#scroll-up' ).click( function () {
 			jQuery( 'body,html' ).animate( {
-				scrollTop: 0
+				scrollTop : 0
 			}, 800 );
 			return false;
 		} );
@@ -66,11 +70,11 @@ jQuery( document ).ready( function () {
 jQuery( document ).on( 'click', '#site-navigation .menunav-menu li.menu-item-has-children > a', function ( event ) {
 	var menuClass = jQuery( this ).parent( '.menu-item-has-children' );
 
-	if ( !menuClass.hasClass( 'focus' ) ) {
+	if ( ! menuClass.hasClass( 'focus' ) ) {
 		menuClass.addClass( 'focus' );
 		event.preventDefault();
 		menuClass.children( '.sub-menu' ).css( {
-			'display': 'block'
+			'display' : 'block'
 		} );
 	}
 } );
