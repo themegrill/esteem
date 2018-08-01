@@ -31,7 +31,7 @@ class Esteem_Demo_Importer {
 	public function __construct() {
 		$this->plugin_data = array(
 			'slug' => 'themegrill-demo-importer',
-			'name' => __( 'ThemeGrill Demo importer', 'colormag' ),
+			'name' => __( 'ThemeGrill Demo importer', 'esteem' ),
 		);
 
 		// Checks if ThemeGrill Demo Importer is installed.
@@ -73,7 +73,7 @@ class Esteem_Demo_Importer {
 	 * Add menu item.
 	 */
 	public function add_admin_menu() {
-		add_theme_page( __( 'Demo Importer', 'colormag' ), __( 'Demo Importer', 'colormag' ), 'switch_themes', 'demo-importer', array( $this, 'demo_importer' ) );
+		add_theme_page( __( 'Demo Importer', 'esteem' ), __( 'Demo Importer', 'esteem' ), 'switch_themes', 'demo-importer', array( $this, 'demo_importer' ) );
 	}
 
 	/**
