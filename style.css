@@ -491,7 +491,8 @@ a:active {
 	border-bottom: 1px solid #DFDFDF;
 }
 
-.main-navigation li:hover > a {
+.main-navigation li:hover > a,
+.main-navigation li:hover > .sub-toggle {
 	color: #ED564B;
 }
 .main-navigation ul ul :hover > a {
@@ -512,7 +513,9 @@ a:active {
 }
 /* Small menu */
 .sub-toggle{
-	display: none;
+    top: 15px;
+    right: 10px;
+	position: absolute;
 }
 .menu-toggle {
 	display: none;
