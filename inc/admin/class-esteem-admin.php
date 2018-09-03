@@ -135,7 +135,7 @@ if ( ! class_exists( 'Esteem_Admin' ) ) :
 
 				<a href="<?php echo esc_url( 'https://demo.themegrill.com/esteem/' ); ?>" class="button button-secondary docs" target="_blank"><?php esc_html_e( 'View Demo', 'esteem' ); ?></a>
 
-				<a href="<?php echo esc_url( 'https://themegrill.com/themes/esteem-pro/' ); ?>" class="button button-primary docs" target="_blank"><?php esc_html_e( 'View PRO version', 'esteem' ); ?></a>
+				<a href="<?php echo esc_url( 'https://themegrill.com/themes/esteem/?utm_source=esteem-about&utm_medium=view-pro-link&utm_campaign=view-pro#free-vs-pro' ); ?>" class="button button-primary docs" target="_blank"><?php esc_html_e( 'View PRO version', 'esteem' ); ?></a>
 
 				<a href="<?php echo esc_url( 'https://wordpress.org/support/theme/esteem/reviews/?filter=5' ); ?>" class="button button-secondary docs" target="_blank"><?php esc_html_e( 'Rate this theme', 'esteem' ); ?></a>
 			</p>
@@ -229,7 +229,7 @@ if ( ! class_exists( 'Esteem_Admin' ) ) :
 							<h3><?php esc_html_e( 'Need more features?', 'esteem' ); ?></h3>
 							<p><?php esc_html_e( 'Upgrade to PRO version for more exciting features.', 'esteem' ) ?></p>
 							<p>
-								<a href="<?php echo esc_url( 'https://themegrill.com/themes/esteem-pro/' ); ?>" class="button button-secondary"><?php esc_html_e( 'View Pro', 'esteem' ); ?></a>
+								<a href="<?php echo esc_url( 'https://themegrill.com/themes/esteem/?utm_source=esteem-about&utm_medium=view-pro-link&utm_campaign=view-pro#free-vs-pro' ); ?>" class="button button-secondary" target="_blank"><?php esc_html_e( 'View Pro', 'esteem' ); ?></a>
 							</p>
 						</div>
 
@@ -539,7 +539,7 @@ if ( ! class_exists( 'Esteem_Admin' ) ) :
 						<td></td>
 						<td></td>
 						<td class="btn-wrapper">
-							<a href="<?php echo esc_url( apply_filters( 'esteem_pro_theme_url', 'https://themegrill.com/themes/esteem/' ) ); ?>" class="button button-secondary docs" target="_blank"><?php _e( 'View Pro', 'esteem' ); ?></a>
+							<a href="<?php echo esc_url( apply_filters( 'esteem_pro_theme_url', 'https://themegrill.com/themes/esteem/?utm_source=esteem-free-vs-pro-table&utm_medium=view-pro-link&utm_campaign=view-pro#free-vs-pro' ) ); ?>" class="button button-secondary docs" target="_blank"><?php _e( 'View Pro', 'esteem' ); ?></a>
 						</td>
 					</tr>
 					</tbody>
