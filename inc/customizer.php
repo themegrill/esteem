@@ -123,7 +123,7 @@ function esteem_customize_register( $wp_customize ) {
 	$wp_customize->add_control( 'esteem_show_header_logo_text', array(
 		'type'    => 'radio',
 		'label'   => __( 'Choose the option that you want.', 'esteem' ),
-		'section' => 'esteem_show_logo_text_setting',
+		'section' => 'title_tagline',
 		'choices' => array(
 			'logo_only' => __( 'Header Logo Only', 'esteem' ),
 			'text_only' => __( 'Header Text Only', 'esteem' ),
