@@ -41,6 +41,10 @@ If you want to translate this theme to your language, Please visit:- https://tra
 /**********************************************************/
 
 == Changelog ==
+= TBD =
+* Remove - Backward compatible for favicon
+* Remove - Backward compatible for header logo
+
 = Version 1.4.0 - 2018-09-05 =
 * Tweak - Added width and height attribute for slider
 * Update - Screenshot updated as per new wordpress.org guideline

@@ -5,9 +5,9 @@
  * This file contains all the functions and it's defination that particularly can't be
  * in other files.
  *
- * @package ThemeGrill
+ * @package    ThemeGrill
  * @subpackage Esteem
- * @since Esteem 1.0
+ * @since      Esteem 1.0
  */
 
 /****************************************************************************************/
@@ -49,7 +49,7 @@ function esteem_scripts_styles_method() {
 		if ( is_home() || is_front_page() ) {
 			wp_enqueue_script( 'esteem_slider', ESTEEM_JS_URL . '/esteem-slider-setting.js', array(
 				'jquery_cycle',
-				'jquery-cycle2-swipe'
+				'jquery-cycle2-swipe',
 			), false, true );
 
 		}
@@ -85,7 +85,7 @@ function esteem_admin_styles() {
  */
 if ( ! function_exists( 'esteem_related_posts_function' ) ) {
 
-	function esteem_related_posts_function(){
+	function esteem_related_posts_function() {
 		wp_reset_postdata();
 		global $post;
 
@@ -487,60 +487,3 @@ function esteem_custom_css_migrate() {
 }
 
 add_action( 'after_setup_theme', 'esteem_custom_css_migrate' );
-
-/**
- * Function to transfer the Header Logo added in Customizer Options of theme to Site Logo in Site Identity section
- */
-function esteem_site_logo_migrate() {
-	if ( function_exists( 'the_custom_logo' ) && ! has_custom_logo( $blog_id = 0 ) ) {
-		$logo_url = get_theme_mod( 'esteem_header_logo_image' );
-
-		if ( $logo_url ) {
-			$customizer_site_logo_id = attachment_url_to_postid( $logo_url );
-			set_theme_mod( 'custom_logo', $customizer_site_logo_id );
-
-			// Delete the old Site Logo theme_mod option.
-			remove_theme_mod( 'esteem_header_logo_image' );
-		}
-	}
-}
-
-add_action( 'after_setup_theme', 'esteem_site_logo_migrate' );
-
-add_action( 'admin_head', 'esteem_favicon' );
-add_action( 'wp_head', 'esteem_favicon' );
-/**
- * Favicon for the site
- */
-function esteem_favicon() {
-	if ( get_theme_mod( 'esteem_activate_favicon', '0' ) == '1' ) {
-		$esteem_favicon        = get_theme_mod( 'esteem_favicon', '' );
-		$esteem_favicon_output = '';
-		if ( ! function_exists( 'has_site_icon' ) || ( ! empty( $esteem_favicon ) && ! has_site_icon() ) ) {
-			$esteem_favicon_output .= '<link rel="shortcut icon" href="' . esc_url( $esteem_favicon ) . '" type="image/x-icon" />';
-		}
-		echo $esteem_favicon_output;
-	}
-}
-
-/**
- * Function to transfer the favicon added in Customizer Options of theme to Site Icon in Site Identity section
- */
-function esteem_site_icon_migrate() {
-	if ( get_option( 'esteem_site_icon_transfer' ) ) {
-		return;
-	}
-	global $wp_version;
-	$image_url = get_theme_mod( 'esteem_favicon', '' );
-	if ( ( $wp_version >= 4.3 ) && ( ! has_site_icon() && ! empty( $image_url ) ) ) {
-		$customizer_site_icon_id = attachment_url_to_postid( $image_url );
-		update_option( 'site_icon', $customizer_site_icon_id );
-		// Set the transfer as complete.
-		update_option( 'esteem_site_icon_transfer', 1 );
-		// Delete the old favicon theme_mod option.
-		remove_theme_mod( 'esteem_activate_favicon' );
-		remove_theme_mod( 'esteem_favicon' );
-	}
-}
-
-add_action( 'after_setup_theme', 'esteem_site_icon_migrate' );

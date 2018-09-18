@@ -91,23 +91,6 @@ function esteem_customize_register( $wp_customize ) {
 		'panel'    => 'esteem_header_options',
 	) );
 
-	if ( ! function_exists( 'the_custom_logo' ) ) {
-		$wp_customize->add_setting( 'esteem_header_logo_image', array(
-			'default'              => '',
-			'capability'           => 'edit_theme_options',
-			'sanitize_callback'    => 'esteem_sanitize_url',
-			'sanitize_js_callback' => 'esteem_sanitize_js_url',
-		) );
-		$wp_customize->add_control(
-			new WP_Customize_Image_Control( $wp_customize, 'esteem_header_logo_image', array(
-				'label'       => __( 'Upload logo for your header.', 'esteem' ),
-				'description' => sprintf( __( '%sInfo:%s This option will be removed in upcoming update. Please go to Site Identity section to upload the theme logo.', 'esteem' ), '<strong>', '</strong>' ),
-				'section'     => 'esteem_header_title_logo',
-				'settings'    => 'esteem_header_logo_image',
-			) )
-		);
-	}
-
 	// Header logo and text display type option
 	$wp_customize->add_section( 'esteem_show_logo_text_setting', array(
 		'title'    => __( 'Show', 'esteem' ),
@@ -514,47 +497,6 @@ function esteem_customize_register( $wp_customize ) {
 		'title'      => __( 'Additional', 'esteem' ),
 	) );
 
-	if ( ! function_exists( 'has_site_icon' ) || ( ! has_site_icon() && ( get_theme_mod( 'esteem_favicon', '' ) != '' ) ) ) {
-		// Favicon Activate Option
-		$wp_customize->add_section( 'esteem_favicon_setting', array(
-			'title'    => __( 'Activate favicon', 'esteem' ),
-			'priority' => 10,
-			'panel'    => 'esteem_additional_options',
-		) );
-
-		$wp_customize->add_setting( 'esteem_activate_favicon', array(
-			'default'           => 0,
-			'capability'        => 'edit_theme_options',
-			'sanitize_callback' => 'esteem_sanitize_checkbox',
-		) );
-		$wp_customize->add_control( 'esteem_activate_favicon', array(
-			'type'    => 'checkbox',
-			'label'   => __( 'Check to activate favicon. Upload fav icon from below option', 'esteem' ),
-			'section' => 'esteem_favicon_setting',
-		) );
-
-		// Favicon Upload Option
-		$wp_customize->add_section( 'esteem_favicon_upload_setting', array(
-			'title'    => __( 'Upload favicon', 'esteem' ),
-			'priority' => 20,
-			'panel'    => 'esteem_additional_options',
-		) );
-
-		$wp_customize->add_setting( 'esteem_favicon', array(
-			'default'              => '',
-			'capability'           => 'edit_theme_options',
-			'sanitize_callback'    => 'esteem_sanitize_url',
-			'sanitize_js_callback' => 'esteem_sanitize_js_url',
-		) );
-		$wp_customize->add_control(
-			new WP_Customize_Image_Control( $wp_customize, 'esteem_favicon', array(
-				'label'    => __( 'Upload favicon for your site.', 'esteem' ),
-				'section'  => 'esteem_favicon_upload_setting',
-				'settings' => 'esteem_favicon',
-			) )
-		);
-	}
-
 	//Related post
 	$wp_customize->add_section( 'esteem_related_posts_section', array(
 		'priority' => 5,
@@ -853,7 +795,7 @@ function esteem_customizer_custom_scripts() { ?>
 			display: block;
 			-webkit-font-smoothing: antialiased;
 			-moz-osx-font-smoothing: grayscale;
-			text-decoration: none!important;
+			text-decoration: none !important;
 		}
 
 		li#accordion-section-esteem_upsell_section h3.accordion-section-title a {
@@ -867,7 +809,7 @@ function esteem_customizer_custom_scripts() { ?>
 		}
 
 		li#accordion-section-esteem_upsell_section h3.accordion-section-title:hover {
-			background-color: #e04439!important;
+			background-color: #e04439 !important;
 			color: #fff !important;
 		}
 
