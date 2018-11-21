@@ -41,7 +41,7 @@ If you want to translate this theme to your language, Please visit:- https://tra
 /**********************************************************/
 
 == Changelog ==
-= TBD =
+= Version 1.4.1 - 2018-11-21 =
 * Added - Gutenberg compatibility
 * Remove - Backward compatible for favicon
 * Remove - Backward compatible for header logo
