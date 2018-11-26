@@ -90,7 +90,13 @@ class esteem_recent_work_widget extends WP_Widget {
 				<div class="<?php echo $class; ?>">
 					<?php
 					if ( has_post_thumbnail( ) ) {
-						echo '<a title="'.get_the_title().'" href="'.get_permalink().'">'.get_the_post_thumbnail( $post->ID,'recent-thumb').'</a>';?>
+						$thumb_id            = get_post_thumbnail_id( get_the_ID() );
+						$img_altr            = get_post_meta( $thumb_id, '_wp_attachment_image_alt', true );
+						$img_alt             = ! empty( $img_altr ) ? $img_altr : $page_title;
+						$post_thumbnail_attr = array(
+							'alt' => esc_attr( $img_alt ),
+						);
+						echo '<a title="'.get_the_title().'" href="'.get_permalink().'">'.get_the_post_thumbnail( $post->ID,'recent-thumb', $post_thumbnail_attr).'</a>';?>
 						<div class="recent-work-title">
 							<h6><?php the_title(); ?></h6>
 						</div>
