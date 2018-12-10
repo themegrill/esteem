@@ -41,6 +41,10 @@ If you want to translate this theme to your language, Please visit:- https://tra
 /**********************************************************/
 
 == Changelog ==
+= Version TBD =
+* Tweak - Add alt attributes to missed img tags
+* Fix - Gallery padding for Gutenberg
+
 = Version 1.4.1 - 2018-11-21 =
 * Added - Gutenberg compatibility
 * Remove - Backward compatible for favicon
