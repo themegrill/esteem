@@ -28,8 +28,8 @@ function esteem_custom_header_setup() {
 		'video'                  => true,
 		'wp-head-callback'       => '',
 		'admin-head-callback'    => '',
-		'admin-preview-callback' => 'esteem_admin_header_image',
 		'header-text'            => false,
+		'admin-preview-callback' => 'esteem_admin_header_image',
 	) ) );
 }
 
