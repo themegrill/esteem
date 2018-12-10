@@ -22,12 +22,15 @@
 		<div class="entry-content clearfix">
 			<?php
 				if( has_post_thumbnail() ) {
-					$image = '';
-					$large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'blog-medium');
-		     		$title_attribute = the_title_attribute( 'echo=0' );
+					$image           = '';
+					$large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'blog-medium' );
+					$title_attribute = the_title_attribute( 'echo=0' );
+					$thumb_id        = get_post_thumbnail_id( get_the_ID() );
+					$img_altr        = get_post_meta( $thumb_id, '_wp_attachment_image_alt', true );
+					$img_alt         = ! empty( $img_altr ) ? $img_altr : $title_attribute;
 		     		$image .= '<figure class="post-featured-image">';
 		  			$image .= '<a href="' . get_permalink() . '" title="'.the_title_attribute( 'echo=0' ).'">';
-		  			$image .= get_the_post_thumbnail( $post->ID, 'blog-medium', array( 'title' => esc_attr( $title_attribute ), 'alt' => esc_attr( $title_attribute ) ) ).'</a>';
+		  			$image .= get_the_post_thumbnail( $post->ID, 'blog-medium', array( 'title' => esc_attr( $title_attribute ), 'alt' => esc_attr( $img_alt ) ) ).'</a>';
 		  			$image .= '<div class="mask">
 		  						<div class="image-icon-wrap">
         							<a href="'.$large_image_url[0].'" class="img-icon img-search"><i class="icon-search"></i></a>
