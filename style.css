@@ -729,6 +729,10 @@ a:active {
 	padding-top: 5px;
 }
 
+ul.wp-block-gallery.columns-3.is-cropped{
+	margin: 0;
+}
+
 /* Make sure embeds and iframes fit their containers */
 embed,
 iframe,
