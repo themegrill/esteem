@@ -72,9 +72,11 @@ if ( ! function_exists( 'esteem_slider' ) ) :
 							$classes = "slides displaynone";
 						}
 						?>
+						<?php $img_altr = get_post_meta( $attachment_to_id, '_wp_attachment_image_alt', true );
+						$img_alt        = ! empty( $img_altr ) ? $img_altr : $esteem_slider_title; ?>
 						<section id="featured-slider" class="<?php echo $classes; ?>">
 							<figure class="slider-image-wrap">
-								<img width="<?php echo esc_attr( $iamge_value[1]); ?>" height="<?php echo esc_attr( $iamge_value[2] ); ?>" alt="<?php echo esc_attr( $esteem_slider_title ); ?>" src="<?php echo esc_url( $esteem_slider_image ); ?>">
+								<img width="<?php echo esc_attr( $iamge_value[1]); ?>" height="<?php echo esc_attr( $iamge_value[2] ); ?>" alt="<?php echo esc_attr( $img_alt ); ?>" src="<?php echo esc_url( $esteem_slider_image ); ?>">
 							</figure>
 							<?php if ( ! empty( $esteem_slider_title ) || ! empty( $esteem_slider_text ) ) { ?>
 								<article id="slider-text-box">
