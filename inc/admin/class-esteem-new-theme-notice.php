@@ -4,7 +4,7 @@
  *
  * @author  ThemeGrill
  * @package Esteem
- * @since   1.1.6
+ * @since   1.4.2
  */
 
 // Exit if directly accessed.
