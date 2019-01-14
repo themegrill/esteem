@@ -41,7 +41,7 @@ If you want to translate this theme to your language, Please visit:- https://tra
 /**********************************************************/
 
 == Changelog ==
-= Version TBD =
+= Version 1.4.2 - 2019-01-14 =
 * Fix - Gallery padding for Gutenberg
 * Tweak - Add alt attributes to missed img tags
 * Tweak - Utilize single custom JS file for required theme JS settings.

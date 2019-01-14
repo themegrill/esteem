@@ -1,14 +1,14 @@
-# Copyright (C) 2018 ThemeGrill
+# Copyright (C) 2019 ThemeGrill
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Esteem 1.4.1\n"
+"Project-Id-Version: Esteem 1.4.2\n"
 "Report-Msgid-Bugs-To: themegrill@gmail.com\n"
-"POT-Creation-Date: 2018-11-21 05:08:43+00:00\n"
+"POT-Creation-Date: 2019-01-14 10:20:50+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2019-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
 "X-Generator: grunt-wp-i18n 0.5.4\n"
@@ -47,8 +47,8 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: content-blog-image-large.php:42 content-blog-image-medium.php:43
-#: content.php:46 inc/widgets/class-esteem-service-widget.php:96
+#: content-blog-image-large.php:42 content-blog-image-medium.php:46
+#: content.php:49 inc/widgets/class-esteem-service-widget.php:96
 #: inc/widgets/class-esteem-service-widget.php:113
 msgid "Read more"
 msgstr ""
@@ -393,6 +393,22 @@ msgstr ""
 msgid "TG: Fun Facts"
 msgstr ""
 
+#: inc/admin/class-esteem-new-theme-notice.php:66
+#. translators: %1$s Zakra theme link %2$s Zakra theme demo link
+msgid ""
+"Zakra - our new most flexible free WordPress theme. %1$s Zakra is fully "
+"compatible with Gutenberg, Elementor and other major page builders. Comes "
+"with %2$s to quickly setup your new website."
+msgstr ""
+
+#: inc/admin/class-esteem-new-theme-notice.php:70
+msgid "Check it out!"
+msgstr ""
+
+#: inc/admin/class-esteem-new-theme-notice.php:75
+msgid "10+ free starter sites"
+msgstr ""
+
 #: inc/admin/meta-boxes.php:21 inc/admin/meta-boxes.php:31
 msgid "Select Layout"
 msgstr ""
@@ -648,7 +664,7 @@ msgstr ""
 msgid "Enter link to redirect slider when clicked"
 msgstr ""
 
-#: inc/functions.php:334
+#: inc/functions.php:331
 msgid "WordPress"
 msgstr ""
 
@@ -656,73 +672,73 @@ msgstr ""
 msgid "ThemeGrill"
 msgstr ""
 
-#: inc/functions.php:338
+#: inc/functions.php:335
 msgid "Copyright &copy; %1$s %2$s."
 msgstr ""
 
-#: inc/functions.php:338
+#: inc/functions.php:335
 msgid "Powered by %s."
 msgstr ""
 
-#: inc/functions.php:338
+#: inc/functions.php:335
 msgid "Theme: %1$s by %2$s."
 msgstr ""
 
-#: inc/functions.php:428
+#: inc/functions.php:425
 msgid ""
 "<span class=\"icon-time\"><a href=\"%1$s\" title=\"%2$s\" "
 "rel=\"bookmark\">%3$s</a></span>"
 msgstr ""
 
-#: inc/functions.php:439
+#: inc/functions.php:436
 msgid "No Comments"
 msgstr ""
 
-#: inc/functions.php:439
+#: inc/functions.php:436
 msgid "1 Comment"
 msgstr ""
 
-#: inc/functions.php:439
+#: inc/functions.php:436
 msgid "% Comments"
 msgstr ""
 
-#: inc/functions.php:439
+#: inc/functions.php:436
 msgid "Comments Off"
 msgstr ""
 
-#: inc/functions.php:442
+#: inc/functions.php:439
 msgid "Edit"
 msgstr ""
 
-#: inc/header-functions.php:124
+#: inc/header-functions.php:126
 msgid "Author: %s"
 msgstr ""
 
-#: inc/header-functions.php:132
+#: inc/header-functions.php:134
 msgid "Day: %s"
 msgstr ""
 
-#: inc/header-functions.php:135
+#: inc/header-functions.php:137
 msgid "Month: %s"
 msgstr ""
 
-#: inc/header-functions.php:138
+#: inc/header-functions.php:140
 msgid "Year: %s"
 msgstr ""
 
-#: inc/header-functions.php:141 sidebar-left.php:29 sidebar.php:29
+#: inc/header-functions.php:143 sidebar-left.php:29 sidebar.php:29
 msgid "Archives"
 msgstr ""
 
-#: inc/header-functions.php:145
+#: inc/header-functions.php:147
 msgid "Page NOT Found"
 msgstr ""
 
-#: inc/header-functions.php:147
+#: inc/header-functions.php:149
 msgid "Search Results"
 msgstr ""
 
-#: inc/header-functions.php:176
+#: inc/header-functions.php:178
 msgid "You are here:"
 msgstr ""
 
@@ -730,7 +746,7 @@ msgstr ""
 msgid "You May Also Like"
 msgstr ""
 
-#: inc/related-posts.php:46
+#: inc/related-posts.php:54
 msgid ""
 "<span class=\"posted-on\"><a href=\"%1$s\" title=\"%2$s\" "
 "rel=\"bookmark\"><i class=\"fa fa-calendar-o\"></i> %3$s</a></span>"
