@@ -41,6 +41,9 @@ If you want to translate this theme to your language, Please visit:- https://tra
 /**********************************************************/
 
 == Changelog ==
+= TBD =
+* Tweak - Modify pingback url autodiscovery for single posts, pages, or attachments.
+
 = Version 1.4.2 - 2019-01-16 =
 * Fix - Gallery padding for Gutenberg
 * Tweak - Add alt attributes to missed img tags
