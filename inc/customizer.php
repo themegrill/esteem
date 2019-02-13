@@ -7,6 +7,11 @@
  * @since      Esteem 1.2.7
  */
 function esteem_customize_register( $wp_customize ) {
+
+	require ESTEEM_INCLUDES_DIR . '/customize-controls/Class-esteem-custom-css-control.php';
+	require ESTEEM_INCLUDES_DIR . '/customize-controls/class-esteem-image-radio-control.php';
+	require ESTEEM_INCLUDES_DIR . '/customize-controls/class-esteem-upsell-section.php';
+
 	// Transport postMessage variable set
 	$customizer_selective_refresh = isset( $wp_customize->selective_refresh ) ? 'postMessage' : 'refresh';
 
@@ -25,41 +30,6 @@ function esteem_customize_register( $wp_customize ) {
 			'selector'        => '.site-description',
 			'render_callback' => 'esteem_customize_partial_blogdescription',
 		) );
-	}
-
-	/**
-	 * Class to include upsell link campaign for theme.
-	 *
-	 * Class ESTEEM_Upsell_Section
-	 */
-	class ESTEEM_Upsell_Section extends WP_Customize_Section {
-		public $type = 'esteem-upsell-section';
-		public $url  = '';
-		public $id   = '';
-
-		/**
-		 * Gather the parameters passed to client JavaScript via JSON.
-		 *
-		 * @return array The array to be exported to the client as JSON.
-		 */
-		public function json() {
-			$json        = parent::json();
-			$json['url'] = esc_url( $this->url );
-			$json['id']  = $this->id;
-
-			return $json;
-		}
-
-		/**
-		 * An Underscore (JS) template for rendering this section.
-		 */
-		protected function render_template() {
-			?>
-			<li id="accordion-section-{{ data.id }}" class="esteem-upsell-accordion-section control-section-{{ data.type }} cannot-expand accordion-section">
-				<h3 class="accordion-section-title"><a href="{{{ data.url }}}" target="_blank">{{ data.title }}</a></h3>
-			</li>
-			<?php
-		}
 	}
 
 // Register `ESTEEM_Upsell_Section` type section.
@@ -261,72 +231,6 @@ function esteem_customize_register( $wp_customize ) {
 		),
 	) );
 
-	class ESTEEM_Image_Radio_Control extends WP_Customize_Control {
-
-		public function render_content() {
-
-			if ( empty( $this->choices ) ) {
-				return;
-			}
-
-			$name = '_customize-radio-' . $this->id;
-
-			?>
-			<style>
-				#esteem-img-container .esteem-radio-img-img {
-					border: 3px solid #DEDEDE;
-					margin: 0 5px 5px 0;
-					cursor: pointer;
-					border-radius: 3px;
-					-moz-border-radius: 3px;
-					-webkit-border-radius: 3px;
-				}
-
-				#esteem-img-container .esteem-radio-img-selected {
-					border: 3px solid #AAA;
-					border-radius: 3px;
-					-moz-border-radius: 3px;
-					-webkit-border-radius: 3px;
-				}
-
-				input[type=checkbox]:before {
-					content: '';
-					margin: -3px 0 0 -4px;
-				}
-			</style>
-			<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
-			<ul class="controls" id='esteem-img-container'>
-				<?php
-				foreach ( $this->choices as $value => $label ) :
-					$class = ( $this->value() == $value ) ? 'esteem-radio-img-selected esteem-radio-img-img' : 'esteem-radio-img-img';
-					?>
-					<li style="display: inline;">
-						<label>
-							<input <?php $this->link(); ?>style='display:none' type="radio" value="<?php echo esc_attr( $value ); ?>" name="<?php echo esc_attr( $name ); ?>" <?php $this->link();
-							checked( $this->value(), $value ); ?> />
-							<img src='<?php echo esc_html( $label ); ?>' class='<?php echo $class; ?>' />
-						</label>
-					</li>
-				<?php
-				endforeach;
-				?>
-			</ul>
-			<script type="text/javascript">
-
-				jQuery( document ).ready( function ( $ ) {
-					$( '.controls#esteem-img-container li img' ).click( function () {
-						$( '.controls#esteem-img-container li' ).each( function () {
-							$( this ).find( 'img' ).removeClass( 'esteem-radio-img-selected' );
-						} );
-						$( this ).addClass( 'esteem-radio-img-selected' );
-					} );
-				} );
-
-			</script>
-			<?php
-		}
-	}
-
 	// Default layout
 	$wp_customize->add_section( 'esteem_default_layout_setting', array(
 		'title'    => __( 'Default layout', 'esteem' ),
@@ -449,21 +353,6 @@ function esteem_customize_register( $wp_customize ) {
 			'settings' => 'esteem_primary_color',
 		) )
 	);
-
-	// Custom CSS setting
-	class ESTEEM_Custom_CSS_Control extends WP_Customize_Control {
-
-		public $type = 'custom_css';
-
-		public function render_content() {
-			?>
-			<label>
-				<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
-				<textarea rows="5" style="width:100%;" <?php $this->link(); ?>><?php echo esc_textarea( $this->value() ); ?></textarea>
-			</label>
-			<?php
-		}
-	}
 
 	if ( ! function_exists( 'wp_update_custom_css_post' ) ) {
 		$wp_customize->add_section( 'esteem_custom_css_setting', array(
