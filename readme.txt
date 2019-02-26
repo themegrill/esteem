@@ -43,6 +43,7 @@ If you want to translate this theme to your language, Please visit:- https://tra
 == Changelog ==
 = TBD =
 * Tweak - Modify pingback url autodiscovery for single posts, pages, or attachments.
+* Tweak - separate customize control class via different file
 
 = Version 1.4.2 - 2019-01-16 =
 * Fix - Gallery padding for Gutenberg
