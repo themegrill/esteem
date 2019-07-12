@@ -41,7 +41,7 @@ If you want to translate this theme to your language, Please visit:- https://tra
 /**********************************************************/
 
 == Changelog ==
-= TBD =
+= Version 1.4.3 - 2019-07-12 =
 * Tweak - Modify pingback url autodiscovery for single posts, pages, or attachments.
 * Tweak - Separate customize control class via different file
 * Tweak - Added `wp_body_open` function to support WordPress 5.2 `wp_body_open` hook.
