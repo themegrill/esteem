@@ -72,7 +72,7 @@ module.exports = function( grunt ){
 		// Compress files and folders.
 		compress: {
 			options: {
-				archive: 'esteem.zip'
+				archive: 'dist/esteem.zip'
 			},
 			files: {
 				src: [
