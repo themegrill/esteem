@@ -497,6 +497,10 @@ a:active {
 	z-index: 100000; /* Above WP toolbar. */
 }
 
+#main[tabindex="-1"]:focus {
+	outline: 0;
+}
+
 /* Clearing */
 .clear:before,
 .clear:after,
