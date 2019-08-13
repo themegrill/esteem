@@ -545,17 +545,16 @@ a:active {
 }
 
 .main-navigation ul ul {
-	display: none;
 	float: left;
 	position: absolute;
 	top: 8.8rem;
-	left: 0;
+	left: -99999px;
 	z-index: 99999;
 	border-top: 4px solid #ed564b;
 }
 
 .main-navigation ul ul ul {
-	left: 100%;
+	left: -99999px;
 	top: 0;
 }
 
@@ -580,18 +579,20 @@ a:active {
 
 }
 
-.main-navigation ul li:hover > ul {
-	display: block;
+.main-navigation ul li:hover > ul,
+.main-navigation ul li.focus > ul {
+	left: auto;
+}
+
+.main-navigation ul ul li:hover > ul,
+.main-navigation ul ul li.focus > ul {
+	left: 100%;
 }
 
 .main-navigation li.current_page_item > a,
 .main-navigation li.current-menu-item > a,
 .main-navigation li.current-menu-ancestor > a {
 	color: #ed564b;
-}
-
-.main-navigation ul li.focus > ul {
-	display: block;
 }
 
 /* Small menu */
