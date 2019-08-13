@@ -63,6 +63,9 @@ function esteem_scripts_styles_method() {
 
 	wp_enqueue_script( 'esteem-navigation', ESTEEM_JS_URL . '/navigation.js', array( 'jquery' ), false, true );
 
+	// Skip link focus fix JS enqueue.
+	wp_enqueue_script( 'esteem-skip-link-focus-fix', ESTEEM_JS_URL . '/skip-link-focus-fix.js', array(), false, true );
+
 }
 
 add_action( 'admin_print_styles', 'esteem_admin_styles' );
