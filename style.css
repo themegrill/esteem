@@ -464,19 +464,27 @@ a:active {
 
 /* Text meant only for screen readers */
 .screen-reader-text {
+	border: 0;
 	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
 	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
 }
 
-.screen-reader-text:hover,
-.screen-reader-text:active,
 .screen-reader-text:focus {
 	background-color: #f1f1f1;
 	border-radius: 3px;
 	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
 	clip: auto !important;
+	clip-path: none;
 	color: #21759b;
 	display: block;
+	font-size: 0.875rem;
 	font-size: 14px;
 	font-weight: bold;
 	height: auto;
@@ -486,7 +494,11 @@ a:active {
 	text-decoration: none;
 	top: 5px;
 	width: auto;
-	z-index: 100000; /* Above WP toolbar */
+	z-index: 100000; /* Above WP toolbar. */
+}
+
+#main[tabindex="-1"]:focus {
+	outline: 0;
 }
 
 /* Clearing */
@@ -533,17 +545,16 @@ a:active {
 }
 
 .main-navigation ul ul {
-	display: none;
 	float: left;
 	position: absolute;
 	top: 8.8rem;
-	left: 0;
+	left: -99999px;
 	z-index: 99999;
 	border-top: 4px solid #ed564b;
 }
 
 .main-navigation ul ul ul {
-	left: 100%;
+	left: -99999px;
 	top: 0;
 }
 
@@ -568,18 +579,20 @@ a:active {
 
 }
 
-.main-navigation ul li:hover > ul {
-	display: block;
+.main-navigation ul li:hover > ul,
+.main-navigation ul li.focus > ul {
+	left: auto;
+}
+
+.main-navigation ul ul li:hover > ul,
+.main-navigation ul ul li.focus > ul {
+	left: 100%;
 }
 
 .main-navigation li.current_page_item > a,
 .main-navigation li.current-menu-item > a,
 .main-navigation li.current-menu-ancestor > a {
 	color: #ed564b;
-}
-
-.main-navigation ul li.focus > ul {
-	display: block;
 }
 
 /* Small menu */
