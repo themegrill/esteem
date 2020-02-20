@@ -245,6 +245,13 @@ if ( ! function_exists( 'esteem_include_files' ) ) {
 		/** Load functions */
 		require_once( ESTEEM_INCLUDES_DIR . '/functions.php' );
 
+		/**
+		 * Admin.
+		 */
+		if ( is_admin() ) {
+			require_once( ESTEEM_ADMIN_DIR . '/tdi-notice.php' );
+		}
+
 		require_once( ESTEEM_INCLUDES_DIR . '/custom-header.php' );
 
 		require_once( ESTEEM_FONTAWESOME_DIR . '/icons.php' );
