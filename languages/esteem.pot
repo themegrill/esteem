@@ -1,14 +1,14 @@
-# Copyright (C) 2019 ThemeGrill
+# Copyright (C) 2020 ThemeGrill
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Esteem 1.4.2\n"
+"Project-Id-Version: Esteem 1.4.4\n"
 "Report-Msgid-Bugs-To: themegrill@gmail.com\n"
-"POT-Creation-Date: 2019-07-12 15:44:21+00:00\n"
+"POT-Creation-Date: 2020-02-20 10:31:39+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2019-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2020-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
 "X-Generator: grunt-wp-i18n 0.5.4\n"
@@ -63,6 +63,10 @@ msgstr ""
 
 #: fontawesome/icons.php:4
 msgid "(None)"
+msgstr ""
+
+#: header.php:32
+msgid "Skip to content"
 msgstr ""
 
 #: inc/admin/class-esteem-admin.php:36 inc/admin/class-esteem-admin.php:119
@@ -429,6 +433,34 @@ msgstr ""
 msgid "fontawesome Icons"
 msgstr ""
 
+#: inc/admin/tdi-notice.php:40
+#. Translators: 1: Notice text 2: Plugin Name 3. CTA
+msgid ""
+"%1$s: Please update \"%2$s\" plugin to latest version to make sure your "
+"site is all secure. We released a security patch in the latest version of "
+"this plugin. %3$s"
+msgstr ""
+
+#: inc/admin/tdi-notice.php:41
+msgid "Action Required"
+msgstr ""
+
+#: inc/admin/tdi-notice.php:42 inc/admin/tdi-notice.php:54
+msgid "ThemeGrill Demo Importer"
+msgstr ""
+
+#: inc/admin/tdi-notice.php:47
+#. Translators: 1: CTA link 2: CTA text
+msgid "Update Now"
+msgstr ""
+
+#: inc/admin/tdi-notice.php:53
+#. Translators: 1: Plugin name
+msgid ""
+"Also, if the purpose of importing the demo via \"%1$s\" plugin is "
+"fulfilled, you can simply delete this plugin now."
+msgstr ""
+
 #: inc/customizer.php:54
 msgid "Header"
 msgstr ""
@@ -648,7 +680,7 @@ msgstr ""
 msgid "Enter link to redirect slider when clicked"
 msgstr ""
 
-#: inc/functions.php:331
+#: inc/functions.php:334
 msgid "WordPress"
 msgstr ""
 
@@ -656,41 +688,41 @@ msgstr ""
 msgid "ThemeGrill"
 msgstr ""
 
-#: inc/functions.php:335
+#: inc/functions.php:338
 msgid "Copyright &copy; %1$s %2$s."
 msgstr ""
 
-#: inc/functions.php:335
+#: inc/functions.php:338
 msgid "Powered by %s."
 msgstr ""
 
-#: inc/functions.php:335
+#: inc/functions.php:338
 msgid "Theme: %1$s by %2$s."
 msgstr ""
 
-#: inc/functions.php:425
+#: inc/functions.php:428
 msgid ""
 "<span class=\"icon-time\"><a href=\"%1$s\" title=\"%2$s\" "
 "rel=\"bookmark\">%3$s</a></span>"
 msgstr ""
 
-#: inc/functions.php:436
+#: inc/functions.php:439
 msgid "No Comments"
 msgstr ""
 
-#: inc/functions.php:436
+#: inc/functions.php:439
 msgid "1 Comment"
 msgstr ""
 
-#: inc/functions.php:436
+#: inc/functions.php:439
 msgid "% Comments"
 msgstr ""
 
-#: inc/functions.php:436
+#: inc/functions.php:439
 msgid "Comments Off"
 msgstr ""
 
-#: inc/functions.php:439
+#: inc/functions.php:442
 msgid "Edit"
 msgstr ""
 
