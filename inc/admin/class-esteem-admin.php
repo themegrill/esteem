@@ -23,6 +23,24 @@ if ( ! class_exists( 'Esteem_Admin' ) ) :
 		 */
 		public function __construct() {
 			add_action( 'admin_menu', array( $this, 'admin_menu' ) );
+			add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
+		}
+
+		/**
+		 * Localize array for import button AJAX request.
+		 */
+		public function enqueue_scripts() {
+			wp_enqueue_style( 'esteem-admin-style', get_template_directory_uri() . '/inc/admin/css/admin.css', array(), ESTEEM_THEME_VERSION );
+
+			wp_enqueue_script( 'esteem-plugin-install-helper', get_template_directory_uri() . '/inc/admin/js/plugin-handle.js', array( 'jquery' ), ESTEEM_THEME_VERSION, true );
+
+			$welcome_data = array(
+				'uri'      => esc_url( admin_url( '/themes.php?page=demo-importer&browse=all&esteem-hide-notice=welcome' ) ),
+				'btn_text' => esc_html__( 'Processing...', 'esteem' ),
+				'nonce'    => wp_create_nonce( 'esteem_demo_import_nonce' ),
+			);
+
+			wp_localize_script( 'esteem-plugin-install-helper', 'esteemRedirectDemoPage', $welcome_data );
 		}
 
 		/**
@@ -41,15 +59,7 @@ if ( ! class_exists( 'Esteem_Admin' ) ) :
 					'welcome_screen',
 				)
 			);
-			add_action( 'admin_print_styles-' . $page, array( $this, 'enqueue_styles' ) );
-		}
-
-		/**
-		 * Enqueue styles.
-		 */
-		public function enqueue_styles() {
-
-			wp_enqueue_style( 'esteem-welcome', get_template_directory_uri() . '/css/admin/welcome.css', array(), ESTEEM_THEME_VERSION );
+			add_action( 'admin_print_styles-' . $page, array( $this, 'enqueue_scripts' ) );
 		}
 
 		/**
