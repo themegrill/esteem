@@ -290,6 +290,7 @@ define( 'ESTEEM_THEME_VERSION', $esteem_theme->get( 'Version' ) );
  */
 if ( is_admin() ) {
 	require( ESTEEM_ADMIN_DIR . '/class-esteem-admin.php' );
+	require( ESTEEM_ADMIN_DIR . '/class-esteem-notice.php' );
 	require( ESTEEM_ADMIN_DIR . '/class-esteem-welcome-notice.php' );
 	require( ESTEEM_ADMIN_DIR . '/class-esteem-theme-review-notice.php' );
 }
