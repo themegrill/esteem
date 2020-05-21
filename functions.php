@@ -281,8 +281,9 @@ if ( class_exists( 'TG_Demo_Importer' ) ) {
 /**
  * Assign the Esteem version to a variable.
  */
-$theme          = wp_get_theme( 'esteem' );
-$esteem_version = $theme['Version'];
+$esteem_theme = wp_get_theme( 'esteem' );
+
+define( 'ESTEEM_THEME_VERSION', $esteem_theme->get( 'Version' ) );
 
 /**
  * Calling in the admin area for the Welcome Page as well as for the new theme notice too.

@@ -48,9 +48,8 @@ if ( ! class_exists( 'Esteem_Admin' ) ) :
 		 * Enqueue styles.
 		 */
 		public function enqueue_styles() {
-			global $esteem_version;
 
-			wp_enqueue_style( 'esteem-welcome', get_template_directory_uri() . '/css/admin/welcome.css', array(), $esteem_version );
+			wp_enqueue_style( 'esteem-welcome', get_template_directory_uri() . '/css/admin/welcome.css', array(), ESTEEM_THEME_VERSION );
 		}
 
 		/**
@@ -59,12 +58,11 @@ if ( ! class_exists( 'Esteem_Admin' ) ) :
 		 * @access private
 		 */
 		private function intro() {
-			global $esteem_version;
 
 			$theme = wp_get_theme( get_template() );
 
 			// Drop minor version if 0
-			$major_version = substr( $esteem_version, 0, 3 );
+			$major_version = substr( ESTEEM_THEME_VERSION, 0, 3 );
 			?>
 			<div class="esteem-theme-info">
 				<h1>
@@ -93,7 +91,7 @@ if ( ! class_exists( 'Esteem_Admin' ) ) :
 			</p>
 
 			<h2 class="nav-tab-wrapper">
-				<a class="nav-tab 
+				<a class="nav-tab
 				<?php
 				if ( empty( $_GET['tab'] ) && $_GET['page'] == 'esteem-welcome' ) {
 					echo 'nav-tab-active';
@@ -102,7 +100,7 @@ if ( ! class_exists( 'Esteem_Admin' ) ) :
 				" href="<?php echo esc_url( admin_url( add_query_arg( array( 'page' => 'esteem-welcome' ), 'themes.php' ) ) ); ?>">
 					<?php echo $theme->display( 'Name' ); ?>
 				</a>
-				<a class="nav-tab 
+				<a class="nav-tab
 				<?php
 				if ( isset( $_GET['tab'] ) && $_GET['tab'] == 'supported_plugins' ) {
 					echo 'nav-tab-active';
@@ -125,7 +123,7 @@ if ( ! class_exists( 'Esteem_Admin' ) ) :
 				">
 					<?php esc_html_e( 'Supported Plugins', 'esteem' ); ?>
 				</a>
-				<a class="nav-tab 
+				<a class="nav-tab
 				<?php
 				if ( isset( $_GET['tab'] ) && $_GET['tab'] == 'free_vs_pro' ) {
 					echo 'nav-tab-active';
@@ -148,7 +146,7 @@ if ( ! class_exists( 'Esteem_Admin' ) ) :
 				">
 					<?php esc_html_e( 'Free Vs Pro', 'esteem' ); ?>
 				</a>
-				<a class="nav-tab 
+				<a class="nav-tab
 				<?php
 				if ( isset( $_GET['tab'] ) && $_GET['tab'] == 'changelog' ) {
 					echo 'nav-tab-active';
