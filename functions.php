@@ -288,7 +288,8 @@ $esteem_version = $theme['Version'];
  * Calling in the admin area for the Welcome Page as well as for the new theme notice too.
  */
 if ( is_admin() ) {
-	require get_template_directory() . '/inc/admin/class-esteem-admin.php';
+	require( ESTEEM_ADMIN_DIR . '/class-esteem-admin.php' );
+	require( ESTEEM_ADMIN_DIR . '/class-esteem-welcome-notice.php' );
 }
 
 /**
