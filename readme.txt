@@ -41,6 +41,9 @@ If you want to translate this theme to your language, Please visit:- https://tra
 /**********************************************************/
 
 == Changelog ==
+= TBD =
+* Add - Required header fields: `Tested up to` and `Requires PHP` in style.css.
+
 = Version 1.4.4 - 2020-02-20 =
 * Tweak - Update `screen-reader-text` CSS.
 * Tweak - Added `skip-link` to content area.
