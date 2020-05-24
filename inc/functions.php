@@ -331,7 +331,7 @@ if ( ! function_exists( 'esteem_footer_copyright' ) ) :
 	function esteem_footer_copyright() {
 		$site_link = '<a href="' . esc_url( home_url( '/' ) ) . '" title="' . esc_attr( get_bloginfo( 'name', 'display' ) ) . '" ><span>' . get_bloginfo( 'name', 'display' ) . '</span></a>';
 
-		$wp_link = '<a href="' . esc_url( 'http://wordpress.org' ) . '" target="_blank" title="' . esc_attr__( 'WordPress', 'esteem' ) . '"><span>' . __( 'WordPress', 'esteem' ) . '</span></a>';
+		$wp_link = '<a href="' . esc_url( 'https://wordpress.org' ) . '" target="_blank" title="' . esc_attr__( 'WordPress', 'esteem' ) . '"><span>' . __( 'WordPress', 'esteem' ) . '</span></a>';
 
 		$tg_link = '<a href="' . esc_url( 'https://themegrill.com/themes/esteem' ) . '" target="_blank" title="' . esc_attr__( 'ThemeGrill', 'esteem' ) . '" rel="author"><span>' . __( 'ThemeGrill', 'esteem' ) . '</span></a>';
 
