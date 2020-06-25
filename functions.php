@@ -78,6 +78,12 @@ if ( ! function_exists( 'esteem_setup' ) ) :
 		// Gutenberg layout support.
 		add_theme_support( 'align-wide' );
 
+		// Add support for Block Styles.
+		add_theme_support('wp-block-styles');
+
+		// Responsive embeds support.
+		add_theme_support('responsive-embeds');
+
 		// Adds the support for the Custom Logo introduced in WordPress 4.5
 		add_theme_support( 'custom-logo',
 			array(
