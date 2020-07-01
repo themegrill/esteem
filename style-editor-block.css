@@ -8,15 +8,9 @@
 	word-wrap: break-word;
 }
 
-.editor-styles-wrapper > * {
-	font-family: 'Arial', sans-serif;
-	color: #777777;
-}
-
 .editor-styles-wrapper .wp-block.editor-post-title__block .editor-post-title__input {
 	font-size: 27px;
 	line-height: 36px;
-	color: #333333;
 	font-weight: normal;
 }
 
@@ -78,4 +72,411 @@
 .editor-styles-wrapper h6 {
 	font-size: 20px;
 	line-height: 25px;
+}
+
+/* Horizontal Lines */
+.editor-styles-wrapper hr {
+	background-color: #cccccc;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+/* Text elements */
+.editor-styles-wrapper p {
+	margin-bottom: 0.7rem;
+}
+
+.editor-styles-wrapper ul, .editor-styles-wrapper ol {
+	list-style: none outside none;
+}
+
+.editor-styles-wrapper li > ul,
+.editor-styles-wrapper li > ol {
+	margin-bottom: 0;
+	margin-left: 1.5em;
+}
+
+.editor-styles-wrapper ol {
+	list-style: decimal outside none;
+}
+
+.editor-styles-wrapper .post .entry-content ul, .editor-styles-wrapper .page .entry-content ul {
+	list-style: disc;
+}
+
+.editor-styles-wrapper .post .entry-content ul, .editor-styles-wrapper .post .entry-content ol,
+.editor-styles-wrapper .page .entry-content ul, .editor-styles-wrapper .page .entry-content ol {
+	margin: 0 0 20px 20px;
+}
+
+.editor-styles-wrapper dt {
+	font-weight: bold;
+}
+
+.editor-styles-wrapper dd {
+	margin: 0 1.5em 1.5em;
+}
+
+.editor-styles-wrapper b, .editor-styles-wrapper strong {
+	font-weight: bold;
+}
+
+.editor-styles-wrapper dfn, .editor-styles-wrapper cite, .editor-styles-wrapper em, .editor-styles-wrapper i {
+	font-style: italic;
+}
+
+.editor-styles-wrapper blockquote {
+	border-width: 1px 1px 1px 3px;
+	border-style: solid;
+	padding: 20px;
+	font-style: italic;
+}
+
+.editor-styles-wrapper address {
+	margin: 0 0 1.5em;
+}
+
+.editor-styles-wrapper pre {
+	background: #eeeeee;
+	font-family: "Courier 10 Pitch", Courier, monospace;
+	font-size: 15px;
+	font-size: 1.5rem;
+	line-height: 1.6;
+	margin-bottom: 1.6em;
+	padding: 1.6em;
+	overflow: auto;
+	max-width: 100%;
+}
+
+.editor-styles-wrapper code, .editor-styles-wrapper kbd, .editor-styles-wrapper tt, .editor-styles-wrapper var {
+	font: 15px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+
+.editor-styles-wrapper abbr, .editor-styles-wrapper acronym {
+	border-bottom: 1px dotted #666666;
+	cursor: help;
+}
+
+.editor-styles-wrapper mark, .editor-styles-wrapper ins {
+	background: #fff9c0;
+	text-decoration: none;
+}
+
+.editor-styles-wrapper sup,
+.editor-styles-wrapper sub {
+	font-size: 75%;
+	height: 0;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+.editor-styles-wrapper sup {
+	bottom: 1ex;
+}
+
+.editor-styles-wrapper sub {
+	top: .5ex;
+}
+
+.editor-styles-wrapper small {
+	font-size: 75%;
+}
+
+.editor-styles-wrapper big {
+	font-size: 125%;
+}
+
+.editor-styles-wrapper figure {
+	margin: 0;
+	text-align: center;
+}
+
+.editor-styles-wrapper table {
+	margin: 0 0 1.5em;
+	width: 100%;
+}
+
+.editor-styles-wrapper th {
+	font-weight: bold;
+}
+
+.editor-styles-wrapper img {
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
+	vertical-align: top;
+}
+
+.editor-styles-wrapper button,
+.editor-styles-wrapper input,
+.editor-styles-wrapper select,
+.editor-styles-wrapper textarea {
+	font-size: 100%; /* Corrects font size not being inherited in all browsers */
+	margin: 0; /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
+	vertical-align: baseline; /* Improves appearance and consistency in all browsers */
+	*vertical-align: middle; /* Improves appearance and consistency in all browsers */
+}
+
+.editor-styles-wrapper button,
+.editor-styles-wrapper input {
+	line-height: normal; /* Addresses FF3/4 setting line-height using !important in the UA stylesheet */
+}
+
+.editor-styles-wrapper button,
+.editor-styles-wrapper html input[type="button"],
+.editor-styles-wrapper input[type="reset"],
+.editor-styles-wrapper input[type="submit"] {
+	cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
+	-webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
+	font-size: 12px;
+	font-size: 1.2rem;
+	border: 0 none;
+	color: #ffffff;
+	padding: 9px 10px 7px;
+	transition: all 0.3s ease-out 0s;
+}
+
+.editor-styles-wrapper button {
+	color: #ffffff;
+}
+
+.editor-styles-wrapper button.components-button {
+    color: #1e1e1e;
+}
+
+.editor-styles-wrapper .components-button.is-pressed {
+    color: #ffffff;
+}
+
+.editor-styles-wrapper .wp-social-link button {
+    color: #ffffff;
+}
+
+.editor-styles-wrapper input[type="button"]:hover, .editor-styles-wrapper input[type="reset"]:hover, .editor-styles-wrapper input[type="submit"]:hover {
+	color: #ffffff;
+}
+
+.editor-styles-wrapper html input[type="button"]:hover,
+.editor-styles-wrapper input[type="reset"]:hover,
+.editor-styles-wrapper input[type="submit"]:hover {
+	background-color: #2f343a;
+	transition: all 0.3s ease-out 0s;
+}
+
+.editor-styles-wrapper input[type="checkbox"],
+.editor-styles-wrapper input[type="radio"] {
+	box-sizing: border-box; /* Addresses box sizing set to content-box in IE8/9 */
+	padding: 0; /* Addresses excess padding in IE8/9 */
+}
+
+.editor-styles-wrapper input[type="search"] {
+	-webkit-appearance: textfield; /* Addresses appearance set to searchfield in S5, Chrome */
+	-webkit-box-sizing: content-box; /* Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+}
+
+.editor-styles-wrapper input[type="search"]::-webkit-search-decoration { /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
+	-webkit-appearance: none;
+}
+
+.editor-styles-wrapper button::-moz-focus-inner,
+.editor-styles-wrapper input::-moz-focus-inner { /* Corrects inner padding and border displayed oddly in FF3/4 www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ */
+	border: 0;
+	padding: 0;
+}
+
+.editor-styles-wrapper input[type="text"],
+.editor-styles-wrapper input[type="email"],
+.editor-styles-wrapper input[type="url"],
+.editor-styles-wrapper input[type="password"],
+.editor-styles-wrapper input[type="search"],
+.editor-styles-wrapper textarea {
+	color: #666666;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	background-color: #f8f8f8;
+	padding: 6px;
+	width: 98%;
+	background-color: #f8f8f8;
+}
+
+.editor-styles-wrapper input[type="text"]:focus,
+.editor-styles-wrapper input[type="email"]:focus,
+.editor-styles-wrapper input[type="url"]:focus,
+.editor-styles-wrapper input[type="password"]:focus,
+.editor-styles-wrapper input[type="search"]:focus,
+.editor-styles-wrapper textarea:focus {
+	color: #111111;
+}
+
+.editor-styles-wrapper textarea {
+	overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */
+	padding-left: 3px;
+	vertical-align: top; /* Improves readability and alignment in all browsers */
+	width: 98%;
+}
+
+/* Links */
+.editor-styles-wrapper a {
+	color: #ed564b;
+	text-decoration: none;
+}
+
+.editor-styles-wrapper a:visited {
+	color: #ed564b;
+}
+
+.editor-styles-wrapper a:hover,
+.editor-styles-wrapper a:focus,
+.editor-styles-wrapper a:active {
+	color: #ed564b;
+}
+
+/* Alignment */
+.editor-styles-wrapper .alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+
+.editor-styles-wrapper .alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+
+.editor-styles-wrapper .aligncenter {
+	clear: both;
+	display: block;
+	margin: 0 auto;
+}
+
+/* =Media
+----------------------------------------------- */
+
+.editor-styles-wrapper .page-content img.wp-smiley,
+.editor-styles-wrapper .entry-content img.wp-smiley,
+.editor-styles-wrapper .comment-content img.wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+
+.editor-styles-wrapper .wp-caption {
+	border: 1px solid #cccccc;
+	margin-bottom: 1.5em;
+	max-width: 100%;
+}
+
+.editor-styles-wrapper .wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin: 1.2% auto 0;
+	max-width: 98%;
+}
+
+.editor-styles-wrapper .wp-caption-text {
+	text-align: center;
+}
+
+.editor-styles-wrapper .wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+
+.editor-styles-wrapper .site-main .gallery {
+	margin-bottom: 1.5em;
+}
+
+.editor-styles-wrapper .site-main .gallery a img {
+	border: none;
+	height: auto;
+	max-width: 90%;
+}
+
+.editor-styles-wrapper .site-main .gallery dd {
+	margin: 0;
+}
+
+/* =WordPress Gallery Support
+----------------------------------------------- */
+.editor-styles-wrapper .gallery {
+	margin: 0 auto 15px;
+}
+
+.editor-styles-wrapper .gallery-item {
+	display: inline-block;
+	padding: 15px 2%;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.editor-styles-wrapper .gallery-columns-3 .gallery-item,
+.editor-styles-wrapper .gallery-columns-4 .gallery-item,
+.editor-styles-wrapper .gallery-columns-5 .gallery-item {
+	padding: 15px 1%;
+}
+
+.editor-styles-wrapper .gallery-columns-6 .gallery-item,
+.editor-styles-wrapper .gallery-columns-7 .gallery-item,
+.editor-styles-wrapper .gallery-columns-8 .gallery-item,
+.editor-styles-wrapper .gallery-columns-9 .gallery-item {
+	padding: 10px 0.5%;
+}
+
+.editor-styles-wrapper .gallery-columns-2 .gallery-item {
+	width: 50%;
+}
+
+.editor-styles-wrapper .gallery-columns-3 .gallery-item {
+	width: 33.33%;
+}
+
+.editor-styles-wrapper .gallery-columns-4 .gallery-item {
+	width: 25%;
+}
+
+.editor-styles-wrapper .gallery-columns-5 .gallery-item {
+	width: 20%;
+}
+
+.editor-styles-wrapper .gallery-columns-6 .gallery-item {
+	width: 16.66%;
+}
+
+.editor-styles-wrapper .gallery-columns-7 .gallery-item {
+	width: 14.28%;
+}
+
+.editor-styles-wrapper .gallery-columns-8 .gallery-item {
+	width: 12.5%;
+}
+
+.editor-styles-wrapper .gallery-columns-9 .gallery-item {
+	width: 11.11%;
+}
+
+.editor-styles-wrapper .gallery-icon img {
+	margin: 0 auto;
+}
+
+.editor-styles-wrapper .gallery .gallery-caption {
+	font-size: 12px;
+	line-height: 1.2;
+	padding-top: 5px;
+}
+
+.editor-styles-wrapper ul.wp-block-gallery.columns-3.is-cropped {
+	margin: 0;
+}
+
+/* Make sure embeds and iframes fit their containers */
+.editor-styles-wrapper embed,
+.editor-styles-wrapper iframe,
+.editor-styles-wrapper object {
+	max-width: 100%;
 }
