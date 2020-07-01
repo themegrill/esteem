@@ -12,3 +12,10 @@
 	font-family: 'Arial', sans-serif;
 	color: #777777;
 }
+
+.editor-styles-wrapper .wp-block.editor-post-title__block .editor-post-title__input {
+	font-size: 27px;
+	line-height: 36px;
+	color: #333333;
+	font-weight: normal;
+}
