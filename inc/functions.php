@@ -247,6 +247,8 @@ function esteem_body_class( $classes ) {
 
 	if ( get_theme_mod( 'esteem_site_layout', 'box' ) == 'wide' ) {
 		$classes[] = 'wide';
+	} else {
+		$classes[] = 'boxed';
 	}
 
 	if ( get_theme_mod( 'esteem_new_menu_enable', '1' ) == '1' ) {
