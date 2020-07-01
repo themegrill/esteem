@@ -1,0 +1,14 @@
+/* Basic Block Editor CSS */
+.editor-styles-wrapper {
+	background-color: #ffffff;
+	color: #777777;
+	font-size: 14px;
+	font-family: 'Arial', sans-serif;
+	line-height: 1.5;
+	word-wrap: break-word;
+}
+
+.editor-styles-wrapper > * {
+	font-family: 'Arial', sans-serif;
+	color: #777777;
+}
