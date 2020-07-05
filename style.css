@@ -99,6 +99,10 @@ blockquote, q {
 	quotes: "" "";
 }
 
+blockquote.wp-block-quote.has-text-align-right {
+border-left: 4px solid #000;
+}
+
 a:focus {
 	outline: thin dotted;
 }

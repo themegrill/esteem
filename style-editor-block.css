@@ -128,6 +128,7 @@
 .editor-styles-wrapper blockquote {
 	border-width: 1px 1px 1px 3px;
 	border-style: solid;
+	border-color: #eaeaea #eaeaea #eaeaea #ed564b;
 	padding: 20px;
 	font-style: italic;
 }
@@ -351,6 +352,10 @@
 .editor-styles-wrapper .wp-block-table td {
 	border: 1px solid #eaeaea;
 	padding: 6px 10px;
+}
+
+.editor-styles-wrapper blockquote.wp-block-quote.has-text-align-right {
+border-left: 4px solid #000;
 }
 
 /* Alignment */
