@@ -82,7 +82,10 @@ caption, th, td {
 	text-align: left;
 }
 
-th, td {
+th,
+td,
+.wp-block-table th,
+.wp-block-table td {
 	border: 1px solid #eaeaea;
 	padding: 6px 10px;
 }
@@ -190,7 +193,8 @@ h6 {
 	line-height: 25px;
 }
 
-hr {
+hr,
+.wp-block-separator {
 	background-color: #cccccc;
 	border: 0;
 	height: 1px;

@@ -333,6 +333,26 @@
 	color: #ed564b;
 }
 
+.editor-styles-wrapper table { /* tables still need 'cellspacing="0"' in the markup */
+	border-collapse: separate;
+	border-spacing: 0;
+}
+
+.editor-styles-wrapper caption, 
+.editor-styles-wrapper th, 
+.editor-styles-wrapper td {
+	font-weight: normal;
+	text-align: left;
+}
+
+.editor-styles-wrapper th, 
+.editor-styles-wrapper td,
+.editor-styles-wrapper .wp-block-table th,
+.editor-styles-wrapper .wp-block-table td {
+	border: 1px solid #eaeaea;
+	padding: 6px 10px;
+}
+
 /* Alignment */
 .editor-styles-wrapper .alignleft {
 	display: inline;
