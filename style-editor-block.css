@@ -8,6 +8,10 @@
 	word-wrap: break-word;
 }
 
+.editor-styles-wrapper > * {
+	font-family: 'Arial', sans-serif
+}
+
 .editor-styles-wrapper .wp-block.editor-post-title__block .editor-post-title__input {
 	font-size: 27px;
 	line-height: 36px;
