@@ -90,7 +90,8 @@
 	margin-bottom: 0.7rem;
 }
 
-.editor-styles-wrapper ul, .editor-styles-wrapper ol {
+.editor-styles-wrapper ul,
+.editor-styles-wrapper ol {
 	list-style: none outside none;
 }
 
@@ -104,15 +105,6 @@
 	list-style: decimal outside none;
 }
 
-.editor-styles-wrapper .post .entry-content ul, .editor-styles-wrapper .page .entry-content ul {
-	list-style: disc;
-}
-
-.editor-styles-wrapper .post .entry-content ul, .editor-styles-wrapper .post .entry-content ol,
-.editor-styles-wrapper .page .entry-content ul, .editor-styles-wrapper .page .entry-content ol {
-	margin: 0 0 20px 20px;
-}
-
 .editor-styles-wrapper dt {
 	font-weight: bold;
 }
@@ -121,20 +113,37 @@
 	margin: 0 1.5em 1.5em;
 }
 
-.editor-styles-wrapper b, .editor-styles-wrapper strong {
+.editor-styles-wrapper b,
+.editor-styles-wrapper strong {
 	font-weight: bold;
 }
 
-.editor-styles-wrapper dfn, .editor-styles-wrapper cite, .editor-styles-wrapper em, .editor-styles-wrapper i {
+.editor-styles-wrapper dfn,
+.editor-styles-wrapper cite,
+.editor-styles-wrapper em,
+.editor-styles-wrapper i {
 	font-style: italic;
 }
 
-.editor-styles-wrapper blockquote {
+.editor-styles-wrapper blockquote,
+.editor-styles-wrapper .wp-block-quote,
+.editor-styles-wrapper .wp-block-quote.is-style-large,
+.editor-styles-wrapper .wp-block-quote.has-text-align-right {
 	border-width: 1px 1px 1px 3px;
 	border-style: solid;
 	border-color: #eaeaea #eaeaea #eaeaea #ed564b;
+	margin-bottom: 20px;
 	padding: 20px;
 	font-style: italic;
+}
+
+.editor-styles-wrapper .wp-block-quote.has-text-align-center {
+	border-left: 1px solid #EAEAEA;
+}
+
+.editor-styles-wrapper .wp-block-quote.has-text-align-right {
+	border-left: 1px solid #EAEAEA;
+	border-right: 4px solid #ed564b;
 }
 
 .editor-styles-wrapper address {
@@ -343,23 +352,19 @@
 	border-spacing: 0;
 }
 
-.editor-styles-wrapper caption, 
-.editor-styles-wrapper th, 
+.editor-styles-wrapper caption,
+.editor-styles-wrapper th,
 .editor-styles-wrapper td {
 	font-weight: normal;
 	text-align: left;
 }
 
-.editor-styles-wrapper th, 
+.editor-styles-wrapper th,
 .editor-styles-wrapper td,
 .editor-styles-wrapper .wp-block-table th,
 .editor-styles-wrapper .wp-block-table td {
 	border: 1px solid #eaeaea;
 	padding: 6px 10px;
-}
-
-.editor-styles-wrapper blockquote.wp-block-quote.has-text-align-right {
-border-left: 4px solid #000;
 }
 
 /* Alignment */

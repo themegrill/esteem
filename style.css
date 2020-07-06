@@ -99,10 +99,6 @@ blockquote, q {
 	quotes: "" "";
 }
 
-blockquote.wp-block-quote.has-text-align-right {
-border-left: 4px solid #000;
-}
-
 a:focus {
 	outline: thin dotted;
 }
@@ -249,13 +245,25 @@ dfn, cite, em, i {
 	font-style: italic;
 }
 
-blockquote {
+blockquote,
+.wp-block-quote,
+.wp-block-quote.is-style-large,
+.wp-block-quote.has-text-align-right {
 	border-width: 1px 1px 1px 3px;
 	border-style: solid;
 	border-color: #eaeaea #eaeaea #eaeaea #ed564b;
 	margin-bottom: 20px;
 	padding: 20px;
 	font-style: italic;
+}
+
+.wp-block-quote.has-text-align-center {
+	border-left: 1px solid #EAEAEA;
+}
+
+.wp-block-quote.has-text-align-right {
+	border-left: 1px solid #EAEAEA;
+	border-right: 4px solid #ed564b;
 }
 
 address {
