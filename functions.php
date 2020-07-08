@@ -52,6 +52,17 @@ add_action( 'template_redirect', 'esteem_content_width' );
 
 add_action( 'after_setup_theme', 'esteem_setup' );
 
+/**
+ * Enqueue block editor styles.
+ *
+ * @since Esteem 1.4.5
+ */
+function esteem_block_editor_styles() {
+	wp_enqueue_style( 'esteem-block-editor-styles', get_template_directory_uri() . '/style-editor-block.css' );
+}
+
+add_action( 'enqueue_block_editor_assets', 'esteem_block_editor_styles', 1, 1 );
+
 if ( ! function_exists( 'esteem_setup' ) ) :
 	/**
 	 * Adding the core functionality of WordPress.
@@ -77,6 +88,12 @@ if ( ! function_exists( 'esteem_setup' ) ) :
 
 		// Gutenberg layout support.
 		add_theme_support( 'align-wide' );
+
+		// Add support for Block Styles.
+		add_theme_support( 'wp-block-styles' );
+
+		// Responsive embeds support.
+		add_theme_support( 'responsive-embeds' );
 
 		// Adds the support for the Custom Logo introduced in WordPress 4.5
 		add_theme_support( 'custom-logo',
