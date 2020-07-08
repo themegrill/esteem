@@ -11,6 +11,13 @@
 	}
 }
 
+@media screen and (max-width: 1200px) and (min-width: 1078px) {
+	.no-sidebar-full-width #primary .entry-content > .alignwide {
+		margin-left: -30px;
+		margin-right: -30px;
+	}
+}
+
 @media screen and (max-width: 1190px) {
 	#page {
 		width: 97%;
