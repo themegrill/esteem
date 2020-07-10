@@ -41,7 +41,7 @@ If you want to translate this theme to your language, Please visit:- https://tra
 /**********************************************************/
 
 == Changelog ==
-= TBD =
+= Version 1.4.5 - 2020-07-10 =
 * Add - Required header fields: `Tested up to` and `Requires PHP` in style.css.
 * Enhancement - Gutenberg compatibility.
 * Remove - Unrequired deprecated demo config for theme demo lists.
