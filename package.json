@@ -1,7 +1,7 @@
 {
   "name": "esteem",
   "title": "Esteem",
-  "version": "1.4.5",
+  "version": "1.4.6",
   "homepage": "https://themegrill.com/themes/esteem",
   "repository": {
     "type": "git",
@@ -24,5 +24,8 @@
     "makepot": "grunt makepot",
     "compress": "grunt compress",
     "build": "npm run makepot && npm run compress"
+  },
+  "dependencies": {
+    "grunt-sass": "^3.1.0"
   }
 }
