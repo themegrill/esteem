@@ -96,7 +96,8 @@ if ( ! function_exists( 'esteem_setup' ) ) :
 		add_theme_support( 'responsive-embeds' );
 
 		// Adds the support for the Custom Logo introduced in WordPress 4.5
-		add_theme_support( 'custom-logo',
+		add_theme_support(
+			'custom-logo',
 			array(
 				'flex-width'  => true,
 				'flex-height' => true,
@@ -111,13 +112,16 @@ if ( ! function_exists( 'esteem_setup' ) ) :
 
 		// Switches default core markup for comment form, and comments
 		// to output valid HTML5.
-		add_theme_support( 'html5', array(
-			'search-form',
-			'comment-form',
-			'comment-list',
-			'gallery',
-			'caption',
-		) );
+		add_theme_support(
+			'html5',
+			array(
+				'search-form',
+				'comment-form',
+				'comment-list',
+				'gallery',
+				'caption',
+			)
+		);
 
 		// Registering navigation menus.
 		register_nav_menu( 'primary', 'Primary Menu' );
@@ -129,9 +133,15 @@ if ( ! function_exists( 'esteem_setup' ) ) :
 		add_image_size( 'service-featured', 600, 330, true );
 
 		// Setup the WordPress core custom background feature.
-		add_theme_support( 'custom-background', apply_filters( 'esteem_custom_background_args', array(
-			'default-color' => 'eaeaea',
-		) ) );
+		add_theme_support(
+			'custom-background',
+			apply_filters(
+				'esteem_custom_background_args',
+				array(
+					'default-color' => 'eaeaea',
+				)
+			)
+		);
 
 		// Adding excerpt option box for pages as well
 		add_post_type_support( 'page', 'excerpt' );
@@ -155,7 +165,7 @@ if ( ! function_exists( 'esteem_options_migrate' ) ) :
 		update_option( 'esteem_customizer_transfer', 1 );
 
 		$esteem_themename      = get_option( 'stylesheet' );
-		$esteem_themename_preg = preg_replace( "/\W/", "_", strtolower( $esteem_themename ) );
+		$esteem_themename_preg = preg_replace( '/\W/', '_', strtolower( $esteem_themename ) );
 		if ( false === ( $mods = get_option( $esteem_themename_preg ) ) ) {
 			return;
 		}
@@ -260,29 +270,29 @@ if ( ! function_exists( 'esteem_include_files' ) ) {
 	function esteem_include_files() {
 
 		/** Load functions */
-		require_once( ESTEEM_INCLUDES_DIR . '/functions.php' );
+		require_once ESTEEM_INCLUDES_DIR . '/functions.php';
 
 		/**
 		 * Admin.
 		 */
 		if ( is_admin() ) {
-			require_once( ESTEEM_ADMIN_DIR . '/tdi-notice.php' );
+			require_once ESTEEM_ADMIN_DIR . '/class-esteem-dashboard.php';
 		}
 
-		require_once( ESTEEM_INCLUDES_DIR . '/custom-header.php' );
+		require_once ESTEEM_INCLUDES_DIR . '/custom-header.php';
 
-		require_once( ESTEEM_FONTAWESOME_DIR . '/icons.php' );
+		require_once ESTEEM_FONTAWESOME_DIR . '/icons.php';
 
-		require_once( ESTEEM_ADMIN_DIR . '/meta-boxes.php' );
+		require_once ESTEEM_ADMIN_DIR . '/meta-boxes.php';
 
 		/** Load Extensions files */
-		require_once( ESTEEM_INCLUDES_DIR . '/header-functions.php' );
+		require_once ESTEEM_INCLUDES_DIR . '/header-functions.php';
 
 		/** Load Widgets and Widgetized Area */
-		require_once( ESTEEM_WIDGETS_DIR . '/widgets.php' );
+		require_once ESTEEM_WIDGETS_DIR . '/widgets.php';
 
 		/** Customizer */
-		require_once( ESTEEM_INCLUDES_DIR . '/customizer.php' );
+		require_once ESTEEM_INCLUDES_DIR . '/customizer.php';
 
 	}
 }
@@ -291,21 +301,20 @@ do_action( 'esteem_init' );
 /**
  * Assign the Esteem version to a variable.
  */
-$theme          = wp_get_theme( 'esteem' );
-$esteem_version = $theme['Version'];
+$esteem_theme = wp_get_theme( 'esteem' );
+
+define( 'ESTEEM_THEME_VERSION', $esteem_theme->get( 'Version' ) );
 
 /**
  * Calling in the admin area for the Welcome Page as well as for the new theme notice too.
  */
 if ( is_admin() ) {
-	require get_template_directory() . '/inc/admin/class-esteem-admin.php';
+	require ESTEEM_ADMIN_DIR . '/class-esteem-admin.php';
+	require ESTEEM_ADMIN_DIR . '/class-esteem-notice.php';
+	require ESTEEM_ADMIN_DIR . '/class-esteem-welcome-notice.php';
+	require ESTEEM_ADMIN_DIR . '/class-esteem-upgrade-notice.php';
+	require ESTEEM_ADMIN_DIR . '/class-esteem-theme-review-notice.php';
 }
-
-/**
- * Load TGMPA Configs.
- */
-require_once( ESTEEM_INCLUDES_DIR . '/tgm-plugin-activation/class-tgm-plugin-activation.php' );
-require_once( ESTEEM_INCLUDES_DIR . '/tgm-plugin-activation/tgmpa-esteem.php' );
 
 /**
  * Load Jetpack compatibility file.
