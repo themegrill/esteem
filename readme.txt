@@ -42,6 +42,7 @@ If you want to translate this theme to your language, Please visit:- https://tra
 
 == Changelog ==
 = TBD =
+* Tweak - Remove deprecate Custom CSS customize option provided via theme.
 * Enhancement - Update protocol to prevent not secure issue.
 
 = Version 1.4.5 - 2020-07-10 =
