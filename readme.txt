@@ -7,6 +7,7 @@ Esteem is a clean multipurpose responsive WordPress theme designed to fit busine
 == COPYRIGHT AND LICENSE ==
 
 Resources packed within the theme.
+* Images on screenshot is from https://pxhere.com/ link. License under Creative Commons Zero (CC0)
 * Font Awesome by Dave Gandy http://fortawesome.github.io/Font-Awesome/
   SIL OFL 1.1 http://scripts.sil.org/OFL.
 * Image used on screenshot is our own creation[licensed under GPL] which also makes use of this image http://www.pexels.com/photo/922/ which is under CC0 License.
