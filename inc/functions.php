@@ -326,13 +326,14 @@ if ( ! function_exists( 'esteem_footer_copyright' ) ) :
 	function esteem_footer_copyright() {
 		$site_link = '<a href="' . esc_url( home_url( '/' ) ) . '" title="' . esc_attr( get_bloginfo( 'name', 'display' ) ) . '" ><span>' . get_bloginfo( 'name', 'display' ) . '</span></a>';
 
-		$wp_link = '<a href="' . esc_url( 'https://wordpress.org' ) . '" target="_blank" title="' . esc_attr__( 'WordPress', 'esteem' ) . '"rel="nofollow"><span>' . __( 'WordPress', 'esteem' ) . '</span></a>';
+		$wp_link = '<a href="' . esc_url( 'https://wordpress.org' ) . '" target="_blank" title="' . esc_attr__( 'WordPress', 'esteem' ) . '"rel="nofollow"><span>' . esc_html__( 'WordPress', 'esteem' ) . '</span></a>';
 
-		$tg_link = '<a href="' . esc_url( 'https://themegrill.com/themes/esteem' ) . '" target="_blank" title="' . esc_attr__( 'Esteem', 'esteem' ) . '" rel="nofollow"><span>' . __( 'Esteem', 'esteem' ) . '</span></a>';
+		$tg_link = '<a href="' . esc_url( 'https://themegrill.com/themes/esteem' ) . '" target="_blank" title="' . esc_attr__( 'Esteem', 'esteem' ) . '" rel="nofollow"><span>' . esc_html__( 'Esteem', 'esteem' ) . '</span></a>';
 
 		$default_footer_value = sprintf( esc_html__( 'Copyright &copy; %1$s %2$s. All rights reserved.', 'esteem' ), date( 'Y' ), $site_link ) . ' ' . sprintf( esc_html__( 'Theme: %1$s by %2$s.', 'esteem' ), $tg_link, 'ThemeGrill' ) . ' ' . sprintf( esc_html__( 'Powered by %s.', 'esteem' ), $wp_link );
 
 		$esteem_footer_copyright = '<div class="copyright">' . $default_footer_value . '</div>';
+
 		echo $esteem_footer_copyright;
 	}
 endif;
