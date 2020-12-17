@@ -44,6 +44,7 @@ If you want to translate this theme to your language, Please visit:- https://tra
 == Changelog ==
 = TBD =
 * Tweak - Remove deprecate Custom CSS customize option provided via theme.
+* Tweak - Update footer credit link with `rel="nofollow"` attributes.
 
 = Version 1.4.6 - 2020-08-14 =
 * Remove - TGMPA library to recommend plugins.
