@@ -42,6 +42,9 @@ If you want to translate this theme to your language, Please visit:- https://tra
 /**********************************************************/
 
 == Changelog ==
+= TBD =
+* Fix - Customizer critical error.
+
 = Version 1.4.7 - 2020-12-17 =
 * Tweak - Remove deprecate Custom CSS customize option provided via theme.
 * Tweak - Update footer credit link with `rel="nofollow"` attributes.
