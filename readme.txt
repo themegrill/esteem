@@ -42,7 +42,7 @@ If you want to translate this theme to your language, Please visit:- https://tra
 /**********************************************************/
 
 == Changelog ==
-= TBD =
+= Version 1.4.8 - 2020-12-18 =
 * Fix - Customizer critical error.
 
 = Version 1.4.7 - 2020-12-17 =
