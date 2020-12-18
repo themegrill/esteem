@@ -503,11 +503,12 @@ function esteem_customize_register( $wp_customize ) {
 
 		) );
 		$wp_customize->add_control(
-			new ESTEEM_Custom_CSS_Control( $wp_customize, 'esteem_slider_text' . $i, array(
+			'esteem_slider_text' . $i, array(
+				'type'	   => 'textarea',
 				'label'    => __( 'Enter your slider description.', 'esteem' ),
 				'section'  => 'esteem_slider_image_setting' . $i,
 				'settings' => 'esteem_slider_text' . $i,
-			) )
+			)
 		);
 
 		// Slider Link
