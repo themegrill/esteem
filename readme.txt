@@ -42,6 +42,9 @@ If you want to translate this theme to your language, Please visit:- https://tra
 /**********************************************************/
 
 == Changelog ==
+= Version TBD =
+* Feature - Added RTL support.
+
 = Version 1.4.8 - 2020-12-18 =
 * Fix - Customizer critical error.
 
