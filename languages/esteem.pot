@@ -745,8 +745,8 @@ msgid ""
 "sidebar layout and 3 blog layout. It's also fully compatible with popular "
 "plugins like contact Form 7, WP PageNavi and Breadcrumb Navxt and is "
 "translation ready. Get free support at "
-"https://themegrill.com/support-forum/ and check the demo at "
-"https://demo.themegrill.com/esteem/."
+"https://themegrill.com/contact/ and check the demo at "
+"https://themegrilldemos.com/esteem/."
 msgstr ""
 
 #. Author URI of the plugin/theme
