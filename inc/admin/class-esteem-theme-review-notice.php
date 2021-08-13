@@ -90,10 +90,10 @@ class Esteem_Theme_Review_Notice {
 						<?php
 							printf(
 							/* translators: %1$s: Opening of strong tag, %2$s: Theme's Name, %3$s: Closing of strong tag  */
-							esc_html__( 'Hope you are having a nice experience with %1$s %2$s %3$s theme. Please provide this theme a nice review.', 'esteem' ),
-							'<strong>',
-							esc_html( wp_get_theme( get_template() ) ),
-							'</strong>'
+								esc_html__( 'Hope you are having a nice experience with %1$s %2$s %3$s theme. Please provide this theme a nice review.', 'esteem' ),
+								'<strong>',
+								esc_html( wp_get_theme( get_template() ) ),
+								'</strong>'
 							);
 						?>
 					</p>
