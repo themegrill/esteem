@@ -1832,11 +1832,12 @@ h3#site-title {
 }
 
 .search-top {
+    font-size: 22px;
 	position: absolute;
 	right: 0;
-	top: 29px;
+	top: 25px;
 	cursor: pointer;
-	padding: 10px;
+	padding: 8px;
 }
 
 .search-form-top {
