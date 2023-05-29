@@ -1834,9 +1834,9 @@ h3#site-title {
 .search-top {
 	position: absolute;
 	right: 0;
-	top: 39px;
+	top: 29px;
 	cursor: pointer;
-	padding: 0 5px;
+	padding: 10px;
 }
 
 .search-form-top {
