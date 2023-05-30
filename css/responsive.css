@@ -77,7 +77,7 @@
 	}
 
 	.hgroup-wrap-right {
-		float: none;
+		float: right;
 		padding-right: 0;
 	}
 
@@ -96,8 +96,7 @@
 
 	.menu-toggle {
 		margin-top: 30px;
-		right: 58px;
-		position: absolute;
+        margin-right: 25px;
 	}
 
 	.menu-toggle:before {
@@ -105,7 +104,6 @@
 		content: "\f0c9";
 		font-family: fontawesome;
 		font-size: 22px;
-		position: absolute;
 	}
 
 	.nav-menu {

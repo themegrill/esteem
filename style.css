@@ -542,7 +542,6 @@ a:active {
 .main-navigation {
 	clear: both;
 	display: block;
-	float: right;
 }
 
 .main-navigation ul {
@@ -962,7 +961,6 @@ h3#site-title {
 }
 
 .hgroup-wrap-right {
-	position: relative;
 	float: right;
 	padding-right: 20px;
 }
@@ -991,13 +989,20 @@ h3#site-title {
 
 .main-navigation {
 	padding-top: 22px;
-	float: right;
+	float: left;
 	clear: none;
 }
 
 .main-navigation ul li {
-	padding-right: 25px;
 	font-size: 14px;
+}
+
+.main-navigation ul li:not(:last-child) {
+	padding-right: 25px;
+}
+
+.nav-menu {
+    margin-right: 25px;
 }
 
 .nav-menu > ul > li > a, .menu > ul > li > a {
@@ -1831,11 +1836,11 @@ h3#site-title {
 	position: relative;
 }
 
-.search-top {
+.search-top.icon-search {
+    float: right;
+    margin-top: 25px;
     font-size: 22px;
-	position: absolute;
 	right: 0;
-	top: 25px;
 	cursor: pointer;
 	padding: 8px;
 }
