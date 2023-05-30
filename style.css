@@ -961,6 +961,7 @@ h3#site-title {
 }
 
 .hgroup-wrap-right {
+    position: relative;
 	float: right;
 	padding-right: 20px;
 }
