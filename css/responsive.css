@@ -147,7 +147,8 @@
 	}
 
     .search-top {
-        top: 13px;
+        top: 12px;
+        font-size: 22px;
     }
 }
 
