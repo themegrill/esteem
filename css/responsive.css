@@ -95,8 +95,8 @@
 	}
 
 	.menu-toggle {
-		margin-top: 30px;
-		right: 58px;
+		top: 18px;
+		right: 74px;
 		position: absolute;
 	}
 
@@ -145,6 +145,10 @@
 		float: right;
 		margin-right: 0;
 	}
+
+    .search-top {
+        top: 13px;
+    }
 }
 
 @media screen and (max-width: 767px) {
