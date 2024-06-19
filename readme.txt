@@ -48,9 +48,10 @@ If you want to translate this theme to your language, Please visit:- https://tra
 /**********************************************************/
 
 == Changelog ==
-= Version TBD =
+= Version 1.5.0 - 2024-06-19 =
 * Tweak - Increase clickable area of search icon.
 * Tweak - Update WordPress tested upto version.
+* Enhancement - General security measures.
 
 = Version 1.4.9 - 2021-05-14 =
 * Feature - Added RTL support.

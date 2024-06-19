@@ -53,11 +53,12 @@ if ( ! function_exists( 'esteem_slider' ) ) :
 	/**
 	 * display featured post slider
 	 */
-	function esteem_slider() { ?>
+	function esteem_slider() {
+		?>
 		<div class="slider-wrap">
 			<div class="slider-cycle">
 				<?php
-				for ( $i = 1; $i <= 4; $i ++ ) {
+				for ( $i = 1; $i <= 4; $i++ ) {
 					$esteem_slider_title = get_theme_mod( 'esteem_slider_title' . $i, '' );
 					$esteem_slider_text  = get_theme_mod( 'esteem_slider_text' . $i, '' );
 					$esteem_slider_image = get_theme_mod( 'esteem_slider_image' . $i, '' );
@@ -67,16 +68,18 @@ if ( ! function_exists( 'esteem_slider' ) ) :
 
 					if ( ! empty( $esteem_slider_image ) ) {
 						if ( $i == 1 ) {
-							$classes = "slides displayblock";
+							$classes = 'slides displayblock';
 						} else {
-							$classes = "slides displaynone";
+							$classes = 'slides displaynone';
 						}
 						?>
-						<?php $img_altr = get_post_meta( $attachment_to_id, '_wp_attachment_image_alt', true );
-						$img_alt        = ! empty( $img_altr ) ? $img_altr : $esteem_slider_title; ?>
+						<?php
+						$img_altr = get_post_meta( $attachment_to_id, '_wp_attachment_image_alt', true );
+						$img_alt  = ! empty( $img_altr ) ? $img_altr : $esteem_slider_title;
+						?>
 						<section id="featured-slider" class="<?php echo $classes; ?>">
 							<figure class="slider-image-wrap">
-								<img width="<?php echo esc_attr( $iamge_value[1]); ?>" height="<?php echo esc_attr( $iamge_value[2] ); ?>" alt="<?php echo esc_attr( $img_alt ); ?>" src="<?php echo esc_url( $esteem_slider_image ); ?>">
+								<img width="<?php echo esc_attr( $iamge_value[1] ); ?>" height="<?php echo esc_attr( $iamge_value[2] ); ?>" alt="<?php echo esc_attr( $img_alt ); ?>" src="<?php echo esc_url( $esteem_slider_image ); ?>">
 							</figure>
 							<?php if ( ! empty( $esteem_slider_title ) || ! empty( $esteem_slider_text ) ) { ?>
 								<article id="slider-text-box">
@@ -123,7 +126,7 @@ if ( ! function_exists( 'esteem_header_title' ) ) :
 				 * what author we're dealing with (if that is the case).
 				*/
 				the_post();
-				$esteem_header_title = sprintf( __( 'Author: %s', 'esteem' ), '<span class="vcard">' . get_the_author() . '</span>' );
+				$esteem_header_title = sprintf( __( 'Author: %s', 'esteem' ), '<span class="vcard">' . esc_html( get_the_author() ) . '</span>' );
 				/* Since we called the_post() above, we need to
 				 * rewind the loop back to the beginning that way
 				 * we can run the loop properly, in full.
@@ -159,7 +162,6 @@ if ( ! function_exists( 'esteem_header_title' ) ) :
 		}
 
 		return $esteem_header_title;
-
 	}
 endif;
 
