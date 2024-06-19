@@ -4,8 +4,8 @@ Theme URI: https://themegrill.com/themes/esteem/
 Author: ThemeGrill
 Author URI: https://themegrill.com
 Description: Esteem is a clean multipurpose responsive WordPress theme designed to fit business, portfolio, blogging or any type of site. The theme supports custom header, custom background, custom widgets, page templates and has built in options panel to configure primary color, site logo, slider, sidebar layout and 3 blog layout. It's also fully compatible with popular plugins like contact Form 7, WP PageNavi and Breadcrumb Navxt and is translation ready. Get free support at https://themegrill.com/contact/ and check the demo at https://themegrilldemos.com/esteem/.
-Version: 1.4.9
-Tested up to: 6.2
+Version: 1.5.0
+Tested up to: 6.4
 Requires PHP: 5.6
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -21,14 +21,63 @@ and Blueprint http://www.blueprintcss.org/
 /* =Reset
 -------------------------------------------------------------- */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, font, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
 	border: 0;
 	font-family: inherit;
 	font-size: 100%;
@@ -41,10 +90,14 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 }
 
 html {
-	font-size: 62.5%; /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
-	overflow-y: scroll; /* Keeps page centred in all browsers regardless of content height */
-	-webkit-text-size-adjust: 100%; /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
-	-ms-text-size-adjust: 100%; /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
+	font-size: 62.5%;
+	/* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
+	overflow-y: scroll;
+	/* Keeps page centred in all browsers regardless of content height */
+	-webkit-text-size-adjust: 100%;
+	/* Prevents iOS text size adjust after orientation change, without disabling user zoom */
+	-ms-text-size-adjust: 100%;
+	/* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
 }
 
 body {
@@ -68,16 +121,20 @@ section {
 	display: block;
 }
 
-ol, ul {
+ol,
+ul {
 	list-style: none;
 }
 
-table { /* tables still need 'cellspacing="0"' in the markup */
+table {
+	/* tables still need 'cellspacing="0"' in the markup */
 	border-collapse: separate;
 	border-spacing: 0;
 }
 
-caption, th, td {
+caption,
+th,
+td {
 	font-weight: normal;
 	text-align: left;
 }
@@ -90,12 +147,15 @@ td,
 	padding: 6px 10px;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
 	content: "";
 }
 
-blockquote, q {
+blockquote,
+q {
 	quotes: "" "";
 }
 
@@ -104,7 +164,8 @@ a:focus {
 }
 
 a:hover,
-a:active { /* Improves readability when focused and also mouse hovered in all browsers people.opera.com/patrickl/experiments/keyboard/test */
+a:active {
+	/* Improves readability when focused and also mouse hovered in all browsers people.opera.com/patrickl/experiments/keyboard/test */
 	outline: 0;
 }
 
@@ -152,12 +213,22 @@ textarea {
 }
 
 /* Headings */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	clear: both;
 
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	font-weight: normal;
 	font-family: 'Arial', sans-serif;
 	color: #333333;
@@ -206,12 +277,13 @@ p {
 	margin-bottom: 0.7rem;
 }
 
-ul, ol {
+ul,
+ol {
 	list-style: none outside none;
 }
 
-li > ul,
-li > ol {
+li>ul,
+li>ol {
 	margin-bottom: 0;
 	margin-left: 1.5em;
 }
@@ -220,12 +292,15 @@ ol {
 	list-style: decimal outside none;
 }
 
-.post .entry-content ul, .page .entry-content ul {
+.post .entry-content ul,
+.page .entry-content ul {
 	list-style: disc;
 }
 
-.post .entry-content ul, .post .entry-content ol,
-.page .entry-content ul, .page .entry-content ol {
+.post .entry-content ul,
+.post .entry-content ol,
+.page .entry-content ul,
+.page .entry-content ol {
 	margin: 0 0 20px 20px;
 }
 
@@ -237,11 +312,15 @@ dd {
 	margin: 0 1.5em 1.5em;
 }
 
-b, strong {
+b,
+strong {
 	font-weight: bold;
 }
 
-dfn, cite, em, i {
+dfn,
+cite,
+em,
+i {
 	font-style: italic;
 }
 
@@ -282,16 +361,21 @@ pre {
 	max-width: 100%;
 }
 
-code, kbd, tt, var {
+code,
+kbd,
+tt,
+var {
 	font: 15px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 }
 
-abbr, acronym {
+abbr,
+acronym {
 	border-bottom: 1px dotted #666666;
 	cursor: help;
 }
 
-mark, ins {
+mark,
+ins {
 	background: #fff9c0;
 	text-decoration: none;
 }
@@ -336,8 +420,10 @@ th {
 }
 
 img {
-	height: auto; /* Make sure images are scaled correctly. */
-	max-width: 100%; /* Adhere to container width. */
+	height: auto;
+	/* Make sure images are scaled correctly. */
+	max-width: 100%;
+	/* Adhere to container width. */
 	vertical-align: top;
 }
 
@@ -345,15 +431,20 @@ button,
 input,
 select,
 textarea {
-	font-size: 100%; /* Corrects font size not being inherited in all browsers */
-	margin: 0; /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
-	vertical-align: baseline; /* Improves appearance and consistency in all browsers */
-	*vertical-align: middle; /* Improves appearance and consistency in all browsers */
+	font-size: 100%;
+	/* Corrects font size not being inherited in all browsers */
+	margin: 0;
+	/* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
+	vertical-align: baseline;
+	/* Improves appearance and consistency in all browsers */
+	*vertical-align: middle;
+	/* Improves appearance and consistency in all browsers */
 }
 
 button,
 input {
-	line-height: normal; /* Addresses FF3/4 setting line-height using !important in the UA stylesheet */
+	line-height: normal;
+	/* Addresses FF3/4 setting line-height using !important in the UA stylesheet */
 }
 
 button,
@@ -361,8 +452,10 @@ html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
 	background: #ed564b;
-	cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
-	-webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
+	cursor: pointer;
+	/* Improves usability and consistency of cursor style between image-type 'input' and others */
+	-webkit-appearance: button;
+	/* Corrects inability to style clickable 'input' types in iOS */
 	font-size: 12px;
 	font-size: 1.2rem;
 	border: 0 none;
@@ -387,29 +480,33 @@ input[type="submit"]:focus,
 button:active,
 html input[type="button"]:active,
 input[type="reset"]:active,
-input[type="submit"]:active {
-
-}
+input[type="submit"]:active {}
 
 input[type="checkbox"],
 input[type="radio"] {
-	box-sizing: border-box; /* Addresses box sizing set to content-box in IE8/9 */
-	padding: 0; /* Addresses excess padding in IE8/9 */
+	box-sizing: border-box;
+	/* Addresses box sizing set to content-box in IE8/9 */
+	padding: 0;
+	/* Addresses excess padding in IE8/9 */
 }
 
 input[type="search"] {
-	-webkit-appearance: textfield; /* Addresses appearance set to searchfield in S5, Chrome */
-	-webkit-box-sizing: content-box; /* Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */
+	-webkit-appearance: textfield;
+	/* Addresses appearance set to searchfield in S5, Chrome */
+	-webkit-box-sizing: content-box;
+	/* Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */
 	-moz-box-sizing: content-box;
 	box-sizing: content-box;
 }
 
-input[type="search"]::-webkit-search-decoration { /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
+input[type="search"]::-webkit-search-decoration {
+	/* Corrects inner padding displayed oddly in S5, Chrome on OSX */
 	-webkit-appearance: none;
 }
 
 button::-moz-focus-inner,
-input::-moz-focus-inner { /* Corrects inner padding and border displayed oddly in FF3/4 www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ */
+input::-moz-focus-inner {
+	/* Corrects inner padding and border displayed oddly in FF3/4 www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ */
 	border: 0;
 	padding: 0;
 }
@@ -439,9 +536,11 @@ textarea:focus {
 }
 
 textarea {
-	overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */
+	overflow: auto;
+	/* Removes default vertical scrollbar in IE6/7/8/9 */
 	padding-left: 3px;
-	vertical-align: top; /* Improves readability and alignment in all browsers */
+	vertical-align: top;
+	/* Improves readability and alignment in all browsers */
 	width: 98%;
 }
 
@@ -491,7 +590,8 @@ a:active {
 	padding: 0;
 	position: absolute !important;
 	width: 1px;
-	word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+	word-wrap: normal !important;
+	/* Many screen reader and browser combinations announce broken words as they would appear visually. */
 }
 
 .screen-reader-text:focus {
@@ -512,7 +612,8 @@ a:active {
 	text-decoration: none;
 	top: 5px;
 	width: auto;
-	z-index: 100000; /* Above WP toolbar. */
+	z-index: 100000;
+	/* Above WP toolbar. */
 }
 
 #main[tabindex="-1"]:focus {
@@ -585,31 +686,28 @@ a:active {
 	border-bottom: 1px solid #dfdfdf;
 }
 
-.main-navigation li:hover > a,
-.main-navigation li:hover > .sub-toggle {
+.main-navigation li:hover>a,
+.main-navigation li:hover>.sub-toggle {
 	color: #ed564b;
 }
 
-.main-navigation ul ul :hover > a {
-}
+.main-navigation ul ul :hover>a {}
 
-.main-navigation ul ul a:hover {
+.main-navigation ul ul a:hover {}
 
-}
-
-.main-navigation ul li:hover > ul,
-.main-navigation ul li.focus > ul {
+.main-navigation ul li:hover>ul,
+.main-navigation ul li.focus>ul {
 	left: auto;
 }
 
-.main-navigation ul ul li:hover > ul,
-.main-navigation ul ul li.focus > ul {
+.main-navigation ul ul li:hover>ul,
+.main-navigation ul ul li.focus>ul {
 	left: 100%;
 }
 
-.main-navigation li.current_page_item > a,
-.main-navigation li.current-menu-item > a,
-.main-navigation li.current-menu-ancestor > a {
+.main-navigation li.current_page_item>a,
+.main-navigation li.current-menu-item>a,
+.main-navigation li.current-menu-ancestor>a {
 	color: #ed564b;
 }
 
@@ -669,8 +767,7 @@ a:active {
 	margin-bottom: 1.5em;
 }
 
-.gallery-caption {
-}
+.gallery-caption {}
 
 .site-main .gallery a img {
 	border: none;
@@ -682,11 +779,9 @@ a:active {
 	margin: 0;
 }
 
-.site-main .gallery-columns-4 .gallery-item {
-}
+.site-main .gallery-columns-4 .gallery-item {}
 
-.site-main .gallery-columns-4 .gallery-item img {
-}
+.site-main .gallery-columns-4 .gallery-item img {}
 
 /* =WordPress Gallery Support
 ----------------------------------------------- */
@@ -778,8 +873,7 @@ object {
 	word-wrap: break-word;
 }
 
-.bypostauthor {
-}
+.bypostauthor {}
 
 #respond label {
 	display: block;
@@ -801,7 +895,10 @@ object {
 	max-width: 74px;
 }
 
-.comment-metadata, .comment-awaiting-moderation, .comment-content, .comment-list .reply {
+.comment-metadata,
+.comment-awaiting-moderation,
+.comment-content,
+.comment-list .reply {
 	float: right;
 	width: calc(100% - 124px);
 	word-wrap: break-word;
@@ -832,7 +929,8 @@ input[type="password"] {
 	list-style: square outside none;
 }
 
-.comment-content ul, .comment-content ol {
+.comment-content ul,
+.comment-content ol {
 	margin: 0 0 20px 20px;
 }
 
@@ -919,7 +1017,10 @@ h3#site-title {
 	line-height: 36px;
 }
 
-#site-title a span, #site-title a:hover, #site-title a:focus, #site-title a:active {
+#site-title a span,
+#site-title a:hover,
+#site-title a:focus,
+#site-title a:active {
 	color: #ed564b;
 }
 
@@ -990,8 +1091,8 @@ h3#site-title {
 }
 
 .main-navigation {
-    padding-top: 22px;
-    margin-right: 30px;
+	padding-top: 22px;
+	margin-right: 30px;
 	float: right;
 	clear: none;
 }
@@ -1004,7 +1105,8 @@ h3#site-title {
 	padding-right: 25px;
 }
 
-.nav-menu > ul > li > a, .menu > ul > li > a {
+.nav-menu>ul>li>a,
+.menu>ul>li>a {
 	line-height: 50px;
 	height: 88px;
 }
@@ -1091,7 +1193,8 @@ h3#site-title {
 	width: 18px;
 }
 
-#controllers a:hover, #controllers a.active {
+#controllers a:hover,
+#controllers a.active {
 	color: #ed564b;
 	background-color: #ed564b;
 }
@@ -1151,8 +1254,7 @@ h3#site-title {
 
 /* =Content
 ----------------------------------------------- */
-.sticky {
-}
+.sticky {}
 
 .hentry {
 	margin: 0 0 4.5em;
@@ -1215,7 +1317,7 @@ h3#site-title {
 	width: 31.28%;
 }
 
-#secondary .widget > ul > li {
+#secondary .widget>ul>li {
 	border-bottom: 1px dotted #777777;
 }
 
@@ -1288,7 +1390,7 @@ h3#site-title {
 	font-size: 12px;
 }
 
-.related-posts-wrapper .entry-meta > span {
+.related-posts-wrapper .entry-meta>span {
 	padding-right: 10px;
 }
 
@@ -1321,42 +1423,44 @@ h3#site-title {
 	overflow: hidden;
 }
 
-.no-sidebar-full-width #primary .entry-content > .alignfull,
-.no-sidebar #primary .entry-content > .alignfull {
+.no-sidebar-full-width #primary .entry-content>.alignfull,
+.no-sidebar #primary .entry-content>.alignfull {
 	margin-left: calc(50% - 50vw);
 	margin-right: calc(50% - 50vw);
 	max-width: unset;
 }
 
-.no-sidebar-full-width #primary .entry-content > .alignfull.wp-block-cover, .no-sidebar-full-width #primary .entry-content > .alignfull.wp-block-cover-image,
-.no-sidebar #primary .entry-content > .alignfull.wp-block-cover,
-.no-sidebar #primary .entry-content > .alignfull.wp-block-cover-image {
+.no-sidebar-full-width #primary .entry-content>.alignfull.wp-block-cover,
+.no-sidebar-full-width #primary .entry-content>.alignfull.wp-block-cover-image,
+.no-sidebar #primary .entry-content>.alignfull.wp-block-cover,
+.no-sidebar #primary .entry-content>.alignfull.wp-block-cover-image {
 	width: unset;
 }
 
-.no-sidebar-full-width #primary .entry-content > .alignwide,
-.no-sidebar #primary .entry-content > .alignwide {
+.no-sidebar-full-width #primary .entry-content>.alignwide,
+.no-sidebar #primary .entry-content>.alignwide {
 	margin-left: -100px;
 	margin-right: -100px;
 	max-width: unset;
 	width: unset;
 }
 
-.no-sidebar-full-width.boxed #primary .entry-content > .alignfull,
-.no-sidebar.boxed #primary .entry-content > .alignfull {
+.no-sidebar-full-width.boxed #primary .entry-content>.alignfull,
+.no-sidebar.boxed #primary .entry-content>.alignfull {
 	margin-left: -30px;
 	margin-right: -30px;
 	width: unset;
 }
 
-.no-sidebar-full-width.boxed #primary .entry-content > .alignfull.wp-block-cover, .no-sidebar-full-width.boxed #primary .entry-content > .alignfull.wp-block-cover-image,
-.no-sidebar.boxed #primary .entry-content > .alignfull.wp-block-cover,
-.no-sidebar.boxed #primary .entry-content > .alignfull.wp-block-cover-image {
+.no-sidebar-full-width.boxed #primary .entry-content>.alignfull.wp-block-cover,
+.no-sidebar-full-width.boxed #primary .entry-content>.alignfull.wp-block-cover-image,
+.no-sidebar.boxed #primary .entry-content>.alignfull.wp-block-cover,
+.no-sidebar.boxed #primary .entry-content>.alignfull.wp-block-cover-image {
 	width: unset;
 }
 
-.no-sidebar-full-width.boxed #primary .entry-content > .alignwide,
-.no-sidebar.boxed #primary .entry-content > .alignwide {
+.no-sidebar-full-width.boxed #primary .entry-content>.alignwide,
+.no-sidebar.boxed #primary .entry-content>.alignwide {
 	margin-left: -15px;
 	margin-right: -15px;
 	max-width: unset;
@@ -1478,13 +1582,15 @@ h3#site-title {
 	color: #909294;
 }
 
-#secondary .widget-title span, #colophon .widget-title span {
+#secondary .widget-title span,
+#colophon .widget-title span {
 	border-bottom: 2px solid #ed564b;
 	text-transform: uppercase;
 	padding-bottom: 4px;
 }
 
-#colophon .widget > ul > li, #colophon div > ul > li {
+#colophon .widget>ul>li,
+#colophon div>ul>li {
 	border-bottom: 1px dotted #777777;
 }
 
@@ -1780,7 +1886,10 @@ h3#site-title {
 	margin-right: 20px;
 }
 
-.blog-medium .post-featured-image, .blog-large .post-featured-image, .category .post-featured-image, .search .post-featured-image {
+.blog-medium .post-featured-image,
+.blog-large .post-featured-image,
+.category .post-featured-image,
+.search .post-featured-image {
 	border-bottom: 4px solid #ed564b;
 }
 
@@ -1836,7 +1945,7 @@ h3#site-title {
 }
 
 .search-top {
-    font-size: 16px;
+	font-size: 16px;
 	position: absolute;
 	right: 0;
 	top: 30px;
@@ -1914,14 +2023,16 @@ h3#site-title {
 
 /* =PAGITNATION
 ----------------------------------------------- */
-.default-wp-page .previous a, .default-wp-page .next a {
+.default-wp-page .previous a,
+.default-wp-page .next a {
 	border: 1px solid #e8e8e8;
 	border-radius: 3px;
 	padding: 8px;
 	float: left;
 }
 
-.default-wp-page .previous a:hover, .default-wp-page .next a:hover {
+.default-wp-page .previous a:hover,
+.default-wp-page .next a:hover {
 	background-color: #ed564b;
 	color: #ffffff;
 }
@@ -1959,7 +2070,8 @@ h3#site-title {
 	color: #e0e0e0;
 }
 
-#site-generator a:hover, #colophon .widget a:hover {
+#site-generator a:hover,
+#colophon .widget a:hover {
 	color: #ed564b;
 }
 
@@ -1972,7 +2084,8 @@ a#scroll-up {
 	display: none;
 	background-color: #ed564b;
 	opacity: 0.7;
-	filter: alpha(opacity=70); /* For IE8 and earlier */
+	filter: alpha(opacity=70);
+	/* For IE8 and earlier */
 	padding: 9px 16px;
 	border-radius: 2px;
 	font-size: 16px;
@@ -1984,7 +2097,8 @@ a#scroll-up i {
 
 a#scroll-up:hover {
 	opacity: 1;
-	filter: alpha(opacity=100); /* For IE8 and earlier */
+	filter: alpha(opacity=100);
+	/* For IE8 and earlier */
 }
 
 /* =Google Rich Snippets
@@ -1996,7 +2110,9 @@ a#scroll-up:hover {
 /*--------------------------------------------------------------
 Gutenberg Blocks Layout.
 --------------------------------------------------------------*/
-.wp-block-gallery.alignleft, .wp-block-gallery.alignright, .wp-block-gallery.aligncenter,
+.wp-block-gallery.alignleft,
+.wp-block-gallery.alignright,
+.wp-block-gallery.aligncenter,
 .wp-block-social-links.alignleft,
 .wp-block-social-links.alignright,
 .wp-block-social-links.aligncenter {
