@@ -48,6 +48,9 @@ If you want to translate this theme to your language, Please visit:- https://tra
 /**********************************************************/
 
 == Changelog ==
+= Version 1.5.2 - 2025-08-12 =
+* Update    - General security measure.
+
 = Version 1.5.0 - 2024-06-19 =
 * Tweak - Increase clickable area of search icon.
 * Tweak - Update WordPress tested upto version.
